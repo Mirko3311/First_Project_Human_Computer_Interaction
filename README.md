@@ -102,11 +102,12 @@ Otvori će se meni sa temama, tako da korisnik može da izabere između plave, c
 Kod administratora podrazumijevana tema je plava.
 Teme se razlikuju po pozadini, fontu slova, boji slova, dizajnu dugmadi.
 Primjer izgleda dvije teme za interfejs profesora (crvene i zelene), dok će se treća tema (plava) koristiti u ovom dokumentu.
-
+<p align="center">
 <div style="display: flex; justify-content: space-between;">
   <img src="Screenshot/GreenTheme.JPG" alt="Tema 1" width="520"/>
   <img src="Screenshot/RedTheme.JPG" alt="Tema 2" width="520"/>
 </div>
+</p>
 
 ## Funkcionalnosti administratora
 
