@@ -508,6 +508,9 @@
   <data name="UpdateText" xml:space="preserve">
     <value>Ažuriraj</value>
   </data>
+  <data name="UsernamePasswordInCorrect" xml:space="preserve">
+    <value>Korisničko ime ili lozinka nisu validni</value>
+  </data>
   <data name="UsernameText" xml:space="preserve">
     <value>Korisnicko ime</value>
   </data>

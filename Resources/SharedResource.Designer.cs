@@ -1231,6 +1231,15 @@ namespace PrviProjektniZadatakHCI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Korisničko ime ili lozinka nisu validni.
+        /// </summary>
+        public static string UsernamePasswordInCorrect {
+            get {
+                return ResourceManager.GetString("UsernamePasswordInCorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Korisnicko ime.
         /// </summary>
         public static string UsernameText {

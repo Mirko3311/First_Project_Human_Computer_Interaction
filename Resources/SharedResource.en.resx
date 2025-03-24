@@ -507,6 +507,9 @@
   <data name="UpdateText" xml:space="preserve">
     <value>Update</value>
   </data>
+  <data name="UsernamePasswordInCorrect" xml:space="preserve">
+    <value>The username or password is incorrect</value>
+  </data>
   <data name="UsernameText" xml:space="preserve">
     <value>Username</value>
   </data>

@@ -1,5 +1,7 @@
 ﻿using PrviProjektniZadatakHCI;
 using PrviProjektniZadatakHCI.DataAccess;
+using PrviProjektniZadatakHCI.Resources;
+using PrviProjektniZadatakHCI.View;
 using System.Globalization;
 using System.Text;
 using System.Windows;
@@ -16,9 +18,7 @@ using System.Windows.Shapes;
 
     namespace ASystem
     {
-        /// <summary>
-        /// Interaction logic for MainWindow.xaml
-        /// </summary>
+        
         public partial class MainWindow : Window
         {
 
@@ -102,7 +102,9 @@ using System.Windows.Shapes;
                 }
                 else
                 {
-                    System.Windows.MessageBox.Show("Korisničko ime ili lozinka nisu korektni!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    string message = SharedResource.UsernamePasswordInCorrect;
+                    new WrongWindow(message).ShowDialog();
+                
                 }
                 }
                 catch (Exception ex)

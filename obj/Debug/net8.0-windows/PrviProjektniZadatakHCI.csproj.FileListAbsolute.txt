@@ -249,6 +249,7 @@ C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\Prvi
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.AssemblyInfoInputs.cache
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.AssemblyInfo.cs
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.csproj.CoreCompileInputs.cache
+C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.sourcelink.json
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\en\PrviProjektniZadatakHCI.resources.dll
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProj.324B066A.Up2Date
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.dll
@@ -256,4 +257,3 @@ C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\refi
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.pdb
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.genruntimeconfig.cache
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\ref\PrviProjektniZadatakHCI.dll
-C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.sourcelink.json
