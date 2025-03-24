@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PrviProjektniZadatakHCI.View"
         mc:Ignorable="d"
        Title="Informacija" 
-     Height="180" Width="300"
+     Height="200" Width="300"
         WindowStyle="None" 
         ResizeMode="NoResize"
         Background="Gray"
@@ -14,14 +14,12 @@
  <Grid>
         <Border CornerRadius="15" Background="White" Padding="0"  BorderThickness="5" Margin="6,5,5,4">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-
-                <!-- Ikona statusa -->
                 <Ellipse Width="60" Height="60" HorizontalAlignment="Center">
 
 
                 </Ellipse>
 
-                <!-- Naslov -->
+       
                 <Border Width="40" Height="40" Padding="0" Background="White" CornerRadius="0" DockPanel.Dock="Top">
                     <Ellipse Margin="-12,-33,-24,26">
                         <Ellipse.Fill>
@@ -30,22 +28,17 @@
                     </Ellipse>
                 </Border>
 
-                <!-- Opis -->
+         
                 <TextBlock x:Name="MessageText" 
                        FontSize="14" Foreground="Gray" 
                        HorizontalAlignment="Center" TextAlignment="Center"
                        Width="250" Height="45"/>
 
-                <!-- Dugme 
--->
-
-                <!-- Background="#01a601"
-   Foreground="White" FontWeight="Bold"
-                       Style="{StaticResource CustomButtonStyle}"-->
+          
                 <Button Content="OK" 
                     
                    Background="red" Foreground="White"
-  Width="80" Height="30" Margin="10,10,10,10"
+  Width="80" Height="30" Margin="10,-10,10,10"
 
                     Click="CloseMessageBox"/>
             </StackPanel>

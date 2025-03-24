@@ -256,3 +256,4 @@ C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\refi
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.pdb
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.genruntimeconfig.cache
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\ref\PrviProjektniZadatakHCI.dll
+C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.sourcelink.json
