@@ -150,7 +150,7 @@ U zavisnosti od izabranog entiteta, otvara se forma za unos podataka. Ako admini
 </p>
 
  Prilikom unosa, ukoliko želi da prekine unos i izbriše sve unijeti podatke u polja može da pritisne dugme za **"Cancel"**, te na taj način da očite polja.
- Na isti način, koristeći **"Cancel**, može da očisti i polja za **Studenta** i **Predmet**.
+ Na isti način, koristeći **"Cancel**, može da očisti i polja za **Studenta** i **Predmet** i za **Profesora**.
 
 !["Cancel"](Screenshot/Cancel.JPG)
 
@@ -161,7 +161,7 @@ Dodavanje **Studenta** i **Predmeta** će imati svoje forme.
   <img src="Screenshot/SubjectForm.JPG" alt="Slika 2" width="460"/>
 </div>
 
-Sva polja prilikom dodavanja moraju biti popunjena, u suprotnom će korisnik dobiti povratnu informaciju da postoje prazna polja.
+Sva polja prilikom dodavanja moraju biti popunjena, u suprotnom će korisnik dobiti povratnu informaciju da postoje prazna polja. Identifikatori moraju da budu cjelobrojne vrijednosti, u suprotnom se dobija upozorenje koje obavještava da identifikatori moraju da budu cjelobrojne vrijednosti.
 
 !["FillField"](Screenshot/FillField.JPG)
 
