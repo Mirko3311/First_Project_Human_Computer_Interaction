@@ -8,11 +8,11 @@ Svrha ovog dokumenta je da pruži detaljan pregled glavnih funkcionalnosti i da 
 
 ## O aplikaciji
 
-Aplikacija ima zadatak da pokrije osnovne potrebe studenata i profesora u vezi njihove interkacije i neophodne razmjene podataka. Omogućava jednostavan uvid studentima u obaveze, postignute rezultate i dostignuća, a profesorima lako zadavanje svih neophodnih zadataka i indirektne komunikacije sa studentima.
+Aplikacija ima zadatak da pokrije osnovne potrebe studenata i profesora u vezi njihove interkacije i neophodne razmjene podataka. Omogućava jednostavan uvid studentima u obaveze, postignute rezultate i dostignuća, a profesorima lako zadavanje svih neophodnih zadataka i indirektne komunikacije sa studentima. Administratorima omogućava kreiranje naloga, predmeta, kao i manipulacija njima.
 
 ## Korisnički nalozi
 
- Aplikacija podrzava rad sa tri tipa korisnika:
+ Aplikacija podržava rad sa tri tipa korisnika:
  1. administrator
  2. student
  3. profesor
@@ -21,10 +21,10 @@ Aplikacija ima zadatak da pokrije osnovne potrebe studenata i profesora u vezi n
 
 | **Tip korisnika**       | **Funkcionalnosti**                                                                                                                                                            |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Superadministrator**   |  Dodavanje i brisanje profesora: Administrator može dodavati nove profesore sa osnovnim podacima i dodeljivati im predmete.                                              |
+| **Superadministrator**   |  Dodavanje i brisanje profesora: Administrator može dodavati nove profesore sa osnovnim podacima i dodjeljivati im predmete.                                              |
 |                          |  Dodavanje i brisanje studenata: Administrator može dodavati nove studente, unositi njihove osnovne podatke.                              |
 |                          |  Kreiranje i ažuriranje predmeta: Administrator može kreirati nove predmete sa osnovnim informacijama i dodjeljivati ih profesorima.                                    |
-|                          |  Dodjela prava pristupa: Superadministrator dodjeljuje profesorima administratorska prava za predmete koje predaju, čime ograničava njihov pristup na relevantne podatke.    |
+|                          |  Dodjela prava pristupa: Administrator dodjeljuje profesorima administratorska prava za predmete koje predaju, čime ograničava njihov pristup na relevantne podatke.    |
 |  **Profesor**            |  Dodavanje domaćih zadataka i ispita: Profesor može dodati domaće zadatke i ispite za svoje predmete, uključujući rokove i maksimalne bodove.                                |
 |                          |  Vođenje evidencije o prisustvu: Profesor može unijeti prisustvo za svakog studenta na predmetu, uključujući datume.                                       |
 |                          |  Unos i pregled ocjena: Profesor može dodavati ocjene za ispite za studente na svojim predmetima. Može da pregleda sve ocjene studenata na predmetima koje predaje za studente koje slušaju predmete.                                                                   |
@@ -33,7 +33,7 @@ Aplikacija ima zadatak da pokrije osnovne potrebe studenata i profesora u vezi n
 |                          |  Pregled domaćih zadataka i ispita: Student može pregledati domaće zadatke za svaki predmet, uključujući rokove.                      |
 |                          |  Pregled ukupnog uspjeha: Student može vidjeti svoj ukupan uspjeh po predmetu kroz zbir bodova i ocjena koje je dobio.                                                       |
 | **Svi korisnici**        |  Internacionalizacija: Sistem omogućava korisnicima da biraju između više jezika.                                                                                           |
-|                          |  Podešavanje tema: Korisnici mogu birati između svijetle i tamne teme, koja se automatski čuva za svakog korisnika.                                                           |
+|                          |  Podešavanje tema: Korisnici mogu birati između tri teme (plava, crvena, zelena), koja se automatski čuva za svakog korisnika. Kada se korisnik sljedeći put uloguje sistem će biti prikazan u posljednjoj izabranoj temi.                                                       |   Promjena lozinke: Profesori i studenti mogu da promijeni lozinke, koje im je kreirao administrator.
 |                          |                                                                  |
 
 
