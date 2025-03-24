@@ -21,19 +21,19 @@ Aplikacija ima zadatak da pokrije osnovne potrebe studenata i profesora u vezi n
 
 | **Tip korisnika**       | **Funkcionalnosti**                                                                                                                                                            |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Superadministrator**   |  Dodavanje i brisanje profesora: Superadministrator može dodavati nove profesore sa osnovnim podacima i dodeljivati im predmete.                                              |
-|                          |  Dodavanje i brisanje studenata: Superadministrator može dodavati nove studente, unositi njihove osnovne podatke.                              |
-|                          |  Kreiranje i ažuriranje predmeta: Superadministrator može kreirati nove predmete sa osnovnim informacijama i dodjeljivati ih profesorima.                                    |
+| **Superadministrator**   |  Dodavanje i brisanje profesora: Administrator može dodavati nove profesore sa osnovnim podacima i dodeljivati im predmete.                                              |
+|                          |  Dodavanje i brisanje studenata: Administrator može dodavati nove studente, unositi njihove osnovne podatke.                              |
+|                          |  Kreiranje i ažuriranje predmeta: Administrator može kreirati nove predmete sa osnovnim informacijama i dodjeljivati ih profesorima.                                    |
 |                          |  Dodjela prava pristupa: Superadministrator dodjeljuje profesorima administratorska prava za predmete koje predaju, čime ograničava njihov pristup na relevantne podatke.    |
 |  **Profesor**            |  Dodavanje domaćih zadataka i ispita: Profesor može dodati domaće zadatke i ispite za svoje predmete, uključujući rokove i maksimalne bodove.                                |
-|                          |  Vođenje evidencije o prisustvu: Profesor može uneti prisustvo za svakog studenta na predmetu, uključujući datume.                                       |
+|                          |  Vođenje evidencije o prisustvu: Profesor može unijeti prisustvo za svakog studenta na predmetu, uključujući datume.                                       |
 |                          |  Unos i pregled ocjena: Profesor može dodavati ocjene za ispite za studente na svojim predmetima. Može da pregleda sve ocjene studenata na predmetima koje predaje za studente koje slušaju predmete.                                                                   |
 |                          |  Pregled rezultata studenata: Profesor može pregledati ukupne rezultate po studentu za svoje predmete, uključujući prisustvo, bodove iz zadataka i ocjene sa ispita.        |
 | **Student**              |  Pregled prisustva: Student može pregledati svoje prisustvo po predmetu, uz detalje o svakom času.                                                                           |
 |                          |  Pregled domaćih zadataka i ispita: Student može pregledati domaće zadatke za svaki predmet, uključujući rokove.                      |
 |                          |  Pregled ukupnog uspjeha: Student može vidjeti svoj ukupan uspjeh po predmetu kroz zbir bodova i ocjena koje je dobio.                                                       |
 | **Svi korisnici**        |  Internacionalizacija: Sistem omogućava korisnicima da biraju između više jezika.                                                                                           |
-|                          |  Podešavanje tema: Korisnici mogu birati između svetle i tamne teme, koja se automatski čuva za svakog korisnika.                                                           |
+|                          |  Podešavanje tema: Korisnici mogu birati između svijetle i tamne teme, koja se automatski čuva za svakog korisnika.                                                           |
 |                          |                                                                  |
 
 
@@ -159,6 +159,7 @@ Dodavanje **Studenta** i **Predmeta** će imati svoje forme.
 
 Sva polja prilikom dodavanja moraju biti popunjena, u suprotnom će korisnik dobiti povratnu informaciju da postoje prazna polja.
 
+!["FillField"](Screenshot/FillField.JPG)
 
 ### Brisanje studenata, profesora, predmeta
 
@@ -192,11 +193,11 @@ Postoje dva ComBox. U prvom ComBox-u  se bira koji entitet želi da ažurira.
  Administrator treba da izabere konkretan entitet koji želi da ažurira. Nakon što selektuje entitet kojeg želi da ažurira, popunjava se forma za ažuriranje podacima 
 izabranog entiteta.
 
-![Update Entity](Screenshot/UpdateConcreteProfessor.JPG)
+![Update Entity](Screenshot/UpdateProfessor.JPG)
 
 U formi se podaci mogu izmijeniti. Svi podaci se mogu izmijeniti. Kada se pritisne na dugme "Ažuriraj", podaci se ažuriraju.
 
-![Update Entity](Screenshot/MessageProfessor.JPG)
+![Update Entity](Screenshot/SuccessUpdateProfessor.JPG)
 
 ### Upravljanje Dodjelama
 
@@ -253,9 +254,9 @@ U tabu **"Predmeti"** prikazani su predmeti koje profesor predaje. Kada selektuj
 
 ![Profesori](Screenshot/Professor2.JPG)
 
-Studenti koji slušaju predmet se prikazuju u posebnom prozoru.
+Studenti koji slušaju predmet se prikazuju u posebnom prozoru. Prikaz obuhvata ime, prezime i broj indeksa studenta.
 
-![Studenti slusaju predmete](Screenshot/SubjectStudents.JPG)
+![Studenti slusaju predmete](Screenshot/StudentSubject.JPG)
 
 ### Domaći zadaci
 
@@ -266,7 +267,7 @@ Profesor u tabu **Domaći zadaci** ima dva podtaba, jedan za dodavanje novog dom
 Profesor popunjava sva neophodna polja za domaći zadatak. Sva polja moraju da budu popunjena. Sva polja podržavaju stringove, osim polja **Maksimalan broj bodova**, koji podržava cjelobrojne vrijednosti.
 Ukoliko sva polja nisu popunjena, korisnik će dobiti povratnu informaciju.
 
-![Prazna polja](Screenshot/EmptyField.JPG)
+![Prazna polja](Screenshot/FillFiledTask.JPG)
 
 Profesor može da doda domaći zadatak samo predmetima koje predaje. Isto tako, samo studenti koji slušaju predmete mogu da pregledaju domaće zadatke. 
 Kada se ** popune sva polja **, profesor pritiskom na dugme **"Dodaj"** pamti domaći zadatak. 
@@ -275,9 +276,13 @@ Kada se ** popune sva polja **, profesor pritiskom na dugme **"Dodaj"** pamti do
 
 #### Pregled zadataka
 
-U ovom tabu profesor može da pregleda sve domaće zadatke, iz svih predmeta koje predaje. Može da pregleda osnove informacije o svakom domaćem zadatku.
+U ovom tabu profesor može da pregleda sve domaće zadatke, iz svih predmeta koje predaje. Osim tabelarnog prikaza, korisnik klikom na red u tabeli može da dobije detaljan prikaz zadatka. Otvara mu se novi prozor, koji prikazuje naziv zadatka, opis zadatka i rok. Profesor može da izbriše zadatak pritiskom na dugme "Obriši" ili da ažurira zadatak koristeći dugme "Ažuriraj". Profesor ima mogućnost korišćenja opcije "Undo", pa može da jednostavno poništi prethodne izmjene. 
 
-![Pregled domaćeg zadatka](Screenshot/HomeworkAdd.JPG)
+![Pregled zadatka](Screenshot/ViewTaskProfessor.JPG)
+
+Ukoliko se zadatak uspješno ažurira, profesor će dobiti povratnu informaciju. 
+
+![Uspješno ažuriranje zadatka](Screenshot/SuccessUpdateTask.JPG)
 
 
 ### Prisustvo
@@ -354,12 +359,15 @@ Funkcionalnost unosa ocjena dostupna je u tabu **"Ocjene"** i realizuje se na sl
    - **Napomena**: Ocjena mora biti cjelobrojna vrijednost. Ukoliko se pokuša unositi tekstualna vrijednost, aplikacija generiše grešku.
 
 5. **Validacija podataka**  
-   - Sva polja (predmet, datum, student, bodovi i ocjena) moraju biti popunjena. Ukoliko neko polje nije popunjeno, profesor dobija obavještenje da su sva polja obavezna.
+   - Sva polja (predmet, datum, student, bodovi i ocjena) moraju biti popunjena. Ukoliko neko polje nije popunjeno, profesor dobija obavještenje da su sva polja obavezna. Profesor mora da unese validan broj bodova, vrijednost u opsegu [0,100].
 
 
 
 <div align="center">
-  <img src="Screenshot/EntryGrade.JPG" alt="Nevalidan unos podataka" width="500">
+  <img src="Screenshot/ValidPoints.JPG" alt="Nevalidan unos bodova" width="500">
+</div>
+<div align="center">
+  <img src="Screenshot/ValidGrade.JPG" alt="Nevalidan unos ocjene" width="500">
 </div>
 
 
@@ -381,7 +389,7 @@ Ova funkcionalnost omogućava profesorima da na jednostavan način evidentiraju 
 
 **Opis funkcionalnosti:**
 
-Pregled ocjena omogućava profesoru da na jednostavan način pristupi ocjenama svojih studenata. Funkcionalnost se sastoji od sledećih elemenata:
+Pregled ocjena omogućava profesoru da na jednostavan način pristupi ocjenama svojih studenata. Funkcionalnost se sastoji od sljedećih elemenata:
 
 1. **Selekcija studenta**:
    - Profesor može odabrati studenta sa liste pomoću **lijevog combo-box-a**. Lista studenata prikazuje sve studente koji su povezani sa predmetima koje profesor predaje.
@@ -390,7 +398,7 @@ Pregled ocjena omogućava profesoru da na jednostavan način pristupi ocjenama s
    - Nakon što odabere studenta, profesor koristi **desni combo-box** za selektovanje predmeta na kojem predaje. Lista predmeta sadrži samo one predmete na kojima je profesor upisan kao nastavnik.
 
 3. **Prikaz ocjena**:
-   - U tabeli ispod combo-box-ova, biće prikazani sledeći podaci za odabranog studenta:
+   - U tabeli ispod combo-box-ova, biće prikazani sljedeći podaci za odabranog studenta:
      - **Ime i prezime studenta**
      - **Ocjena** koju je student postigao na predmetu
      - **Datum ispita** kada je ocjena uneta
@@ -411,7 +419,9 @@ Pregled ocjena omogućava profesoru da na jednostavan način pristupi ocjenama s
 
 U MenuBar, na samom vrhu, je ikonica za **Undo**, kojom se poništavaju prethodne akcije.
 Na samom dnu MenuBar-a je ikonica za **LogOut**. Kada korisnik dvoklikne na tu ikonicu odjaviće se se.
+Korisnik može da poništi zadatke, ukoliko ima operacija za poništavanje, a ako nema operacija za poništavanja profesor dobija obavještenje da nema operacija za undo.
 
+![PregledOcjena](Screenshot/NoUndo.JPG)
 
 
 
