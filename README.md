@@ -414,6 +414,18 @@ Pregled ocjena omogućava profesoru da na jednostavan način pristupi ocjenama s
 
 **Napomena**: Ova funkcionalnost omogućava profesorima da brzo i efikasno pregledaju ocjene svojih studenata za specifične predmete. Sve promjene u selektovanim studentima i predmetima odmah se odražavaju u tabeli, pružajući tako interaktivan i pregledan način za praćenje ocjena.
 
+### Promjena lozinke
+
+Kao i profesor, student može da klikom na ikonicu Ključa(Key) u navbar-u promijeni lozinku. Kada klikne na ikonicu za promjenu lozinke, tada mu se otvara prozor za promjenu lozinke. Postoji tri unosa. Mora da unese trenutnu lozinku, kako bi  potvrdio identitet, a zatim da unese dva puta novu lozinku.
+<div align="center">
+  <img src="Screenshot/ChangePassword.JPG" alt="Greška prilikom promjene lozinke" width="800">
+</div>
+
+Ukoliko ne unese pravilnu lozinku i potvrdu nove lozinke, dobiće sljedeće obavještenje.
+<div align="center">
+  <img src="Screenshot/ErrorPasswordChange.JPG" alt="Greška prilikom promjene lozinke" width="800">
+</div>
+
 
 ### Opcija Undo i Logout
 
@@ -439,7 +451,7 @@ U tabu **Pregled Prisustva**, student može pregledati evidenciju svojih prisust
   - **Informacija** o tome da li je student prisustvovao tim predavanjima.
 
 <div align="center">
-  <img src="Screenshot/StudentAttendance.JPG" alt="Studentski pregled prisustva" width="800">
+  <img src="Screenshot/StudentWindow" alt="Studentski pregled prisustva" width="800">
 </div>
 
 ####  Domaći zadaci
@@ -451,7 +463,7 @@ U tabu **Pregled Prisustva**, student može pregledati evidenciju svojih prisust
 
 
 <div align="center">
-  <img src="Screenshot/HomeworkStudent.JPG" alt="Domaci zadatak" width="800">
+  <img src="Screenshot/ViewTask.JPG" alt="Domaci zadatak" width="800">
 </div>
 
 
@@ -466,7 +478,20 @@ U tabu **Pregled Prisustva**, student može pregledati evidenciju svojih prisust
   3. **Krajnju ocjenu** iz predmeta.
 
 <div align="center">
-  <img src="Screenshot/Exam.JPG" alt="Ispiti" width="800">
+  <img src="Screenshot/ExamStudent.JPG" alt="Ispiti" width="800">
+</div>
+
+
+### Promjena lozinke
+
+Kao i profesor, student može da klikom na ikonicu Ključa(Key) u navbar-u promijeni lozinku. Kada klikne na ikonicu za promjenu lozinke, tada mu se otvara prozor za promjenu lozinke. Postoji tri unosa. Mora da unese trenutnu lozinku, kako bi  potvrdio identitet, a zatim da unese dva puta novu lozinku.
+<div align="center">
+  <img src="Screenshot/PasswordChangeError.JPG" alt="Greška prilikom promjene lozinke" width="800">
+</div>
+
+Ukoliko ne unese pravilnu lozinku i potvrdu nove lozinke, dobiće sljedeće obavještenje.
+<div align="center">
+  <img src="Screenshot/PasswordChangeError.JPG" alt="Greška prilikom promjene lozinke" width="800">
 </div>
 
 
