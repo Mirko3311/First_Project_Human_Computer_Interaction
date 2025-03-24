@@ -254,7 +254,7 @@ Kada se profesor uspješno prijavi, otvara mu se prozor, tako da u vrhu postoje 
 
 ### Predmeti
 
-U tabu **"Predmeti"** prikazani su predmeti koje profesor predaje. Kada selektuje neki predmet i dugme "Student",prikazuju  se studenti koji slušaju predmet.
+U tabu **"Predmeti"** prikazani su predmeti koje profesor predaje. Kada selektuje neki predmet i dugme "Student", prikazuju  se studenti koji slušaju predmet.
 
 ![Profesori](Screenshot/Professor2.JPG)
 
@@ -370,6 +370,9 @@ Funkcionalnost unosa ocjena dostupna je u tabu **"Ocjene"** i realizuje se na sl
 <div align="center">
   <img src="Screenshot/ValidPoints.JPG" alt="Nevalidan unos bodova" width="500">
 </div>
+
+- Profesor mora da unese i validnu ocjenu, u suprotnom će dobiti upozorenje.
+
 <div align="center">
   <img src="Screenshot/ValidGrade.JPG" alt="Nevalidan unos ocjene" width="500">
 </div>
