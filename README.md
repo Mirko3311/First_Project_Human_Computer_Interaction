@@ -486,7 +486,7 @@ U tabu **Pregled Prisustva**, student može pregledati evidenciju svojih prisust
 
 Kao i profesor, student može da klikom na ikonicu Ključa(Key) u navbar-u promijeni lozinku. Kada klikne na ikonicu za promjenu lozinke, tada mu se otvara prozor za promjenu lozinke. Postoji tri unosa. Mora da unese trenutnu lozinku, kako bi  potvrdio identitet, a zatim da unese dva puta novu lozinku.
 <div align="center">
-  <img src="Screenshot/PasswordChangeError.JPG" alt="Greška prilikom promjene lozinke" width="800">
+  <img src="Screenshot/PasswordManager.JPG" alt="Greška prilikom promjene lozinke" width="800">
 </div>
 
 Ukoliko ne unese pravilnu lozinku i potvrdu nove lozinke, dobiće sljedeće obavještenje.
