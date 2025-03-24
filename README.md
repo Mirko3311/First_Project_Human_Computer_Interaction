@@ -58,7 +58,10 @@ Ako su korisničko ime ili lozinka pogrešni, ispisaće se povratni prozor koji 
 
 
 
-![Greška prilikom unosa kredencijala](Screenshot/ErrorValidation.JPG)
+<p align="center">
+  <img src="Screenshot/ErrorValidation.JPG" alt="Greška prilikom unosa kredencijala">
+</p>
+
 
 
 ### Izbor jezika aplikacije
