@@ -1,0 +1,506 @@
+﻿<Window x:Class="ASystem.ProfessorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:ASystem"
+       xmlns:resources="clr-namespace:PrviProjektniZadatakHCI.Resources;assembly=PrviProjektniZadatakHCI" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        WindowState="Maximized"
+         Icon="pack://application:,,,/Images/professorIcon.ico"
+     Title="{x:Static resources:SharedResource.ProfessorText}">
+    <Window.InputBindings>
+        <KeyBinding Command="ApplicationCommands.Undo" Gesture="Ctrl+Z" />
+     
+        <KeyBinding Key="L" Modifiers="Control" Command="{x:Static local:ProfessorWindow.LogoutCommand}" />
+
+    </Window.InputBindings>
+
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="1200"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid.Background>
+                <DynamicResource ResourceKey="Backdrop" />
+            </Grid.Background>
+
+            <Border Height="670" VerticalAlignment="Center" CornerRadius="20" Opacity="0.7" Background="#FFFFFF" RenderTransformOrigin="0.5,0.5" Margin="10,0,10,0">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.201"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Button Style="{DynamicResource topButton}" Click="Undo_Click" HorizontalAlignment="Left" Margin="20,30,0,10" Width="29" Height="NaN">
+                        <Icon:PackIconMaterial Kind="Undo" Width="30" Height="25" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                            <Icon:PackIconMaterial.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="1.319"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Icon:PackIconMaterial.RenderTransform>
+                        </Icon:PackIconMaterial>
+
+                    </Button>
+
+                    <Border Grid.Row="1" Margin="12,10,11,0" Background="AntiqueWhite" Height="59" VerticalAlignment="Top">
+                        <DockPanel Margin="0,0,1,0">
+                            <Border Width="47" Height="80" Padding="0" Background="White" CornerRadius="95" DockPanel.Dock="Top">
+                                <Ellipse Margin="-2,0,0,21" Height="59" VerticalAlignment="Bottom">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="pack://application:,,,/Images/professorIcon.ico"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                            </Border>
+                        </DockPanel>
+                    </Border>
+
+                <!--   <Button Grid.Row="1"  Click="Dodaj"  Background="Transparent" BorderThickness="0"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,435,0,0" Width="67" Height="46">
+                        <Image Source="pack://application:,,,/Images/addIcon.png" Width="53" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Button>  -->
+                    <Button Grid.Row="1" x:Name="btnDelete"  Click="DeleteItem_Click" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,180,0,0" Width="41" Height="41" >
+                        <Icon:PackIconMaterial Kind="Delete" Width="25" Height="31" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                    </Button>
+
+                    <Button Grid.Row="1" x:Name="btnPassword"  Click="Password_Click" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,290,0,0" Width="41" Height="41" >
+                        <Icon:PackIconMaterial Kind="Key" Width="30" Height="41" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                    </Button>
+                    <Button Grid.Row="1" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,400,0,0" Width="41" Height="40" RenderTransformOrigin="0.353,-0.756">
+                        <Icon:PackIconMaterial Kind="ThemeLightDark" Width="23" Height="31" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+                     
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="{x:Static resources:SharedResource.BlueText}" Click="LightThemeClick"/>
+                                <MenuItem Header="{x:Static resources:SharedResource.RedText}" Click="DarkThemeClick"/>
+                                <MenuItem Header="{x:Static resources:SharedResource.GreenText}" Click="GreenThemeClick"/>
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+
+                    <Button Grid.Row="1" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,520,0,0" Width="41" Height="40" RenderTransformOrigin="0.5,0.5">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                        <Icon:PackIconMaterial Kind="Logout" Width="23" Height="31" VerticalAlignment="Center" HorizontalAlignment="Center" MouseDoubleClick="LogoutButton_Click"/>
+                    </Button>
+                </Grid>
+            </Border>
+
+  <TabControl Grid.Column="1">
+                <TabItem Header="{x:Static resources:SharedResource.SubjectText}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
+                    <StackPanel Margin="10" Width="796">
+                        <TextBlock Text="{x:Static resources:SharedResource.CourseList}" FontWeight="Bold"  Foreground="#eb984e" FontSize="22" Margin="10,0,10,10" />
+
+                        <Border BorderBrush="Gray" BorderThickness="40" CornerRadius="30" Background="White" Margin="10,8,140,10">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                                <Grid>
+                                    <ListView Name="lvDataBinding" Height="400" Margin="0" >
+
+                                    <!--    SelectedItem="{Binding SelectedPredmet, Mode=TwoWay}"> -->
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal" Margin="15" HorizontalAlignment="Stretch">
+                                                    <TextBlock Text="{Binding Naziv}" VerticalAlignment="Center" FontSize="14" FontFamily="Poppins" FontWeight="Bold" Foreground="#0096FF" Width="400" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                    <Image Source = "pack://application:,,,/Images/BoxBook.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="140" Margin="0 10 10 0"/>
+                                </Grid>
+                            </ScrollViewer>
+                        </Border>
+
+
+                        <Button Width="390" Height="50" 
+Margin="10,-12,125,0" 
+Click="PregledStudenata"
+Background="Gray" 
+Foreground="White"
+FontWeight="Bold"
+Style="{StaticResource MaterialDesignFlatButton}">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Person" Width="4" Height="24" Foreground="White" Margin="-50,0,10,0"/>
+                                <TextBlock Text="{x:Static resources:SharedResource.StudentList}" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="{x:Static resources:SharedResource.HomeworkExamText}" Height="85" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" >
+                    <TabControl>
+                        <TabItem Header="{x:Static resources:SharedResource.TaskAddText}" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Height="85">
+                            <Grid Height="640" Width="1134">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="4*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="0" BorderBrush="#ff808080" BorderThickness="30" Background="White" CornerRadius="40" Padding="40" Margin="50,42,701,20" Grid.ColumnSpan="2">
+                                    <StackPanel Margin="0">
+                                        <TextBlock Text="{x:Static resources:SharedResource.SubjectText}" Margin="0,0,100,2" Width="245" />
+                                        <ComboBox Name="cmbPredmeti" ItemsSource="{Binding}" Margin="0,0,0,20">
+                                            <ComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Naziv}" />
+                                                </DataTemplate>
+                                            </ComboBox.ItemTemplate>
+                                        </ComboBox>
+
+                                        <TextBlock Text="{x:Static resources:SharedResource.TaskText}" Margin="0,20,100,5" Width="244" Height="20" />
+                                        <ComboBox Name="TaskTypeSelector" Margin="0,0,0,20">
+                                            <ComboBoxItem Content="{x:Static resources:SharedResource.HomeworkText}" />
+                                            <ComboBoxItem Content="{x:Static resources:SharedResource.ExamText}" />
+                                        </ComboBox>
+
+                                        <TextBlock Text="{x:Static resources:SharedResource.TaskNameText}" VerticalAlignment="Center" Margin="0,20,0,5" />
+                                        <TextBox Name="ime" Margin="0,0,0,20" />
+
+                                        <TextBlock Text="{x:Static resources:SharedResource.DeadLineText}" VerticalAlignment="Center" Margin="0,0,0,5" />
+                                        <DatePicker Name="TaskDeadline" Margin="0,0,0,10" Height="26" Width="245" />
+
+                                        <TextBlock Text="{x:Static resources:SharedResource.ExamIdText}" Margin="0,10,100,5" Width="247" />
+                                        <TextBox Name="taskCode" Margin="0,0,0,20" />
+
+                                        <TextBlock Text="{x:Static resources:SharedResource.MaximumPointsText}" Margin="0,0,100,15" Width="244" />
+                                        <TextBox Name="MaxPoints" Margin="0,-1.34,0,10" Height="23" Width="350" />
+                                    </StackPanel>
+                                </Border>
+                                <Border Grid.Column="1" BorderBrush="#b4846a" CornerRadius="40" BorderThickness="40" Padding="0" Margin="150,40,80,82"  >
+                                    <StackPanel Background="LightYellow" Margin="-6,-11,-10,-10" >
+                                        <TextBlock Text="{x:Static resources:SharedResource.DescriptionText}" FontFamily="Arial" FontStyle="Italic" Foreground="#4a342a" FontSize="25" Width="156" Margin="10,10,50,10" Height="37" />
+                                        <Image Source="pack://application:,,,/Images/pushPin.png" HorizontalAlignment="Right" Width="80" Height="65" Margin="0,-45,20,0" RenderTransformOrigin="0.433,-0.547" />
+                                        <TextBox x:Name="taskDescription" Height="451" TextWrapping="Wrap" Margin="10"  AcceptsReturn="True" Width="480" />
+                                    </StackPanel>
+                                </Border>
+
+
+                                <Button Grid.Row="1"  Grid.Column="1"   Content="{x:Static resources:SharedResource.AddButton}"  Style="{DynamicResource CustomButtonStyle}" Click="AddTask"   BorderThickness="0"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,580,20,-70" Width="90" Height="46">
+                              
+                                </Button>
+             
+                            </Grid>
+                        </TabItem>
+
+                     
+                        <TabItem Header="{x:Static resources:SharedResource.TaskOverviewText}" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Height="85">
+                            <Grid Margin="10">
+                                <DataGrid Name="homeworkDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column" GridLinesVisibility="Horizontal" Margin="10"  SelectionChanged="dgAktivnosti_SelectionChanged">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="{x:Static resources:SharedResource.SubjectText}" Binding="{Binding predmet.Naziv}" Width="*" />
+
+                                        <DataGridTextColumn Header="{x:Static resources:SharedResource.NameText}" Binding="{Binding naziv}" Width="*" />
+                                        <DataGridTextColumn Header="{x:Static resources:SharedResource.DeadLineText}" Binding="{Binding rok, StringFormat=\{0:dd/MM/yyyy\}}" Width="*" />
+                                        <DataGridTextColumn Header="{x:Static resources:SharedResource.IdText}" Binding="{Binding idDomaciZadatak}" Width="*" />
+                                        <DataGridTextColumn Header="{x:Static resources:SharedResource.DescriptionText}" Binding="{Binding opis}" Width="2*" />
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </TabItem>
+
+                <TabItem Header="{x:Static resources:SharedResource.AttendanceText}" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Height="85"  >
+                    <Grid>
+                        <TabControl>
+                            <TabItem Header="{x:Static resources:SharedResource.RecordAttendance}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
+                                <StackPanel Margin="10">
+                                    <TextBlock Text="{x:Static resources:SharedResource.AttendanceRecordMText}" Foreground="#d68910" FontWeight="Bold" FontSize="26" Margin="400,10,10,50" />
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,10,30">
+                                      
+                                        <StackPanel Orientation="Horizontal" Margin="0,0,20,0" VerticalAlignment="Center">
+                                            <Image Source="pack://application:,,,/Images/educational.png" Width="50" Height="50" Margin="0,0,13,0" />
+                                            <TextBlock Text="{x:Static resources:SharedResource.SubjectText}" FontSize="18" VerticalAlignment="Center" />
+                                            <ComboBox x:Name="cmbPredmet" 
+                          SelectionChanged="cmbPredmet_SelectionChanged"  
+                          Background="#f7dc6f" 
+                          Width="200" 
+                          Margin="10,0,0,0">
+                                                <!--  Visibility="{Binding IsPredmetVisible, Converter={StaticResource BooleanToVisibilityConverter}}"> -->
+                                                <ComboBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding Naziv}" />
+                                                    </DataTemplate>
+                                                </ComboBox.ItemTemplate>
+                                            </ComboBox>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal"    VerticalAlignment="Center" Margin="20,12,0,0">
+                                            <Image Source="pack://application:,,,/Images/schedule.png" Width="50" Height="50" Margin="400,0,20,0" />
+                                            <TextBlock Text="{x:Static resources:SharedResource.DateTimeText}"  FontSize="18" VerticalAlignment="Center" />
+                                            <Border Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Margin="10,10,0,0">
+                                                <DatePicker x:Name="AttendanceDate" Width="200" />
+                                            </Border>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                               
+                                    <TextBlock Text="{x:Static resources:SharedResource.StudentList}" FontSize="18" />
+                                    <Border BorderBrush="Gray" BorderThickness="18" CornerRadius="15" Background="#e2e3de" Margin="0,20,10,10">
+                                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                                            <DataGrid x:Name="AttendanceDataGrid" AutoGenerateColumns="False" Margin="0,5,0,10">
+                                                <DataGrid.Columns>
+                                                    <DataGridTextColumn Header="{x:Static resources:SharedResource.NameText}" Width="200" Binding="{Binding ime}" />
+                                                    <DataGridTextColumn Header="{x:Static resources:SharedResource.SurnameText}" Width="200" Binding="{Binding prezime}" />
+                                                    <DataGridTemplateColumn Header="{x:Static resources:SharedResource.PresentText}">
+                                                        <DataGridTemplateColumn.CellTemplate>
+                                                            <DataTemplate>
+                                                                <CheckBox Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" />
+                                                            </DataTemplate>
+                                                        </DataGridTemplateColumn.CellTemplate>
+                                                    </DataGridTemplateColumn>
+                                                </DataGrid.Columns>
+                                            </DataGrid>
+                                        </ScrollViewer>
+                                    </Border>
+
+                                
+                                    <Button Content="{x:Static resources:SharedResource.SaveButton}" Click="SaveAttendance" Style="{DynamicResource CustomButtonStyle}" HorizontalAlignment="Right" Width="150" Margin="0,10,0,0" />
+                                </StackPanel>
+                            </TabItem>
+
+                            <TabItem Header="{x:Static resources:SharedResource.AttendanceO}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
+                                <StackPanel Margin="10">
+                                    <TextBlock Text="{x:Static resources:SharedResource.AttendanceO}"  Foreground="#ffff" FontWeight="Bold" FontSize="18" Margin="400,10,10,50" />
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                        <StackPanel Orientation="Horizontal" Margin="0,0,20,0" VerticalAlignment="Center">
+                                            <Image Source="pack://application:,,,/Images/educational.png" Width="50" Height="50" Margin="0,0,10,0" />
+                                            <TextBlock Text="{x:Static resources:SharedResource.StudentText}" FontSize="18" VerticalAlignment="Center" />
+                                            <ComboBox x:Name="cmbStudenti" 
+                         SelectionChanged="cmbSubject_SelectionChanged"
+                          Background="#f7dc6f" 
+                          Width="200" 
+                          Margin="10,0,0,0">
+                                             <!--   Visibility="{Binding IsPredmetVisible, Converter={StaticResource BooleanToVisibilityConverter}}"> -->
+                                                <ComboBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <!--   <TextBlock>
+                                                           
+                                                  <TextBlock.Text>
+                                                                <MultiBinding StringFormat="{}{0} {1}">
+                                                                 <Binding Path="ime" />
+                                                                    <Binding Path="prezime" /> 
+
+                                                                </MultiBinding>
+                                                            </TextBlock.Text>
+                                                            
+                                                        </TextBlock>-->
+                                                        <TextBlock Text="{Binding NazivStudenta}" />
+
+                                                    </DataTemplate>
+                                                  
+                                                </ComboBox.ItemTemplate>
+                                            </ComboBox>
+                                        </StackPanel>
+
+                                  
+                                        <StackPanel Orientation="Horizontal" Margin="400,0,0,0" VerticalAlignment="Center">
+                                            <Image Source="pack://application:,,,/Images/StudentIcon.png" Width="43" Height="43" Margin="0,0,10,0" />
+                                            <TextBlock Text="{x:Static resources:SharedResource.SubjectText}" FontSize="18" VerticalAlignment="Center" />
+                                            <ComboBox x:Name="cmbSubjects" 
+SelectionChanged="cmbSubject_SelectionChanged"  
+Background="#f7dc6f" 
+Width="200" 
+Margin="10,0,0,0" >
+                                           <!--     Visibility="{Binding IsPredmetVisible, Converter={StaticResource BooleanToVisibilityConverter}}">  -->
+                                                <ComboBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding Naziv}" />
+                                                    </DataTemplate>
+                                                </ComboBox.ItemTemplate>
+                                            </ComboBox>
+                                        </StackPanel>
+
+
+                                    </StackPanel>
+                                    <Border BorderBrush="Gray" BorderThickness="18" CornerRadius="15" Background="#e2e3de" Margin="0,20,10,10">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                                            <DataGrid x:Name="Attendance" AutoGenerateColumns="False" Margin="0,5,0,10" >
+                                                <DataGrid.Columns>
+                                                   
+                                                    <DataGridTextColumn Header="{x:Static resources:SharedResource.NameText}" Width="200" Binding="{Binding Student.ime}" />
+
+                                                    <DataGridTextColumn Header="{x:Static resources:SharedResource.SurnameText}" Width="200" Binding="{Binding Student.prezime}" />
+
+                                                   
+                                                    <DataGridTextColumn Header="{x:Static resources:SharedResource.PresentText}" Width="150" Binding="{Binding Status}" />
+
+                                               
+                                                    <DataGridTextColumn Header="{x:Static resources:SharedResource.DateTimeText}" Width="250" Binding="{Binding Datum}" />
+                                                </DataGrid.Columns>
+                                            </DataGrid>
+                                        </ScrollViewer>
+                                    </Border>
+                                </StackPanel>
+                            </TabItem>
+                        </TabControl>
+                    </Grid>
+
+                </TabItem>
+
+                <TabItem Header="{x:Static resources:SharedResource.GradeText}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
+                    <Grid>
+                        <TabControl>
+                            <TabItem Header="{x:Static resources:SharedResource.GradeEntry}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
+
+                                <Border  BorderBrush="Gray" BorderThickness="15" CornerRadius="20" Height ="500" Width="600"  Padding="10">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="pack://application:,,,/Images/grade.jpg" Stretch="UniformToFill" />
+                                    </Border.Background>
+                                    <StackPanel Margin="10">
+                                        <TextBlock Text="{x:Static resources:SharedResource.GradeEntryText}" FontWeight="Bold" Foreground="#fccb3e" FontSize="20" Margin="200,0,0,10" />
+
+                                        <TextBlock Text="{x:Static resources:SharedResource.SubjectText}" />
+                                        <ComboBox x:Name="cmbPredmetOcjena" 
+                      SelectionChanged="cmbPredmet_SelectionChangedOcjene" 
+                      ItemsSource="{Binding}" 
+                      Margin="0,5,0,10">
+                                            <ComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Naziv}" />
+                                                </DataTemplate>
+                                            </ComboBox.ItemTemplate>
+                                        </ComboBox>
+
+                                        <TextBlock Text="{x:Static resources:SharedResource.ExamDateText}" VerticalAlignment="Center" />
+                                        <DatePicker Name="ExamDate" Margin="0,5,0,10" />
+
+                                        <TextBlock Text="{x:Static resources:SharedResource.StudentList}" />
+                                        <ComboBox Name="cmbStudents" 
+                      Margin="0,5,0,10" >
+                                           <!-- ItemsSource="{Binding}" -->
+                                            <ComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding NazivStudenta}"/>
+                                                   <!--  <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding ime}" Margin="0,0,5,0" FontWeight="Bold" />
+                                                        <TextBlock Text="{Binding prezime}" FontStyle="Italic" />
+                                                    </StackPanel> -->
+                                                </DataTemplate> 
+                                            </ComboBox.ItemTemplate>
+                                        </ComboBox>
+
+                                        <Label Content="{x:Static resources:SharedResource.PointsText}" Target="{Binding ElementName=txtBodovi}" />
+                                        <TextBox Name="txtBodovi" Margin="0,5,0,10" />
+
+                                        <Label Content="{x:Static resources:SharedResource.GradeText}" Target="{Binding ElementName=txtOcjena}" />
+                                        <TextBox Name="txtOcjena" Margin="0,5,0,10" />
+
+                                        <Button Content="{x:Static resources:SharedResource.SaveButton}" HorizontalAlignment="Right" Width="150" Margin="0,10,0,0" Click="SaveGrade" />
+                                    </StackPanel>
+                                </Border>
+
+                            </TabItem>
+                            <TabItem Header="{x:Static resources:SharedResource.GradeReview}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
+                                <Grid>
+                                    <TabControl>
+
+                                        <StackPanel Margin="10">
+                                            <TextBlock Text="{x:Static resources:SharedResource.GradeReview}"  Foreground="#ffff" FontWeight="Bold" FontSize="18" Margin="400,10,10,50" />
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                                <StackPanel Orientation="Horizontal" Margin="0,0,20,0" VerticalAlignment="Center">
+                                                    <Image Source="pack://application:,,,/Images/educational.png" Width="50" Height="50" Margin="0,0,10,0" />
+                                                    <TextBlock Text="{x:Static resources:SharedResource.StudentText}" FontSize="18" VerticalAlignment="Center" />
+                                                    <ComboBox x:Name="cmbStudentsGrade" 
+                          SelectionChanged="cmbStudent_SelectionChanged_Grade"
+                          Background="#f7dc6f" 
+                          Width="200" 
+                          Margin="10,0,0,0">
+                                                    <!--    Visibility="{Binding IsPredmetVisible, Converter={StaticResource BooleanToVisibilityConverter}}"> -->
+                                                        <ComboBox.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <TextBlock Text="{Binding NazivStudenta}"/>
+                                                                <!-- <TextBlock>
+                                                                    
+                                                                    <TextBlock.Text>
+                                                                        <MultiBinding StringFormat="{}{0} {1}">
+                                                                            <Binding Path="ime" />
+                                                                            <Binding Path="prezime" />
+                                                                        </MultiBinding>
+                                                                    </TextBlock.Text> 
+                                                                </TextBlock>-->
+                                                            </DataTemplate>
+                                                        </ComboBox.ItemTemplate>
+                                                    </ComboBox>
+                                                </StackPanel>
+
+
+                                                <StackPanel Orientation="Horizontal" Margin="400,0,0,0" VerticalAlignment="Center">
+                                                    <Image Source="pack://application:,,,/Images/StudentIcon.png" Width="43" Height="43" Margin="0,0,10,0" />
+                                                    <TextBlock Text="{x:Static resources:SharedResource.SubjectText}" FontSize="18" VerticalAlignment="Center" />
+                                                    <ComboBox x:Name="cmbSubjectsForGrade" 
+SelectionChanged="cmbSubject_SelectionChanged_Grade"  
+Background="#f7dc6f" 
+Width="200" 
+Margin="10,0,0,0">
+                                                        <!--          Visibility="{Binding IsPredmetVisible, Converter={StaticResource BooleanToVisibilityConverter}}"> -->
+                                                        <ComboBox.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <TextBlock Text="{Binding Naziv}" />
+                                                            </DataTemplate>
+                                                        </ComboBox.ItemTemplate>
+                                                    </ComboBox>
+                                                </StackPanel>
+
+
+                                            </StackPanel>
+                                            <Border BorderBrush="Gray" BorderThickness="18" CornerRadius="15" Background="#e2e3de" Margin="0,20,10,10">
+                                                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                                                    <DataGrid x:Name="ListGrade" AutoGenerateColumns="False" Margin="0,5,0,10">
+                                                        <DataGrid.Columns>
+
+                                                            <DataGridTextColumn Header="{x:Static resources:SharedResource.NameText}" Width="200" Binding="{Binding StudentIme}" />
+
+
+                                                            <DataGridTextColumn Header="{x:Static resources:SharedResource.SurnameText}" Width="200" Binding="{Binding StudentPrezime}" />
+
+
+                                                            <DataGridTextColumn Header="{x:Static resources:SharedResource.GradeText}" Width="150" Binding="{Binding Ocjena}" />
+
+                                                            <DataGridTextColumn Header="{x:Static resources:SharedResource.DateTimeText}" Width="150" Binding="{Binding DatumIspita}" />
+                                                        </DataGrid.Columns>
+                                                    </DataGrid>
+                                                </ScrollViewer>
+                                            </Border>
+                                        </StackPanel>
+
+                                    </TabControl>
+                                </Grid>
+
+
+                            </TabItem>
+                        </TabControl>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+      
+        </Grid>
+
+    </ScrollViewer>
+</Window>

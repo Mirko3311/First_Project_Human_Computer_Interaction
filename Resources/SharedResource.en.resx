@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name=" CourseNameText" xml:space="preserve">
+    <value>Course Name</value>
+  </data>
+  <data name=" SuccessfullyAdded" xml:space="preserve">
+    <value> Successfully added</value>
+  </data>
+  <data name="1Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Absent/Present" xml:space="preserve">
+    <value>Absent/Present</value>
+  </data>
+  <data name="AcademicIntegerValue" xml:space="preserve">
+    <value>The academic year must be an integer value</value>
+  </data>
+  <data name="AcademicTitleText" xml:space="preserve">
+    <value>Academic Title</value>
+  </data>
+  <data name="AddButton" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddingEntity" xml:space="preserve">
+    <value>Selection of an entity for entry</value>
+  </data>
+  <data name="AddProfessor" xml:space="preserve">
+    <value>Add Professor</value>
+  </data>
+  <data name="AssignMessage" xml:space="preserve">
+    <value>The professor has been assigned to the course.</value>
+  </data>
+  <data name="AssignText" xml:space="preserve">
+    <value>Assign Course</value>
+  </data>
+  <data name="AttendanceO" xml:space="preserve">
+    <value>Attendance Overview</value>
+  </data>
+  <data name="AttendanceRecordMText" xml:space="preserve">
+    <value>Attendance Record Management</value>
+  </data>
+  <data name="AttendanceReviewText" xml:space="preserve">
+    <value>Attendance Overview</value>
+  </data>
+  <data name="AttendanceText" xml:space="preserve">
+    <value>Attendance</value>
+  </data>
+  <data name="BlueText" xml:space="preserve">
+    <value>Blue Theme</value>
+  </data>
+  <data name="ChangesRetreved" xml:space="preserve">
+    <value>The changes have been reverted</value>
+  </data>
+  <data name="CodeText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm new password</value>
+  </data>
+  <data name="CourseList" xml:space="preserve">
+    <value>Course List</value>
+  </data>
+  <data name="CurrentPassMessage" xml:space="preserve">
+    <value>The current password is incorrect</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="DateTimeText" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DeadLineText" xml:space="preserve">
+    <value>Deadline</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DescriptionText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ECTSIntegerValue" xml:space="preserve">
+    <value> ECTS must be an integer value</value>
+  </data>
+  <data name="ECTSText" xml:space="preserve">
+    <value>ECTS</value>
+  </data>
+  <data name="EmailText" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EnterCourseName" xml:space="preserve">
+    <value>Enter the course name</value>
+  </data>
+  <data name="EnteringUser" xml:space="preserve">
+    <value>Select the user you are entering</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Enter password</value>
+  </data>
+  <data name="EnterUsername" xml:space="preserve">
+    <value>Enter username</value>
+  </data>
+  <data name="ErorrUpdatingTask" xml:space="preserve">
+    <value>Error while updating the task</value>
+  </data>
+  <data name="ErrorAdding" xml:space="preserve">
+    <value>An error occurred while adding</value>
+  </data>
+  <data name="ErrorChangePassword" xml:space="preserve">
+    <value>An error occurred while changing the password</value>
+  </data>
+  <data name="ErrorDeletingTask" xml:space="preserve">
+    <value>Error while deleting the task.</value>
+  </data>
+  <data name="ErrorProfSubject" xml:space="preserve">
+    <value>The professor is not assigned to the course</value>
+  </data>
+  <data name="ErrorUnassign" xml:space="preserve">
+    <value>Error during unassignment.</value>
+  </data>
+  <data name="ErrorUpdate" xml:space="preserve">
+    <value>An error occurred while updating</value>
+  </data>
+  <data name="ExamDate" xml:space="preserve">
+    <value>Exam Date</value>
+  </data>
+  <data name="ExamDateText" xml:space="preserve">
+    <value>Exam Date</value>
+  </data>
+  <data name="ExamIdText" xml:space="preserve">
+    <value>Task Identifier</value>
+  </data>
+  <data name="ExamManagement" xml:space="preserve">
+    <value>Exam Management</value>
+  </data>
+  <data name="ExamsByCourses" xml:space="preserve">
+    <value>Exams by Courses</value>
+  </data>
+  <data name="ExamText" xml:space="preserve">
+    <value>Exam</value>
+  </data>
+  <data name="FillField" xml:space="preserve">
+    <value> Fill in all fields</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="GradeEntry" xml:space="preserve">
+    <value>Grade entry</value>
+  </data>
+  <data name="GradeEntryText" xml:space="preserve">
+    <value>Grade Entry Form</value>
+  </data>
+  <data name="GradeReview" xml:space="preserve">
+    <value>Grade Review</value>
+  </data>
+  <data name="GradeText" xml:space="preserve">
+    <value>Grade</value>
+  </data>
+  <data name="GreenText" xml:space="preserve">
+    <value>Green Theme</value>
+  </data>
+  <data name="HomeworkExamText" xml:space="preserve">
+    <value>Homework and Exam</value>
+  </data>
+  <data name="Homeworks" xml:space="preserve">
+    <value>Homeworks</value>
+  </data>
+  <data name="HomeworkText" xml:space="preserve">
+    <value>Homework</value>
+  </data>
+  <data name="IdExist" xml:space="preserve">
+    <value>Identifier already exists</value>
+  </data>
+  <data name="IdIntegerValue" xml:space="preserve">
+    <value>The ID must be an integer value</value>
+  </data>
+  <data name="IdText" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+  <data name="IndexNumberText" xml:space="preserve">
+    <value>Index Number</value>
+  </data>
+  <data name="Invalid_ID_AY" xml:space="preserve">
+    <value>Invalid ID or academic year input</value>
+  </data>
+  <data name="LectureD" xml:space="preserve">
+    <value>Lecture Date</value>
+  </data>
+  <data name="LogInButton" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="LogInTitle" xml:space="preserve">
+    <value>LogIn</value>
+  </data>
+  <data name="ManageAssignmentText" xml:space="preserve">
+    <value>Manage Assignments</value>
+  </data>
+  <data name="ManagementSA" xml:space="preserve">
+    <value>Management Subjects and Activities</value>
+  </data>
+  <data name="MaximumPointsText" xml:space="preserve">
+    <value>Maximum Points</value>
+  </data>
+  <data name="MessageProfAdd" xml:space="preserve">
+    <value>Professor has been successfully added</value>
+  </data>
+  <data name="NameText" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NoSelectedProfesoor" xml:space="preserve">
+    <value>No professor selected</value>
+  </data>
+  <data name="NoSubjectSelected" xml:space="preserve">
+    <value>No subject selected</value>
+  </data>
+  <data name="OAbyCourses" xml:space="preserve">
+    <value>Attendance Overview by Courses</value>
+  </data>
+  <data name="OverviewAR" xml:space="preserve">
+    <value>Overview of Activities and Results</value>
+  </data>
+  <data name="ParametarUpdate" xml:space="preserve">
+    <value>{0} {1} has been updated</value>
+  </data>
+  <data name="ParameterDelete" xml:space="preserve">
+    <value>{0} {1} has been deleted.</value>
+  </data>
+  <data name="PassConfirmation" xml:space="preserve">
+    <value>The new password and confirmation do not match</value>
+  </data>
+  <data name="PasswordChange" xml:space="preserve">
+    <value>Password Change</value>
+  </data>
+  <data name="PasswordChangeMessage" xml:space="preserve">
+    <value>The password has been successfully changed!</value>
+  </data>
+  <data name="PasswordText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PerformanceByCourses" xml:space="preserve">
+    <value>Performance by Courses</value>
+  </data>
+  <data name="PointsText" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="PresentText" xml:space="preserve">
+    <value>Present</value>
+  </data>
+  <data name="ProfessorDeleted" xml:space="preserve">
+    <value>Professor {0} {1} has been deleted</value>
+  </data>
+  <data name="ProfessorReadded" xml:space="preserve">
+    <value>Professor {0} {1} has been re-added.</value>
+  </data>
+  <data name="ProfessorSuccessfullyUpdated" xml:space="preserve">
+    <value>Professor was successfully updated</value>
+  </data>
+  <data name="ProfessorText" xml:space="preserve">
+    <value>Professor</value>
+  </data>
+  <data name="ProfUpdateMessage" xml:space="preserve">
+    <value>Professor has been successfully updated</value>
+  </data>
+  <data name="RecordAttendance" xml:space="preserve">
+    <value>Record Attendance</value>
+  </data>
+  <data name="RedText" xml:space="preserve">
+    <value>Red Theme</value>
+  </data>
+  <data name="SaveAttendanceButton" xml:space="preserve">
+    <value>Save Attendance</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SelectItemDelete" xml:space="preserve">
+    <value> Select an item to delete</value>
+  </data>
+  <data name="StudentAchievement" xml:space="preserve">
+    <value>Student Achievement</value>
+  </data>
+  <data name="StudentDeleted" xml:space="preserve">
+    <value>Student {0} {1} has been deleted</value>
+  </data>
+  <data name="StudentList" xml:space="preserve">
+    <value>Students</value>
+  </data>
+  <data name="StudentRemoved " xml:space="preserve">
+    <value>{0}  {1} has been removed</value>
+  </data>
+  <data name="StudentRestored" xml:space="preserve">
+    <value>Student {0} {1} has been restored.</value>
+  </data>
+  <data name="StudentText" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="SubjectSuccessfullyUpdated" xml:space="preserve">
+    <value>Subject was successfully updated</value>
+  </data>
+  <data name="SubjectText" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="SubjectUndo" xml:space="preserve">
+    <value>The course has been successfully restored</value>
+  </data>
+  <data name="SuccessAddStudent" xml:space="preserve">
+    <value>Student was successfully added</value>
+  </data>
+  <data name="SuccessfulAddSubject" xml:space="preserve">
+    <value> Subject was successfully added</value>
+  </data>
+  <data name="SuccessfullyDelete" xml:space="preserve">
+    <value>Successfully deleted</value>
+  </data>
+  <data name="SuccessProfSubject" xml:space="preserve">
+    <value>The professor is assigned to the course</value>
+  </data>
+  <data name="SurnameText" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="SystemSetup" xml:space="preserve">
+    <value>System Setup</value>
+  </data>
+  <data name="TakenId" xml:space="preserve">
+    <value>The identifier is already taken</value>
+  </data>
+  <data name="TaskAdd" xml:space="preserve">
+    <value>The task has been successfully added</value>
+  </data>
+  <data name="TaskAddText" xml:space="preserve">
+    <value>Task Addition</value>
+  </data>
+  <data name="TaskAgainAdd" xml:space="preserve">
+    <value>The task has been added again</value>
+  </data>
+  <data name="TaskDelete" xml:space="preserve">
+    <value>The task has been deleted</value>
+  </data>
+  <data name="TaskDetails" xml:space="preserve">
+    <value>Task Details</value>
+  </data>
+  <data name="TaskErrorMessage" xml:space="preserve">
+    <value>The task has not been successfully added</value>
+  </data>
+  <data name="TaskNameText" xml:space="preserve">
+    <value>Task Name</value>
+  </data>
+  <data name="TaskOverviewText" xml:space="preserve">
+    <value>Task Overview</value>
+  </data>
+  <data name="TaskSuccessfullyAdd" xml:space="preserve">
+    <value>The task has been successfully added</value>
+  </data>
+  <data name="TaskSuccessfullyDelete" xml:space="preserve">
+    <value>The task has been successfully deleted</value>
+  </data>
+  <data name="TaskSuccessfullyUpdate" xml:space="preserve">
+    <value> The task has been successfully updated</value>
+  </data>
+  <data name="TaskText" xml:space="preserve">
+    <value>Task Type</value>
+  </data>
+  <data name="UnassignCourse" xml:space="preserve">
+    <value>Release from Course</value>
+  </data>
+  <data name="UnassignMessage" xml:space="preserve">
+    <value>The professor has been released from the course.</value>
+  </data>
+  <data name="UndoMessage" xml:space="preserve">
+    <value>No available operations for undo</value>
+  </data>
+  <data name="UndoProfessorRestored" xml:space="preserve">
+    <value>Undo: Professor {0} {1} has been restored.</value>
+  </data>
+  <data name="UnsuccessfulStudent" xml:space="preserve">
+    <value>Unsuccessful student addition</value>
+  </data>
+  <data name="UnsuccessSubject" xml:space="preserve">
+    <value>Subject was not successfully added</value>
+  </data>
+  <data name="UpdateButton" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdateEntity" xml:space="preserve">
+    <value>Select the entity to update</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UsernameText" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="YearOfStudy" xml:space="preserve">
+    <value>Year of Study</value>
+  </data>
+</root>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\AdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DetailWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PromjenaLozinkeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\StudentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\StudentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SuccessWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WarningWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WrongWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ZadatakWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Themes\Style.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DetailWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PromjenaLozinkeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SuccessWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WarningWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WrongWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ZadatakWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Update="Themes\GreenTheme.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Update="Themes\BlueTheme.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Update="Themes\RedTheme.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Update="View\StudentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\StudentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

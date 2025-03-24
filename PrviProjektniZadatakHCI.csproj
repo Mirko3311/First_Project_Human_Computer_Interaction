@@ -1,0 +1,140 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+    <AssemblyName>PrviProjektniZadatakHCI</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DataAccess\KorisnikDataAccess.cs~RF17f8e44f.TMP" />
+    <None Remove="Images\addIcon.png" />
+    <None Remove="Images\admin.png" />
+    <None Remove="Images\adminIcon.ico" />
+    <None Remove="Images\adminIcon.png" />
+    <None Remove="Images\bb.jpg" />
+    <None Remove="Images\bookicon.png" />
+    <None Remove="Images\BoxBook.png" />
+    <None Remove="Images\Combox.png" />
+    <None Remove="Images\deleteIcon.png" />
+    <None Remove="Images\education.png" />
+    <None Remove="Images\educational.png" />
+    <None Remove="Images\EnglishIcon.png" />
+    <None Remove="Images\grade.jpg" />
+    <None Remove="Images\homework.jpg" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\logout.jpg" />
+    <None Remove="Images\papers.jpg" />
+    <None Remove="Images\professorIcon.ico" />
+    <None Remove="Images\pushPin.png" />
+    <None Remove="Images\redSchoolBackGround.jpg" />
+    <None Remove="Images\schedule.png" />
+    <None Remove="Images\school.jpg" />
+    <None Remove="Images\schoolStudent.jpg" />
+    <None Remove="Images\SerbianIcon.png" />
+    <None Remove="Images\studentIcon.ico" />
+    <None Remove="Images\studentIcon.png" />
+    <None Remove="Images\successAdd.png" />
+    <None Remove="Images\teacher.png" />
+    <None Remove="Images\Translate.png" />
+    <None Remove="Images\unSuccess.png" />
+    <None Remove="Images\warningIcon.png" />
+    <None Remove="Resources\SharedResource.Designer.cs~RF56a800fb.TMP" />
+    <None Remove="Resources\SharedResource.Designer.cs~RF5bd0d1f2.TMP" />
+    <None Remove="Resources\SharedResource.en.resx~RF5590c6bd.TMP" />
+    <None Remove="ufjz301p.taq~" />
+    <None Remove="View\wa3agu2n.3s1~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Resources\BlueTheme.xaml" />
+    <Page Remove="Resources\GreenTheme.xaml" />
+    <Page Remove="Resources\RedTheme.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome" Version="4.7.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="5.1.0" />
+    <PackageReference Include="MaterialDesignColors" Version="3.1.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+    <PackageReference Include="MultiLanguageForXAML" Version="2.3.0.2" />
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="MySql.Data" Version="9.1.0" />
+    <PackageReference Include="WPFLocalizeExtension" Version="3.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors">
+      <HintPath>..\..\HCIP\DB_01_HCI\HCI\lib\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf">
+      <HintPath>..\..\HCIP\DB_01_HCI\HCI\lib\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\addIcon.png" />
+    <Resource Include="Images\adminIcon.ico" />
+    <Resource Include="Images\adminIcon.png" />
+    <Resource Include="Images\bookicon.png" />
+    <Resource Include="Images\BoxBook.png" />
+    <Resource Include="Images\Combox.png" />
+    <Resource Include="Images\deleteIcon.png" />
+    <Resource Include="Images\education.png" />
+    <Resource Include="Images\educational.png" />
+    <Resource Include="Images\EnglishIcon.png" />
+    <Resource Include="Images\grade.jpg" />
+    <Resource Include="Images\homework.jpg" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\logout.jpg" />
+    <Resource Include="Images\papers.jpg" />
+    <Resource Include="Images\professorIcon.ico" />
+    <Resource Include="Images\pushPin.png" />
+    <Resource Include="Images\redSchoolBackGround.jpg" />
+    <Resource Include="Images\schedule.png" />
+    <Resource Include="Images\school.jpg" />
+    <Resource Include="Images\schoolStudent.jpg" />
+    <Resource Include="Images\SerbianIcon.png" />
+    <Resource Include="Images\studentIcon.ico" />
+    <Resource Include="Images\studentIcon.png" />
+    <Resource Include="Images\successAdd.png" />
+    <Resource Include="Images\teacher.png" />
+    <Resource Include="Images\unSuccess.png" />
+    <Resource Include="Images\warningIcon.png" />
+    <Resource Include="Themes\GreenTheme.xaml" />
+    <Resource Include="Themes\BlueTheme.xaml" />
+    <Resource Include="Themes\RedTheme.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\SharedResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SharedResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\SharedResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
