@@ -48,6 +48,40 @@ namespace PrviProjektniZadatakHCI.DataAccess
             }
         }
 
+
+        public static bool obrisiOcjenu(double bodovi, int ocjena, DateTime datum, Predmet predmet, Student student)
+        {
+            MySqlConnection conn = new MySqlConnection(connectionString);
+
+            try
+            {
+                conn.Open();
+                MySqlCommand command = conn.CreateCommand();
+                command.CommandText = "DELETE FROM Ispit_Student WHERE Bodovi = @Bodovi AND Ocjena = @Ocjena AND Ispit_DatumIspita = @Datum AND Student_Korisnik_idKorisnik = @Id AND Predmet_idPredmeta = @Predmet";
+                command.Parameters.AddWithValue("@Bodovi", bodovi);
+                command.Parameters.AddWithValue("@Ocjena", ocjena);
+                command.Parameters.AddWithValue("@Datum", datum);
+                command.Parameters.AddWithValue("@Id", student.idKorisnika);
+                command.Parameters.AddWithValue("@Predmet", predmet.IdPredmeta);
+
+                int rowsAffected = command.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Došlo je do greške: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+
         public static ObservableCollection<Ispit> pregledIspita(Predmet predmet, Student student)
         {
 

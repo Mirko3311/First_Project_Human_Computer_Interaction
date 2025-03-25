@@ -289,31 +289,28 @@ namespace ASystem
             if (cmbPredmetOcjena.SelectedItem is not Predmet predmet)
             {
                 new WarningWindow("Izaberite predmet").ShowDialog();
-                //MessageBox.Show("Molimo izaberite predmet.");
+              
                 return;
             }
             if (ExamDate.SelectedDate is not DateTime datum)
             {
                 new WarningWindow("Izaberite predmet").ShowDialog();
-               // MessageBox.Show("Molimo izaberite datum ispita.");
+              
                 return;
             }
             if (!double.TryParse(txtBodovi.Text, out double bodovi) || bodovi < 0 || bodovi > 100)
             {
-                new WarningWindow("Molimo unesite validan broj bodova (0-100).").ShowDialog();
-               // MessageBox.Show("Molimo unesite validan broj bodova (0-100).");
+                new WarningWindow("Molimo unesite validan broj bodova (0-100).").ShowDialog();              
                 return;
             }
             if (!int.TryParse(txtOcjena.Text, out int ocjena) || ocjena < 5 || ocjena > 10)
             {
                 new WarningWindow("Unesite validnu ocjenu (5-10)").ShowDialog();
-              //  MessageBox.Show("Molimo unesite validnu ocjenu (5-10).");
                 return;
             }
             if (cmbStudents.SelectedItem is not Student student)
             {
                 new WarningWindow("Izaberite studenta").ShowDialog();
-                //MessageBox.Show("Molimo izaberite studenta.");
                 return;
             }
             try
@@ -331,8 +328,16 @@ namespace ASystem
             catch (Exception ex)
             {
                 new WrongWindow("Greška prilikom čuvanja ispita {ex.Message}").ShowDialog();
-              //  MessageBox.Show($"Došlo je do greške prilikom čuvanja ispita: {ex.Message}");
             }
+
+            undoStack.Push(() =>
+            {
+                IspitDataAccess.obrisiOcjenu(bodovi, ocjena, datum, predmet, student);
+                string message = SharedResource.SuccessfullyDelete;
+                new SuccessWindow(message).ShowDialog();
+                ListGrade.ItemsSource = IspitDataAccess.pregledIspita(predmet, student).Select(ispit => new IspitViewModel(ispit)).ToList();
+            });
+
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
