@@ -157,9 +157,10 @@ U zavisnosti od izabranog entiteta, otvara se forma za unos podataka. Ako admini
 Dodavanje **Studenta** i **Predmeta** će imati svoje forme.
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="Screenshot/AddProfessor.JPG" alt="Slika 1" width="460"/>
-  <img src="Screenshot/AddSubject.JPG" alt="Slika 2" width="460"/>
+  <img src="Screenshot/AddProfessor.JPG" alt="Slika 1" width="460" height="300"/>
+  <img src="Screenshot/AddSubject.JPG" alt="Slika 2" width="460" height="300"/>
 </div>
+
 
 Sva polja prilikom dodavanja moraju biti popunjena, u suprotnom će korisnik dobiti povratnu informaciju da postoje prazna polja. 
 
