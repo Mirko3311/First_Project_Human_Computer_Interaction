@@ -202,7 +202,7 @@ Postoje dva ComBox. U prvom ComBox-u  se bira koji entitet želi da ažurira.
  Administrator treba da izabere konkretan entitet koji želi da ažurira. Nakon što selektuje entitet kojeg želi da ažurira, popunjava se forma za ažuriranje podacima 
 izabranog entiteta.
 
-![Update Entity](Screenshot/UpdateProfessor.JPG)
+![Update Entity](Screenshot/UpdateConcreteProfessor.JPG)
 
 U formi se podaci mogu izmijeniti. Svi podaci se mogu izmijeniti. Kada se pritisne na dugme "Ažuriraj", podaci se ažuriraju.
 
