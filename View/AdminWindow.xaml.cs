@@ -1,6 +1,5 @@
 ﻿using MaterialDesignThemes.Wpf;
 using MySql.Data.MySqlClient;
-using PrviProjektniZadatakHCI;
 using PrviProjektniZadatakHCI.DataAccess;
 using PrviProjektniZadatakHCI.Resources;
 using PrviProjektniZadatakHCI.View;
@@ -20,7 +19,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using PrviProjektniZadatakHCI.Resources; 
+using PrviProjektniZadatakHCI.Resources;
+using PrviProjektniZadatakHCI;
 
 namespace ASystem
 {

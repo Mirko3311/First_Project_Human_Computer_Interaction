@@ -18,7 +18,7 @@ namespace PrviProjektniZadatakHCI
         public static void ApplyUserTheme(string username)
         {
             string theme = KorisnikDataAccess.GetTheme(username);
-           
+
 
             if (theme == "Light")
             {
@@ -34,7 +34,7 @@ namespace PrviProjektniZadatakHCI
             }
         }
 
-        
+
         public static void ChangeTheme(string theme, string username)
         {
             try
@@ -49,11 +49,11 @@ namespace PrviProjektniZadatakHCI
                 }
                 else if (theme == "Green")
                 {
-                   
+
                     App.ChangeTheme(new Uri("Themes/GreenTheme.xaml", UriKind.Relative));
                 }
 
-            
+
                 string query = "UPDATE Korisnik SET Tema = @tema WHERE Username =@parametar";
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
@@ -68,7 +68,7 @@ namespace PrviProjektniZadatakHCI
             }
             catch (Exception ex)
             {
-             
+
                 Console.WriteLine("Greška prilikom promene teme: " + ex.Message);
             }
         }

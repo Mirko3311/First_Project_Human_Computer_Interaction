@@ -16,10 +16,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-    namespace ASystem
-    {
-        
-        public partial class MainWindow : Window
+namespace ASystem
+{
+
+    public partial class MainWindow : Window
         {
 
 

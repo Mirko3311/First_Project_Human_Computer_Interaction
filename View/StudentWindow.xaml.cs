@@ -14,15 +14,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System;
-using PrviProjektniZadatakHCI;
 using System.Collections.ObjectModel;
 using PrviProjektniZadatakHCI.View;
 using PrviProjektniZadatakHCI.DataAccess;
 using PrviProjektniZadatakHCI.Resources;
+using PrviProjektniZadatakHCI;
 
 namespace ASystem
-    {
-        public partial class StudentWindow : Window
+{
+    public partial class StudentWindow : Window
         {
         public static RoutedCommand CancelCommand = new RoutedCommand();
         public static RoutedCommand LogoutCommand = new RoutedCommand();
