@@ -158,12 +158,16 @@ Dodavanje **Studenta** i **Predmeta** će imati svoje forme.
 
 <div style="display: flex; justify-content: space-between;">
   <img src="Screenshot/StudentForm.JPG" alt="Slika 1" width="480"/>
-  <img src="Screenshot/SubjectForm.JPG" alt="Slika 2" width="460"/>
+  <img src="Screenshot/AddSubject.JPG" alt="Slika 2" width="460"/>
 </div>
 
-Sva polja prilikom dodavanja moraju biti popunjena, u suprotnom će korisnik dobiti povratnu informaciju da postoje prazna polja. Identifikatori moraju da budu cjelobrojne vrijednosti, u suprotnom se dobija upozorenje koje obavještava da identifikatori moraju da budu cjelobrojne vrijednosti.
+Sva polja prilikom dodavanja moraju biti popunjena, u suprotnom će korisnik dobiti povratnu informaciju da postoje prazna polja. 
 
 !["FillField"](Screenshot/FillField.JPG)
+
+Identifikatori moraju da budu cjelobrojne vrijednosti, u suprotnom se dobija upozorenje koje obavještava da identifikatori moraju da budu cjelobrojne vrijednosti.
+
+!["Integer ID"](Screenshot/IntegerID.JPG)
 
 ### Brisanje studenata, profesora, predmeta
 
