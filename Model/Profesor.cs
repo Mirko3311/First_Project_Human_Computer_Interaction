@@ -28,7 +28,7 @@ namespace ASystem
                 if (_zvanje != value)
                 {
                     _zvanje = value;
-                    //  OnPropertyChanged(nameof(Zvanje)); // Obaveštavamo da je svojstvo promenjeno
+               
                 }
             }
         }
