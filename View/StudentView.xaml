@@ -15,16 +15,13 @@
       Title="{x:Static resources:SharedResource.StudentList}" Height="400" Width="600">
    <Grid Margin="10">
     <Border Background="White" BorderBrush="#3aafd0" BorderThickness="3" CornerRadius="15" Padding="10">
-        <StackPanel>
-            <!-- Naslov -->
-            <TextBlock Text="Studenti"
+            <StackPanel>
+                <TextBlock Text="Studenti"
                        FontSize="24"
                        FontWeight="Bold"
                        Foreground="#3498db"
                        TextAlignment="Center"
                        Margin="0,0,0,15"/>
-
-            <!-- Moderni DataGrid za prikaz podataka -->
                 <DataGrid x:Name="lvStudenti"
                       AutoGenerateColumns="False"
                       HeadersVisibility="Column"
@@ -35,9 +32,7 @@
                       AlternatingRowBackground="#f2f2f2"
                       BorderBrush="Gray"
                       BorderThickness="1">
-
-                <!-- Definicija kolona -->
-                <DataGrid.Columns>
+                    <DataGrid.Columns>
                     <DataGridTextColumn Header="{x:Static resources:SharedResource.NameText}"
                                         Binding="{Binding ime}"
                                         Width="*"/>

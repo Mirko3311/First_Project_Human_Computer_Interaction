@@ -40,7 +40,7 @@ namespace PrviProjektniZadatakHCI.DataAccess
             }
             finally
             {
-                // Zatvaramo vezu sa bazom (ako nije već zatvorena)
+      
                 if (conn.State == System.Data.ConnectionState.Open)
                 {
                     conn.Close();

@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace ASystem
 {
-    /// <summary>
-    /// Interaction logic for SuperUser.xaml
-    /// </summary>
+
     public partial class SuperUser : Window
     {
         public SuperUser()

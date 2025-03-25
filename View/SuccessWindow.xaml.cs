@@ -14,15 +14,12 @@ using System.Windows.Shapes;
 
 namespace PrviProjektniZadatakHCI.View
 {
-    /// <summary>
-    /// Interaction logic for SuccessAdd.xaml
-    /// </summary>
     public partial class SuccessWindow : Window
     {
         public SuccessWindow(string message)
         {
             InitializeComponent();
-            MessageText.Text = message; // Postavi dinamičku poruku
+            MessageText.Text = message;
         }
 
         private void CloseMessageBox(object sender, RoutedEventArgs e)

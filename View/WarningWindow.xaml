@@ -15,14 +15,10 @@
     <Grid>
         <Border CornerRadius="15" Background="White" Padding="0"  BorderThickness="5" Margin="0">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-
-                <!-- Ikona statusa -->
                 <Ellipse Width="40" Height="40" HorizontalAlignment="Center">
 
 
                 </Ellipse>
-
-                <!-- Naslov -->
 
 
                 <Border Width="40" Height="40" Padding="0" Background="White" CornerRadius="0" DockPanel.Dock="Top">
@@ -36,13 +32,6 @@
                        FontSize="16" Foreground="Gray" Margin="0,0,0,-15" 
                        HorizontalAlignment="Center" TextAlignment="Center"
                        Width="400" Height="45"/>
-
-                <!-- Dugme 
--->
-
-                <!-- Background="#01a601"
-   Foreground="White" FontWeight="Bold"
-                       Style="{StaticResource CustomButtonStyle}"-->
                 <Button Content="OK" 
                    Background="#fedb41" Foreground="Black"
                     Width="80" Height="30" Margin="10,10,10,10"

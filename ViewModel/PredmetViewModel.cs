@@ -52,7 +52,7 @@ namespace PrviProjektniZadatakHCI.ViewModel
                 {
                     _naziv = value;
                     OnPropertyChanged(nameof(Naziv));
-                    OnPropertyChanged(nameof(IsValid)); // Provjeravamo validnost
+                    OnPropertyChanged(nameof(IsValid));
                 }
             }
         }

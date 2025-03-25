@@ -14,15 +14,13 @@ using System.Windows.Shapes;
 
 namespace PrviProjektniZadatakHCI.View
 {
-    /// <summary>
-    /// Interaction logic for WrongAdd.xaml
-    /// </summary>
+  
     public partial class WrongWindow : Window
     {
         public WrongWindow(string message)
         {
             InitializeComponent();
-            MessageText.Text = message; // Postavi dinamičku poruku
+            MessageText.Text = message; 
         }
 
         private void CloseMessageBox(object sender, RoutedEventArgs e)

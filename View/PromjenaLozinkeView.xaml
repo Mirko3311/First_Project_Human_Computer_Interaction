@@ -25,12 +25,8 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <!-- Polja za unos zauzimaju više prostora -->
                     <RowDefinition Height="Auto"/>
-                    <!-- Dugme ispod -->
                 </Grid.RowDefinitions>
-
-                <!-- StackPanel koji sadrži polja za unos -->
                 <StackPanel Grid.Row="0" Margin="10" HorizontalAlignment="Stretch">
                     <Label Content="{x:Static resources:SharedResource.CurrentPassword}" Foreground="White"/>
                     <PasswordBox x:Name="CurrentPasswordBox" PasswordChanged="PasswordBox_PasswordChanged" MinWidth="200"/>
@@ -41,8 +37,6 @@
                     <Label Content="{x:Static resources:SharedResource.ConfirmPassword}" Foreground="White"/>
                     <PasswordBox x:Name="ConfirmPasswordBox" PasswordChanged="PasswordBox_PasswordChanged" MinWidth="200"/>
                 </StackPanel>
-
-                <!-- Dugme ispod polja za unos -->
                 <Button Content="{x:Static resources:SharedResource.SaveButton}" Click="SaveNewPassword_Click"
                         Width="90" Height="40" Margin="10"
                         Background="#3498db" Foreground="White" FontSize="14"

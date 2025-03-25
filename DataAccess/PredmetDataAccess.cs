@@ -89,8 +89,6 @@ WHERE
                 command.Parameters.AddWithValue("@Id", predmet.IdPredmeta);
 
                 int rowsAffected = command.ExecuteNonQuery();
-
-                // Ako je broj pogođenih redova veći od 0, znači da je upit uspešno izvršen
                 return rowsAffected > 0;
             }
             catch (Exception ex)
@@ -138,7 +136,7 @@ WHERE
             }
             finally
             {
-                // Zatvaramo vezu sa bazom (ako nije već zatvorena)
+  
                 if (conn.State == System.Data.ConnectionState.Open)
                 {
                     conn.Close();
@@ -428,7 +426,7 @@ where Predmet_idPredmeta = @str";
 
             while (reader.Read())
             {
-                //  int idKorisnik = reader["idKorisnik"] != DBNull.Value ? Convert.ToInt32(reader["idKorisnik"]) : 0;
+              
                 Student student = new Student(
                         (int)reader["idKorisnik"],
                         reader.GetString("ime"),

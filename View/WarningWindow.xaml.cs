@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace PrviProjektniZadatakHCI.View
 {
-    /// <summary>
-    /// Interaction logic for WarningWindow.xaml
-    /// </summary>
+   
     public partial class WarningWindow : Window
     {
         public WarningWindow(String text)

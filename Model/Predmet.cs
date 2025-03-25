@@ -17,29 +17,6 @@ using Org.BouncyCastle.Crypto.Signers;
 
 namespace ASystem
 {
-    /*
-    public class Predmet : INotifyPropertyChanged
-    {
-
-        
-        public int idPredmeta;
-        public String naziv;
-        public String opis;
-        public int eCTS;
-
-        public string DisplayText => Naziv;
-        public int IdPredmeta { get => idPredmeta; set => idPredmeta = value; }
-        public int ECTS { get => eCTS; set => eCTS = value; }
-        public String Naziv { get => naziv; set => naziv = value; }
-        public string Opis { get => opis; set => opis = value; }
-
-     
-     
-    }*/
-
- 
-
-  
         public class Predmet : INotifyPropertyChanged
         {
             private int idPredmeta;
@@ -102,8 +79,6 @@ namespace ASystem
             }
 
             public string DisplayText => Naziv;
-
-            // Helper method to raise PropertyChanged event
             protected void OnPropertyChanged(string propertyName)
             {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

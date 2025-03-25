@@ -36,8 +36,7 @@ namespace PrviProjektniZadatakHCI.ViewModel
             public ProfesorViewModel()
             {
                 Profesori = new ObservableCollection<Profesor>();
-                SelektovaniProfesor = new Profesor(); // Postavljamo inicijalno praznog profesora
-
+                SelektovaniProfesor = new Profesor(); 
                 AzurirajProfesoraCommand = new RelayCommand(AzurirajProfesora);
             }
 

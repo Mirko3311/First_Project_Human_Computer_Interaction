@@ -55,39 +55,36 @@ namespace PrviProjektniZadatakHCI.View
             string newPassword = viewModel.NewPassword;
             string confirmPassword = viewModel.ConfirmPassword;
 
-            // Provera da li nova lozinka i potvrda odgovaraju
             if (newPassword != confirmPassword)
             {
                 string message = SharedResource.PassConfirmation;
                 new WrongWindow(message).ShowDialog();
-               /* MessageBox.Show("Nova lozinka i potvrda se ne podudaraju!", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);*/
+            
                 return;
             }
 
-            // Provera da li je trenutna lozinka tačna
+    
             if (!KorisnikDataAccess.provjeriLozinku(korisnik, currentPassword))
             {
                 string message = SharedResource.CurrentPassMessage;
                 new WrongWindow(message).ShowDialog();
-              /*  MessageBox.Show("Trenutna lozinka nije tačna!", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);*/
                 return;
             }
 
-            // Ažuriranje lozinke u bazi
+   
             bool success = KorisnikDataAccess.azurirajLozinku(korisnik, newPassword);
             if (success)
             {
 
                 string message = SharedResource.PasswordChangeMessage;
-                new SuccessWindow(message).ShowDialog();
-                /*MessageBox.Show("Lozinka je uspješno promijenjena!", "Uspjeh", MessageBoxButton.OK, MessageBoxImage.Information);*/
+                new SuccessWindow(message).ShowDialog();           
                 this.Close();
             }
             else
             {
                 string message = SharedResource.ErrorChangePassword;
                 new WrongWindow(message).ShowDialog();
-               /* MessageBox.Show("Došlo je do greške prilikom promjene lozinke!", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);*/
+             
             }
         }
     }

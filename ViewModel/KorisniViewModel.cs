@@ -11,17 +11,13 @@ namespace PrviProjektniZadatakHCI.ViewModel
     public class KorisnikViewModel : INotifyPropertyChanged
     {
         private Korisnik _korisnik;
-
-        // Konstruktor za inicijalizaciju Korisnika u ViewModel
         public KorisnikViewModel(Korisnik korisnik)
         {
             _korisnik = korisnik;
         }
 
-        // Event za obaveštavanje UI-a o promenama
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // Svojstvo za idKorisnika
         public int IdKorisnika
         {
             get => _korisnik.idKorisnika;
@@ -35,7 +31,6 @@ namespace PrviProjektniZadatakHCI.ViewModel
             }
         }
 
-        // Svojstvo za ime
         public string Ime
         {
             get => _korisnik.ime;
@@ -45,12 +40,11 @@ namespace PrviProjektniZadatakHCI.ViewModel
                 {
                     _korisnik.ime = value;
                     OnPropertyChanged(nameof(Ime));
-                    OnPropertyChanged(nameof(DisplayText));  // Ažuriranje DisplayText kada se ime promeni
+                    OnPropertyChanged(nameof(DisplayText));  
                 }
             }
         }
 
-        // Svojstvo za prezime
         public string Prezime
         {
             get => _korisnik.prezime;
@@ -60,12 +54,12 @@ namespace PrviProjektniZadatakHCI.ViewModel
                 {
                     _korisnik.prezime = value;
                     OnPropertyChanged(nameof(Prezime));
-                    OnPropertyChanged(nameof(DisplayText));  // Ažuriranje DisplayText kada se prezime promeni
+                    OnPropertyChanged(nameof(DisplayText));  
                 }
             }
         }
-
-        // Svojstvo za email
+   
+     
         public string Email
         {
             get => _korisnik.email;
@@ -79,7 +73,7 @@ namespace PrviProjektniZadatakHCI.ViewModel
             }
         }
 
-        // Svojstvo za username
+ 
         public string Username
         {
             get => _korisnik.username;
@@ -93,7 +87,6 @@ namespace PrviProjektniZadatakHCI.ViewModel
             }
         }
 
-        // Svojstvo za password
         public string Password
         {
             get => _korisnik.password;
@@ -107,7 +100,6 @@ namespace PrviProjektniZadatakHCI.ViewModel
             }
         }
 
-        // Svojstvo za tip korisnika
         public string TipKorisnika
         {
             get => _korisnik.tipKorisnika;
@@ -121,10 +113,10 @@ namespace PrviProjektniZadatakHCI.ViewModel
             }
         }
 
-        // Svojstvo za prikaz imena i prezimena
+     
         public string DisplayText => $"{Ime} {Prezime}";
 
-        // Metoda za podizanje PropertyChanged event-a
+
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

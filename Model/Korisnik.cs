@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Google.Protobuf.Compiler;
 using MySqlX.XDevAPI.Common;
-//using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Drawing;
 using System.Windows;
 
@@ -33,12 +32,6 @@ public class Korisnik
             this.ime = ime;
             this.prezime = prezime;
         }
-
-   
-    //   private static readonly string connectionString = ConfigurationManager.ConnectionStrings["MySql_hci"]?.ConnectionString;
-
-
-    // Konstruktor
     public Korisnik(int idKorisnik, string ime, string prezime, string email, string username, string password, string tipKorisnika)
         {
             idKorisnika = idKorisnik;

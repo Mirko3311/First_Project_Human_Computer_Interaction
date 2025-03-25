@@ -125,7 +125,6 @@ namespace PrviProjektniZadatakHCI.DataAccess
                 {
                     throw new Exception("Unos u tabelu Korisnik nije uspešan.");
                 }
-                //   int korisnikId = Convert.ToInt32(commandKorisnik.ExecuteScalar());
 
 
                 MySqlCommand commandStudent = conn.CreateCommand();
@@ -324,7 +323,6 @@ namespace PrviProjektniZadatakHCI.DataAccess
             }
             finally
             {
-                // Zatvaranje konekcije
                 if (conn.State == System.Data.ConnectionState.Open)
                 {
                     conn.Close();

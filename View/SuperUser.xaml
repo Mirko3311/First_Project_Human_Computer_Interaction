@@ -4,9 +4,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Superadmin Panel" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid>
-        <!-- Glavni sadržaj sa TabControl -->
         <TabControl Margin="10">
-            <!-- Tab za upravljanje profesorima -->
             <TabItem Header="Upravljanje Profesorima">
                 <Grid Margin="10">
                     <StackPanel Orientation="Vertical">
@@ -35,7 +33,6 @@
                 </Grid>
             </TabItem>
 
-            <!-- Tab za upravljanje studentima -->
             <TabItem Header="Upravljanje Studentima">
                 <Grid Margin="10">
                     <StackPanel Orientation="Vertical">
@@ -64,7 +61,6 @@
                 </Grid>
             </TabItem>
 
-            <!-- Tab za upravljanje predmetima -->
             <TabItem Header="Upravljanje Predmetima">
                 <Grid Margin="10">
                     <StackPanel Orientation="Vertical">
@@ -92,8 +88,6 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
-
-            <!-- Tab za dodjelu prava pristupa -->
             <TabItem Header="Dodjela Prava Pristupa">
                 <Grid Margin="10">
                     <StackPanel Orientation="Vertical">
