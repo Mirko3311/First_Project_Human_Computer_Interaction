@@ -261,7 +261,7 @@ Kada se profesor uspješno prijavi, otvara mu se prozor, tako da u vrhu postoje 
 
 U tabu **"Predmeti"** prikazani su predmeti koje profesor predaje. Kada selektuje neki predmet i dugme "Student", prikazuju  se studenti koji slušaju predmet.
 
-![Profesori](Screenshot/Professor2.JPG)
+![Profesori](Screenshot/ProfessorWindow.JPG)
 
 Studenti koji slušaju predmet se prikazuju u posebnom prozoru. Prikaz obuhvata ime, prezime i broj indeksa studenta.
 
