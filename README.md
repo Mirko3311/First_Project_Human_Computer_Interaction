@@ -58,7 +58,10 @@ Ako su korisničko ime ili lozinka pogrešni, ispisaće se povratni prozor koji 
 
 
 
-![Greška prilikom unosa kredencijala](Screenshot/ErrorLogIn.JPG)
+<p align="center">
+  <img src="Screenshot/ErrorValidation.JPG" alt="Greška prilikom unosa kredencijala">
+</p>
+
 
 
 ### Izbor jezika aplikacije
@@ -99,11 +102,12 @@ Otvori će se meni sa temama, tako da korisnik može da izabere između plave, c
 Kod administratora podrazumijevana tema je plava.
 Teme se razlikuju po pozadini, fontu slova, boji slova, dizajnu dugmadi.
 Primjer izgleda dvije teme za interfejs profesora (crvene i zelene), dok će se treća tema (plava) koristiti u ovom dokumentu.
-
+<p align="center">
 <div style="display: flex; justify-content: space-between;">
   <img src="Screenshot/GreenTheme.JPG" alt="Tema 1" width="520"/>
   <img src="Screenshot/RedTheme.JPG" alt="Tema 2" width="520"/>
 </div>
+</p>
 
 ## Funkcionalnosti administratora
 
@@ -146,7 +150,7 @@ U zavisnosti od izabranog entiteta, otvara se forma za unos podataka. Ako admini
 </p>
 
  Prilikom unosa, ukoliko želi da prekine unos i izbriše sve unijeti podatke u polja može da pritisne dugme za **"Cancel"**, te na taj način da očite polja.
- Na isti način, koristeći **"Cancel**, može da očisti i polja za **Studenta** i **Predmet**.
+ Na isti način, koristeći **"Cancel**, može da očisti i polja za **Studenta** i **Predmet** i za **Profesora**.
 
 !["Cancel"](Screenshot/Cancel.JPG)
 
@@ -154,12 +158,16 @@ Dodavanje **Studenta** i **Predmeta** će imati svoje forme.
 
 <div style="display: flex; justify-content: space-between;">
   <img src="Screenshot/StudentForm.JPG" alt="Slika 1" width="480"/>
-  <img src="Screenshot/SubjectForm.JPG" alt="Slika 2" width="460"/>
+  <img src="Screenshot/AddSubject.JPG" alt="Slika 2" width="460"/>
 </div>
 
-Sva polja prilikom dodavanja moraju biti popunjena, u suprotnom će korisnik dobiti povratnu informaciju da postoje prazna polja.
+Sva polja prilikom dodavanja moraju biti popunjena, u suprotnom će korisnik dobiti povratnu informaciju da postoje prazna polja. 
 
 !["FillField"](Screenshot/FillField.JPG)
+
+Identifikatori moraju da budu cjelobrojne vrijednosti, u suprotnom se dobija upozorenje koje obavještava da identifikatori moraju da budu cjelobrojne vrijednosti.
+
+!["Integer ID"](Screenshot/IntegerID.JPG)
 
 ### Brisanje studenata, profesora, predmeta
 
@@ -250,7 +258,7 @@ Kada se profesor uspješno prijavi, otvara mu se prozor, tako da u vrhu postoje 
 
 ### Predmeti
 
-U tabu **"Predmeti"** prikazani su predmeti koje profesor predaje. Kada selektuje neki predmet i dugme "Student",prikazuju  se studenti koji slušaju predmet.
+U tabu **"Predmeti"** prikazani su predmeti koje profesor predaje. Kada selektuje neki predmet i dugme "Student", prikazuju  se studenti koji slušaju predmet.
 
 ![Profesori](Screenshot/Professor2.JPG)
 
@@ -366,6 +374,9 @@ Funkcionalnost unosa ocjena dostupna je u tabu **"Ocjene"** i realizuje se na sl
 <div align="center">
   <img src="Screenshot/ValidPoints.JPG" alt="Nevalidan unos bodova" width="500">
 </div>
+
+- Profesor mora da unese i validnu ocjenu, u suprotnom će dobiti upozorenje.
+
 <div align="center">
   <img src="Screenshot/ValidGrade.JPG" alt="Nevalidan unos ocjene" width="500">
 </div>
