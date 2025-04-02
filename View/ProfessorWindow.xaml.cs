@@ -7,11 +7,13 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace ASystem
 {
@@ -30,6 +32,7 @@ namespace ASystem
         {
 
             InitializeComponent();
+            TaskDeadline.BlackoutDates.Add(new CalendarDateRange(DateTime.MinValue, DateTime.Today.AddDays(-1)));
             this.profesor = profesor;
             this.WindowState = WindowState.Maximized;
             ObservableCollection<String> predmeti = new ObservableCollection<String>();
@@ -42,8 +45,15 @@ namespace ASystem
 
             cmbPredmeti.ItemsSource = predmetViewModel.Predmeti;
 
-            cmbStudenti.ItemsSource = listaStudenata;
-            cmbStudentsGrade.ItemsSource = listaStudenata;
+            var students = StudentDataAccess.GetStudents();
+            var studentViewModels = students.Select(s => new StudentViewModel(s)).ToList();
+
+            cmbStudenti.ItemsSource = studentViewModels;
+            cmbStudentsGrade.ItemsSource = studentViewModels;
+
+
+          //  cmbStudenti.ItemsSource = listaStudenata;
+         //   cmbStudentsGrade.ItemsSource = listaStudenata;
             cmbSubjectsForGrade.ItemsSource = listaPredmeta;
   
 
@@ -62,7 +72,47 @@ namespace ASystem
             this.CommandBindings.Add(logoutBinding);
 
         }
+ 
+      
+        private List<DataGrid> FindAllDataGrids(DependencyObject parent)
+        {
+            var dataGrids = new List<DataGrid>();
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                if (child is DataGrid dataGrid)
+                {
+                    dataGrids.Add(dataGrid);
+                }
+                else
+                {
+                    dataGrids.AddRange(FindAllDataGrids(child));
+                }
+            }
+            return dataGrids;
+        }
 
+
+        public void RefreshAllDataGrids()
+        {
+            var allDataGrids = FindAllDataGrids(this); 
+            foreach (var dataGrid in allDataGrids)
+            {
+                dataGrid.InvalidateVisual();
+                dataGrid.Items.Refresh(); // Опционо: Освјежи податке
+            }
+        }
+
+       
+        private void ChangeLanguageToEnglish(object sender, RoutedEventArgs e)
+        {
+            ((App)Application.Current).ChangeLanguage("en");
+        }
+
+        private void ChangeLanguageToSerbian(object sender, RoutedEventArgs e)
+        {
+            ((App)Application.Current).ChangeLanguage("sr");
+        }
         private void Undo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             Undo_Click(sender, e);
@@ -81,66 +131,75 @@ namespace ASystem
         {
             ChangerThemes.ChangeTheme("Green", profesor.username);
         }
+   
         private void cmbPredmet_SelectionChangedOcjene(object sender, SelectionChangedEventArgs e)
         {
             if (cmbPredmetOcjena.SelectedItem is Predmet selectedPredmet)
             {
-               
-                studenti = PredmetDataAccess.studentiSlusaju(selectedPredmet);
+                var studentModels = PredmetDataAccess.studentiSlusaju(selectedPredmet);
 
-
-                if (studenti != null && studenti.Count > 0)
+                if (studentModels != null && studentModels.Count > 0)
                 {
-                    cmbStudents.ItemsSource = studenti;
+
+                    var studentViewModels = studentModels
+                        .Select(s => new StudentViewModel(s))
+                        .ToList();
+
+                    cmbStudents.ItemsSource = studentViewModels;
                 }
                 else
                 {
-                    MessageBox.Show("Nema studenata za odabrani predmet.");
+                    string message = (string)Application.Current.Resources["NoStudentsForCourse"];
+                    new WarningWindow(message).ShowDialog();
                     cmbStudents.ItemsSource = null;
                 }
             }
         }
 
-        private void cmbSubject_SelectionChanged_Grade(object sender, SelectionChangedEventArgs e)
-        {
+       private void cmbSubject_SelectionChanged_Grade(object sender, SelectionChangedEventArgs e)
+           {
+               if (cmbStudentsGrade.SelectedItem is StudentViewModel studentVM)
+               {
+                   if (cmbSubjectsForGrade.SelectedItem is Predmet predmet)
+                   {
+                       var student = studentVM.StudentModel;
+                       ListGrade.ItemsSource = IspitDataAccess.pregledIspita(predmet, student)
+                           .Select(ispit => new IspitViewModel(ispit))
+                           .ToList();
+                   }
+                   else
+                   {
+                    string message = (string)Application.Current.Resources["SelectSubjectText"];
+                    new WarningWindow(message).ShowDialog();
+                   }
+               }
+               else
+               {
+                string message = (string)Application.Current.Resources["SelectStudentText"];
+                new WarningWindow(message).ShowDialog();
+              
+               }
+           }
 
-            if (cmbStudentsGrade.SelectedItem is Student student)
-            {
-                if (cmbSubjectsForGrade.SelectedItem is Predmet predmet)
-                {
-                
-                    ListGrade.ItemsSource = IspitDataAccess.pregledIspita(predmet, student).Select(ispit => new IspitViewModel(ispit)).ToList();
-
-                }
-                else
-                {
-                    new WarningWindow("Izaberite predmet!").ShowDialog();
-                   // MessageBox.Show("Molimo izaberite predmet.");
-                }
-            }
-            else
-            {
-                new WarningWindow("Izaberite studenta").ShowDialog();
-              //  MessageBox.Show("Molimo izaberite studenta.");
-            }
-        }
         private void cmbStudent_SelectionChanged_Grade(object sender, SelectionChangedEventArgs e)
         {
-           
-            if (cmbStudentsGrade.SelectedItem is Student student)
+            if (cmbStudentsGrade.SelectedItem is StudentViewModel studentVM)
             {
                 if (cmbSubjectsForGrade.SelectedItem is Predmet predmet)
                 {
+                    Student student = studentVM.StudentModel;
                     ListGrade.ItemsSource = IspitDataAccess.pregledIspita(predmet, student);
                 }
                 else
-                {       
-                    MessageBox.Show("Molimo izaberite predmet.");
+                {
+                    string message = (string)Application.Current.Resources["SelectSubjectText"];
+                    new WarningWindow(message).ShowDialog();
                 }
             }
             else
             {
-                MessageBox.Show("Molimo izaberite studenta.");
+                string message = (string)Application.Current.Resources["SelectStudentText"];
+                new WarningWindow(message).ShowDialog();
             }
         }
 
@@ -156,21 +215,20 @@ namespace ASystem
                 }
                 else
                 {
-                    new WarningWindow("Nema studenta za odabrani predmet").ShowDialog();
-                 //   MessageBox.Show("Nema studenata za odabrani predmet.");
+                    string message = (string)Application.Current.Resources["NoStudentsForCourse"];
+                    new WarningWindow(message).ShowDialog();            
                     AttendanceDataGrid.ItemsSource = null;
                 }
             }
         }
-   private void cmbSubject_SelectionChanged(object sender, SelectionChangedEventArgs e)
-           {
+        private void cmbSubject_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
-               if (cmbStudenti.SelectedItem is Student selectedStudent && cmbSubjects.SelectedItem is Predmet selectedPredmet)
-               {
-                   Attendance.ItemsSource = PrisustvoDataAccess.PregledPrisustva(selectedStudent, selectedPredmet, profesor);
-               }
-
-           }
+            if (cmbStudenti.SelectedItem is StudentViewModel selectedStudentVM && cmbSubjects.SelectedItem is Predmet selectedPredmet)
+            {
+                Attendance.ItemsSource = PrisustvoDataAccess.PregledPrisustva(selectedStudentVM.StudentModel, selectedPredmet, profesor);
+            }
+        }
 
         private void Undo_Click(object sender, RoutedEventArgs e)
         {
@@ -183,7 +241,8 @@ namespace ASystem
             }
             else
             {
-               new WarningWindow("Nema dostupnih operacija za poništavanje.").ShowDialog();
+                string message = (string)Application.Current.Resources["UndoMessage"];
+                new WarningWindow(message).ShowDialog();
             }
         }
 
@@ -274,7 +333,8 @@ namespace ASystem
             }
             else
             {
-                new WarningWindow("Nema selektovanog predmeta.");
+                string message = (string)Application.Current.Resources["NoSubjectSelected"];
+                new WarningWindow(message).ShowDialog();
             }
         }
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
@@ -283,63 +343,66 @@ namespace ASystem
             CheckBox checkBox = sender as CheckBox;
           
         }
+       
         private void SaveGrade(object sender, RoutedEventArgs e)
         {
-         
+          
             if (cmbPredmetOcjena.SelectedItem is not Predmet predmet)
             {
                 new WarningWindow("Izaberite predmet").ShowDialog();
-              
                 return;
             }
+
             if (ExamDate.SelectedDate is not DateTime datum)
             {
-                new WarningWindow("Izaberite predmet").ShowDialog();
-              
+                new WarningWindow("Izaberite datum ispita").ShowDialog(); 
                 return;
             }
             if (!double.TryParse(txtBodovi.Text, out double bodovi) || bodovi < 0 || bodovi > 100)
             {
-                new WarningWindow("Molimo unesite validan broj bodova (0-100).").ShowDialog();              
+                string message = (string)Application.Current.Resources["PointsValid"];
+                new WarningWindow(message).ShowDialog();
                 return;
             }
             if (!int.TryParse(txtOcjena.Text, out int ocjena) || ocjena < 5 || ocjena > 10)
             {
-                new WarningWindow("Unesite validnu ocjenu (5-10)").ShowDialog();
+                string message = (string)Application.Current.Resources["ValidGrade"];
+                new WarningWindow(message).ShowDialog();
                 return;
             }
-            if (cmbStudents.SelectedItem is not Student student)
+
+            if (cmbStudents.SelectedItem is not StudentViewModel studentVM)
             {
                 new WarningWindow("Izaberite studenta").ShowDialog();
                 return;
             }
+
             try
             {
-                
+                Student student = studentVM.StudentModel;
                 IspitDataAccess.sacuvajIspit(bodovi, ocjena, datum, predmet, student);
-                cmbPredmetOcjena.SelectedIndex=-1;
+                cmbPredmetOcjena.SelectedIndex = -1;
                 ExamDate.SelectedDate = null;
                 cmbStudents.SelectedIndex = -1;
                 txtOcjena.Clear();
                 txtBodovi.Clear();
-                txtOcjena.Clear();
-                new SuccessWindow("Ispit je uspješno sačuvan!").ShowDialog();
+                string message = (string)Application.Current.Resources["ExamAdd"];
+                new SuccessWindow(message).ShowDialog();           
+                undoStack.Push(() =>
+                {
+                    IspitDataAccess.obrisiOcjenu(bodovi, ocjena, datum, predmet, student);
+                    string message = SharedResource.SuccessfullyDelete;
+                    new SuccessWindow(message).ShowDialog();
+                    ListGrade.ItemsSource = IspitDataAccess.pregledIspita(predmet, student)
+                        .Select(ispit => new IspitViewModel(ispit))
+                        .ToList();
+                });
             }
             catch (Exception ex)
             {
-                new WrongWindow("Greška prilikom čuvanja ispita {ex.Message}").ShowDialog();
+                new WrongWindow($"Greška prilikom čuvanja ispita: {ex.Message}").ShowDialog();
             }
-
-            undoStack.Push(() =>
-            {
-                IspitDataAccess.obrisiOcjenu(bodovi, ocjena, datum, predmet, student);
-                string message = SharedResource.SuccessfullyDelete;
-                new SuccessWindow(message).ShowDialog();
-                ListGrade.ItemsSource = IspitDataAccess.pregledIspita(predmet, student).Select(ispit => new IspitViewModel(ispit)).ToList();
-            });
-
         }
-
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
@@ -348,25 +411,41 @@ namespace ASystem
         }
         private void AddTask(object sender, RoutedEventArgs e)
         {
+            TaskDeadline.DisplayDateStart = DateTime.Now;
 
             Predmet predmet = cmbPredmeti.SelectedItem as Predmet;
 
             if (predmet == null)
             {
-                new WarningWindow("Predmet nije odabran").ShowDialog();
+                string message = (string)Application.Current.Resources["NoSubjectSelected"];
+                new WarningWindow(message).ShowDialog();
                 return; 
             }
             string predmetNaziv = predmet.Naziv;
-
-            string tipZadatka = TaskTypeSelector.SelectedItem is ComboBoxItem tipItem ? tipItem.Content.ToString() : "Nije odabran";
             string naziv = ime.Text;
             string opis = taskDescription.Text;
             string sifra = taskCode.Text;
             DateTime? rok = TaskDeadline.SelectedDate;
-            string maksimalniBrojBodova = MaxPoints.Text;
 
 
-            if (string.IsNullOrEmpty(naziv) || string.IsNullOrEmpty(opis) || string.IsNullOrEmpty(sifra) || !rok.HasValue || string.IsNullOrEmpty(maksimalniBrojBodova))
+
+            if (!rok.HasValue)
+            {
+                new WarningWindow("Datum roka mora biti odabran.").ShowDialog();
+                return;
+            }
+
+            DateTime selectedDate = rok.Value.Date;
+            DateTime today = DateTime.Today;
+
+            if (selectedDate < today)
+            {
+                string message = (string)Application.Current.Resources["DateInPast"];
+                new WarningWindow(message).ShowDialog();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(naziv) || string.IsNullOrEmpty(opis) || string.IsNullOrEmpty(sifra) || !rok.HasValue )
             {
                 string message = SharedResource.FillField;
                 new WarningWindow(message).Show();
@@ -378,39 +457,28 @@ namespace ASystem
 
             if (DomaciZadatakDataAccess.dodajDZadatak(naziv, opis, (DateTime)rok, sifra, predmet, profesor))
             {
-
+                string message = (string)Application.Current.Resources["TaskAdd"];
+                new SuccessWindow(message).ShowDialog();
                 cmbPredmeti.SelectedItem = null;
-                TaskTypeSelector.SelectedItem = null;
                 ime.Text = string.Empty;
                 taskDescription.Text = string.Empty;
                 taskCode.Text = string.Empty;
-                MaxPoints.Text = string.Empty;
                 TaskDeadline.SelectedDate = null;
-
                 homeworkDataGrid.ItemsSource = DomaciZadatakDataAccess.pregledDomacegPoProfesoru(profesor);
-
-                string message = SharedResource.TaskAdd;
-                new SuccessWindow(message).ShowDialog();
-
             }
             else
             {
-                string message = SharedResource.TaskErrorMessage;
+                string message = (string)Application.Current.Resources["TaskErrorMessage"];
                 new WrongWindow(message).ShowDialog();
             }    
             undoStack.Push(() =>
             {
                 DomaciZadatakDataAccess.obrisiDZadatak(sifra);
                 homeworkDataGrid.ItemsSource = DomaciZadatakDataAccess.pregledDomacegPoProfesoru(profesor);
-                string message = SharedResource.TaskDelete;
+                string message = (string)Application.Current.Resources["TaskDelete"];
                 new SuccessWindow(message).ShowDialog();
             });
-            redoStack.Push(() =>
-            {
-            DomaciZadatakDataAccess.dodajDZadatak(naziv, opis, (DateTime)rok, sifra, predmet, profesor);
-                string message = SharedResource.TaskAgainAdd;
-                new SuccessWindow(message).ShowDialog();
-        });
+          
         }
 
 
@@ -424,13 +492,15 @@ namespace ASystem
                 undoStack.Push(() =>
                 {
                     DomaciZadatakDataAccess.ponovoDodajZadatak(selectedDomaciZD,profesor);
-                    new SuccessWindow("Zadatak je uspješno vraćen!");
+                    string message = (string)Application.Current.Resources["SuccessfullyUndo"];
+                    new SuccessWindow(message).ShowDialog();
 
                 });
                
                 if (DomaciZadatakDataAccess.obrisiZadatak(selectedDomaciZD))
                 {
-                    new SuccessWindow("Zadatak je uspješno obrisan!");
+                    string message = (string)Application.Current.Resources["SuccessfullyDelete"];
+                    new SuccessWindow(message).ShowDialog();
                 }
               
             }
@@ -446,7 +516,6 @@ namespace ASystem
 
                 if (prozor.ShowDialog() == true)  
                 {
-                    // Osvježi DataGrid nakon brisanja ili ažuriranja
                     homeworkDataGrid.ItemsSource = null;
                     homeworkDataGrid.ItemsSource = DomaciZadatakDataAccess.pregledDomacegPoProfesoru(profesor);
                 }
@@ -460,20 +529,8 @@ namespace ASystem
             prozor.ShowDialog();
         }
 
-        private void ShowDetailWindow(object dataContext)
-        {
-            DetailWindow detailWindow = new DetailWindow
-            {
-                DataContext = dataContext
-            };
-            detailWindow.ShowDialog();
-            homeworkDataGrid.SelectedItem = null;
-        }
-
-
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
-        {
-            
+        {    
             MainWindow loginWindow = new MainWindow();
             loginWindow.Show(); 
             this.Close();

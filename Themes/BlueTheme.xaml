@@ -13,7 +13,8 @@
         </Border>
     </DataTemplate>
 
-    <SolidColorBrush x:Key="MyForegroundBrush" Color="#eb984e"/>
+    <SolidColorBrush x:Key="MyForegroundBrush" Color="#f28728"/>
+    <SolidColorBrush x:Key="BoxForegroundBrush" Color="Black"/>
 
     <Style x:Key="CustomButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="#ffff" />
@@ -30,27 +31,33 @@
 
     <FontFamily x:Key="DynamicFont">Calibri</FontFamily>
 
-    <Style x:Key="DynamicTextBlockStyle" TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="{DynamicResource DynamicFont}" />
-        <Setter Property="FontSize" Value="16" />
-        <Setter Property="Foreground" Value="Black" />
-    </Style>
-
-    <Style x:Key="DynamicTextHeaderStyle" TargetType="TextBlock">
+    <Style x:Key="HeaderTextBlockStyle" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="{DynamicResource DynamicFont}" />
         <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{DynamicResource MyForegroundBrush}"/>
+    </Style>
+
+
+
+    <Style x:Key="DynamicTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{DynamicResource DynamicFont}" />
+        <Setter Property="FontSize" Value="17" />
         <Setter Property="Foreground" Value="{DynamicResource MyForegroundBrush}" />
     </Style>
+
 
     <Style x:Key="DynamicHeaderStyle" TargetType="DataGridColumnHeader">
         <Setter Property="Foreground" Value="{DynamicResource MyForegroundBrush}" />
         <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="21" />
     </Style>
 
     <FontFamily x:Key="DynamicFontFamily">Arial</FontFamily>
     
     <Style x:Key="DynamicFontStyle" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="{DynamicResource DynamicFontFamily}" />
-        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="Foreground" Value="{DynamicResource MyForegroundBrush}" />
     </Style>
 </ResourceDictionary>

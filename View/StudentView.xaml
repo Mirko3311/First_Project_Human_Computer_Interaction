@@ -5,14 +5,15 @@
        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:resources="clr-namespace:PrviProjektniZadatakHCI.Resources;assembly=PrviProjektniZadatakHCI"
-    x:Class="ASystem.StudentView"
-    xmlns:local="clr-namespace:PrviProjektniZadatakHCI"
+      x:Class="PrviProjektniZadatakHCI.StudentView"
+      xmlns:local="clr-namespace:PrviProjektniZadatakHCI"
+
     mc:Ignorable="d"
    Icon="pack://application:,,,/Images/studentIcon.ico"
 
     d:DesignHeight="450" d:DesignWidth="800"
 
-      Title="{x:Static resources:SharedResource.StudentList}" Height="400" Width="600">
+      Title="{DynamicResource StudentList}" Height="400" Width="600">
    <Grid Margin="10">
     <Border Background="White" BorderBrush="#3aafd0" BorderThickness="3" CornerRadius="15" Padding="10">
             <StackPanel>
@@ -33,13 +34,13 @@
                       BorderBrush="Gray"
                       BorderThickness="1">
                     <DataGrid.Columns>
-                    <DataGridTextColumn Header="{x:Static resources:SharedResource.NameText}"
+                        <DataGridTextColumn Header="{DynamicResource NameText}"
                                         Binding="{Binding ime}"
                                         Width="*"/>
-                    <DataGridTextColumn Header="{x:Static resources:SharedResource.SurnameText}"
+                        <DataGridTextColumn Header="{DynamicResource  SurnameText}"
                                         Binding="{Binding prezime}"
                                         Width="*"/>
-                    <DataGridTextColumn Header="{x:Static resources:SharedResource.IndexNumberText}"
+                        <DataGridTextColumn Header="{DynamicResource IndexNumberText}"
                                         Binding="{Binding BrojIndeksa}"
                                         Width="*"/>
                 </DataGrid.Columns>

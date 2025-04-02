@@ -204,6 +204,9 @@
   <data name="EmailText" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="English" xml:space="preserve">
+    <value>Engleski</value>
+  </data>
   <data name="EnterCourseName" xml:space="preserve">
     <value>Unesite ime predmeta</value>
   </data>
@@ -244,7 +247,7 @@
     <value>Datum ispita</value>
   </data>
   <data name="ExamIdText" xml:space="preserve">
-    <value>Šifra zadatka</value>
+    <value>Unesite šifru zadatka:</value>
   </data>
   <data name="ExamManagement" xml:space="preserve">
     <value>Ispiti</value>
@@ -396,6 +399,18 @@
   </data>
   <data name="SelectItemDelete" xml:space="preserve">
     <value>Izaberite stavku za brisanje</value>
+  </data>
+  <data name="SelectProfessorText" xml:space="preserve">
+    <value>Izaberite profesora </value>
+  </data>
+  <data name="SelectStudentText" xml:space="preserve">
+    <value>Izaberite studenta</value>
+  </data>
+  <data name="SelectSubjectText" xml:space="preserve">
+    <value>Izaberite predmet</value>
+  </data>
+  <data name="Serbian" xml:space="preserve">
+    <value>Srpski</value>
   </data>
   <data name="StudentAchievement" xml:space="preserve">
     <value>Uspjeh</value>

@@ -26,6 +26,7 @@ public class Korisnik
 
         public string DisplayText => $"{ime} {prezime}";
 
+        public string ToString => $"{ime} {prezime}";
         public Korisnik(int idKorisnik, string ime, string prezime)
         {
             this.idKorisnika = idKorisnik;

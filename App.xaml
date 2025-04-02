@@ -16,13 +16,17 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Secondary/MaterialDesignColor.Lime.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
-         
 
+                <ResourceDictionary Source="Themes/CustomCombox.xaml"/>
                 <ResourceDictionary Source="Themes/RedTheme.xaml" />
                 <ResourceDictionary Source="Themes/BlueTheme.xaml"/>
                 <ResourceDictionary Source="Themes/GreenTheme.xaml"/>
                 <ResourceDictionary Source="Themes/Style.xaml"/>
-               
+
+                <ResourceDictionary Source="Resources/EnglishLanguage.xaml" />
+                <ResourceDictionary Source="Resources/SerbianLanguage.xaml" />
+            
+
             </ResourceDictionary.MergedDictionaries>
 
        

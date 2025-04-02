@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:resources="clr-namespace:PrviProjektniZadatakHCI.Resources;assembly=PrviProjektniZadatakHCI"
         xmlns:local="clr-namespace:ASystem" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
         mc:Ignorable="d"
         WindowState="Maximized"
         Icon="pack://application:,,,/Images/adminIcon.ico"
@@ -30,18 +32,18 @@
             <StackPanel>
                 <Border Background="WhiteSmoke" BorderBrush="Gray" Width="680" Margin="10,0,180,10"  Height="350" Padding="30" CornerRadius="50" BorderThickness="10">
                     <StackPanel>
-                        <TextBlock Text="{x:Static resources:SharedResource.NameText}" Margin="10,5" Style="{DynamicResource  DynamicTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource NameText}" Margin="10,5" Style="{DynamicResource  DynamicTextBlockStyle}"/>
                         <TextBox Text="{Binding ime, Mode=TwoWay}" Margin="10,5" />
-                        <TextBlock Text="{x:Static resources:SharedResource.SurnameText}" Margin="10,5"  Style="{DynamicResource  DynamicTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource SurnameText}" Margin="10,5"  Style="{DynamicResource  DynamicTextBlockStyle}"/>
                         <TextBox Text="{Binding prezime, Mode=TwoWay}" Margin="10,5" />
-                        <TextBlock Text="{x:Static resources:SharedResource.EmailText}" Margin="10,5" Style="{DynamicResource  DynamicTextBlockStyle}"/>
-
-                        <TextBox Text="{Binding email, Mode=TwoWay}" Margin="10,5" />
-                        <TextBlock Text="{x:Static resources:SharedResource.AcademicTitleText}" Margin="10,5" Style="{DynamicResource  DynamicTextBlockStyle}" />
+                        <TextBlock Text="{DynamicResource EmailText}"  Style="{DynamicResource DynamicTextBlockStyle}"/>
+                        <TextBox Text="{Binding email, Mode=TwoWay}" Margin="0,10,10,5" />
+                        <TextBlock Name="emailStudentError" Text="{DynamicResource InvalidEmailFormat}" Foreground="Red" Visibility="Collapsed" />
+                        <TextBlock Text="{DynamicResource AcademicTitleText}" Margin="10,5" Style="{DynamicResource  DynamicTextBlockStyle}" />
                         <TextBox Text="{Binding Zvanje, Mode=TwoWay}" Margin="10,5"/>
                     </StackPanel>
                 </Border>
-                <Button Content="{x:Static resources:SharedResource.UpdateButton}" Style="{DynamicResource CustomButtonStyle}" FontFamily="{DynamicResource DynamicFont}" Click="UpdateProfessor_Click" Width="150" Margin="-160,10,10,10" />
+                <Button Content="{DynamicResource UpdateButton}" Style="{DynamicResource CustomButtonStyle}" FontFamily="{DynamicResource DynamicFont}" Click="UpdateProfessor_Click" Width="150" Margin="-160,10,10,10" />
             </StackPanel>
         </DataTemplate>
 
@@ -50,42 +52,39 @@
             <StackPanel>
                 <Border BorderBrush="Gray" CornerRadius="20" Padding="30"  Width="680" Height="380" Margin="10,0,180,10" Background="WhiteSmoke"  BorderThickness="10">
                     <StackPanel>
-                        <TextBlock Text="{x:Static resources:SharedResource.NameText}"  Style="{DynamicResource  DynamicTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource NameText}"  Style="{DynamicResource  DynamicTextBlockStyle}"/>
                         <TextBox Text="{Binding ime, Mode=TwoWay}" Margin="0,10,10,5" />
-                        <TextBlock Text="{x:Static resources:SharedResource.SurnameText}"  Style="{DynamicResource DynamicTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource SurnameText}"  Style="{DynamicResource DynamicTextBlockStyle}"/>
                         <TextBox Text="{Binding prezime, Mode=TwoWay}" Margin="0,10,10,5" />
-                        <TextBlock Text="{x:Static resources:SharedResource.EmailText}"  Style="{DynamicResource DynamicTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource EmailText}"  Style="{DynamicResource DynamicTextBlockStyle}"/>
                         <TextBox Text="{Binding email, Mode=TwoWay}" Margin="0,10,10,5" />
-
-                        <TextBlock Text="{x:Static resources:SharedResource.YearOfStudy}" Style="{DynamicResource DynamicTextBlockStyle}"/>
-                        <TextBox Text="{Binding GodinaStudija, Mode=TwoWay}" Margin="0,10,5,5"  />
-                        <TextBlock Text="{x:Static resources:SharedResource.IndexNumberText}"  Style="{DynamicResource DynamicTextBlockStyle}" />
+                        <TextBlock Text="{DynamicResource YearOfStudy}" Style="{DynamicResource DynamicTextBlockStyle}"/>
+                        <TextBox Text="{Binding GodinaStudija, Mode=TwoWay}" Margin="0,10,10,5" />
+                        <TextBlock Text="{DynamicResource IndexNumberText}"  Style="{DynamicResource DynamicTextBlockStyle}" />
                         <TextBox Text="{Binding BrojIndeksa, Mode=TwoWay}" Margin="0,0,10,5" />
                     </StackPanel>
-
-
                 </Border>
-                <Button Content="{x:Static resources:SharedResource.UpdateButton}" Style="{DynamicResource CustomButtonStyle}" Click="UpdateStudent_Click" Width="150"  Margin="-160,10,10,10" />
+                <Button Content="{DynamicResource UpdateButton}" Style="{DynamicResource CustomButtonStyle}" Click="UpdateStudent_Click" Width="150"  Margin="-160,10,10,10" />
             </StackPanel>
 
         </DataTemplate>
 
-       
+
         <DataTemplate x:Key="SubjectTemplate">
             <StackPanel>
                 <Border BorderBrush="Gray" CornerRadius="20" Padding="20" Width="700" Height="300" Margin="10,0,180,10" Background="WhiteSmoke" BorderThickness="10">
                     <StackPanel>
-                        <TextBlock Text="{x:Static resources:SharedResource._CourseNameText}" Margin="10,5" Style="{DynamicResource DynamicTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource CourseNameText}" Margin="10,5" Style="{DynamicResource DynamicTextBlockStyle}"/>
                         <TextBox Text="{Binding Naziv, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,5"/>
 
-                        <TextBlock Text="{x:Static resources:SharedResource.DescriptionText}" Margin="10,5" Style="{DynamicResource DynamicTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource DescriptionText}" Margin="10,5" Style="{DynamicResource DynamicTextBlockStyle}"/>
                         <TextBox Text="{Binding Opis, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,5"/>
 
-                        <TextBlock Text="{x:Static resources:SharedResource.ECTSText}" Margin="10,5" Style="{DynamicResource DynamicTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource ECTSText}" Margin="10,5" Style="{DynamicResource DynamicTextBlockStyle}"/>
                         <TextBox Text="{Binding ECTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,5"/>
                     </StackPanel>
                 </Border>
-                <Button Content="{x:Static resources:SharedResource.UpdateButton}" Style="{DynamicResource CustomButtonStyle}" FontFamily="{DynamicResource DynamicFont}" Click="UpdateSubject_Click" Width="150" Margin="-160,10,10,10"/>
+                <Button Content="{DynamicResource UpdateButton}" Style="{DynamicResource CustomButtonStyle}" FontFamily="{DynamicResource DynamicFont}" Click="UpdateSubject_Click" Width="150" Margin="-160,10,10,10"/>
             </StackPanel>
         </DataTemplate>
 
@@ -114,7 +113,7 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Button Style="{DynamicResource topButton}" Click="Undo_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Width="50" Height="40">
+                    <Button Style="{DynamicResource topButton}" Click="Undo_Click" HorizontalAlignment="Center" ToolTip="Undo" VerticalAlignment="Top" Margin="0,20,0,0" Width="50" Height="40">
                         <Icon:PackIconMaterial Kind="Undo" Width="25" Height="30"/>
                     </Button>
 
@@ -129,28 +128,35 @@
                             </Border>
                         </DockPanel>
                     </Border>
-
-                  <!--  <Button Grid.Row="1" x:Name="btnPassword"  Click="Password_Click" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,90,0,0" Width="41" Height="41" >
-                        <Icon:PackIconMaterial Kind="Key" Width="40" Height="41" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-
-                    </Button> -->
-
-                    <Button Grid.Row="1" x:Name="btnCancel"  Click="Cancel_Click" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,180,0,0" Width="41" Height="41" >
+                    <Button Grid.Row="1" x:Name="btnCancel" ToolTip="{DynamicResource ClearFields}" Click="Cancel_Click" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,100,0,0" Width="41" Height="41" >
                         <Icon:PackIconMaterial Kind="Cancel" Width="25" Height="31" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-
                     </Button>
-                    <Button Grid.Row="1" x:Name="btnDelete"  Click="DeleteItem_Click" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,280,0,0" Width="41" Height="41" >
+                    <Button Grid.Row="1" x:Name="btnDelete"  ToolTip="{DynamicResource DeleteText}" Click="DeleteItem_Click" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,200,0,0" Width="41" Height="41" >
                         <Icon:PackIconMaterial Kind="Delete" Width="25" Height="31" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
                     </Button>
-
+                    <Button Grid.Row="1"  Margin="5,300,0,0" Width="41" Height="41"  Background="Black" BorderBrush="Black">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Icon:PackIconMaterial Kind="Translate" Foreground="Black" Width="35" Height="35"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="{DynamicResource English}" Click="ChangeLanguageToEnglish"/>
+                                <MenuItem Header="{DynamicResource Serbian}" Click="ChangeLanguageToSerbian"/>
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
                     <Button Grid.Row="1" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,380,0,0" Width="41" Height="41">
                         <Icon:PackIconMaterial Kind="ThemeLightDark" Width="23" Height="31" VerticalAlignment="Center" HorizontalAlignment="Center" />
                         <Button.ContextMenu>
                             <ContextMenu>
-                                <MenuItem Header="{x:Static resources:SharedResource.BlueText}" Click="LightThemeClick"/>
-                                <MenuItem Header="{x:Static resources:SharedResource.RedText}" Click="DarkThemeClick"/>
-                                <MenuItem Header="{x:Static resources:SharedResource.GreenText}" Click="GreenThemeClick"/>
+                                <MenuItem Header="{DynamicResource BlueText}" Click="LightThemeClick"/>
+                                <MenuItem Header="{DynamicResource RedText}" Click="DarkThemeClick"/>
+                                <MenuItem Header="{DynamicResource GreenText}" Click="GreenThemeClick"/>
                             </ContextMenu>
                         </Button.ContextMenu>
                     </Button>
@@ -164,56 +170,33 @@
 
             <TabControl Grid.Column="1">
 
-                <TabItem Header="{x:Static resources:SharedResource.AddButton}"  Height="85" Margin="0,0,20,0" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
+                <TabItem Header="{DynamicResource AddButton}"  Height="85" Margin="0,0,20,0" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
                     <StackPanel Width="1045">
-                        <TextBlock  Text="{x:Static resources:SharedResource.AddingEntity}" Style="{DynamicResource DynamicTextHeaderStyle}"  Foreground="White"  Margin="5,10,0,10"/>
-                        <ComboBox Name="cmbAddChoice"
+
+                        <TextBlock  Text="{DynamicResource SelectSubProfStudent}"   Margin="0,40,0,0" Style="{DynamicResource DynamicTextHeaderStyle}"/>
+
+                        <ComboBox x:Name="cmbAddChoice"
+          Style="{StaticResource ModernComboBoxStyle}"
+          IsEditable="False"
+          IsReadOnly="True"
+          Loaded="cmbChoice_Loaded"
           SelectionChanged="cmbAddChoice_SelectionChanged"
-          Margin="0,10,650,10"
-          Padding="5"
-          FontSize="15"
-          Width="250"
-          Height="30"
-          Background="#F0F0F0"
-          Foreground="Black"
-          BorderBrush="White"
-          BorderThickness="1"
-          Cursor="Hand">
+          Margin="0,5,720,10">
+                            <ComboBoxItem Content="{DynamicResource ProfessorText}" Tag="Professor" />
+                            <ComboBoxItem Content="{DynamicResource StudentText}" Tag="Student" />
+                            <ComboBoxItem Content="{DynamicResource SubjectText}" Tag="Subject" />
 
-
-                            <ComboBox.Resources>
-                                <Style TargetType="ComboBoxItem">
-                                    <Setter Property="Padding" Value="10"/>
-                                    <Setter Property="FontSize" Value="14"/>
-                                    <Setter Property="Foreground" Value="Black"/>
-                                    <Setter Property="Background" Value="White"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#ADD8E6"/>
-                                        </Trigger>
-                                        <Trigger Property="IsSelected" Value="True">
-                                            <Setter Property="Background" Value="#007ACC"/>
-                                            <Setter Property="Foreground" Value="White"/>
-                                            <Setter Property="FontWeight" Value="Bold"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </ComboBox.Resources>
-                            <ComboBoxItem Content="{x:Static resources:SharedResource.ProfessorText}" Tag="Professor" />
-                            <ComboBoxItem Content="{x:Static resources:SharedResource.StudentText}" Tag="Student" />
-                            <ComboBoxItem Content="{x:Static resources:SharedResource.SubjectText}" Tag="Subject" />
                         </ComboBox>
 
-                        <StackPanel Name="addForm" Margin="0">
-                            <StackPanel Name="addProfessorForm" Visibility="Collapsed" Margin="0,10">
+                        <StackPanel x:Name="addForm" Margin="0">
+                            <StackPanel x:Name="addProfessorForm" Visibility="Collapsed" Margin="0,10">
                                 <Grid Margin="10">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="390" />
                                         <ColumnDefinition Width="600" />
 
                                     </Grid.ColumnDefinitions>
-                                 <Border Grid.Column="0"
+                                    <Border Grid.Column="0"
         Background="WhiteSmoke"
         BorderBrush="Gray"
         BorderThickness="10"
@@ -226,25 +209,26 @@
                                             <DropShadowEffect Color="#888888" BlurRadius="10" ShadowDepth="2" />
                                         </Border.Effect>
                                         <StackPanel Margin="20">
-                                            <TextBlock Text="{x:Static resources:SharedResource.NameText}"
+                                            <TextBlock Text="{DynamicResource NameText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5"/>
-                                            <TextBox Name="txtProfessorName" Margin="0,0,0,10"/>
+                                            <TextBox x:Name="txtProfessorName" Margin="0,0,0,10"/>
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.SurnameText}"
+                                            <TextBlock Text="{DynamicResource SurnameText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5"/>
-                                            <TextBox Name="txtProfessorSurname" Margin="0,0,0,10"/>
+                                            <TextBox x:Name="txtProfessorSurname" Margin="0,0,0,10"/>
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.EmailText}"
+                                            <TextBlock Text="{DynamicResource EmailText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5"/>
-                                            <TextBox Name="email" Margin="0,0,0,10"/>
+                                            <TextBox x:Name="email" TextChanged="email_TextChanged" Margin="0,0,0,10"/>
+                                            <TextBlock x:Name="emailError" Text="{DynamicResource InvalidEmailFormat}" Foreground="Red" Visibility="Collapsed" />
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.AcademicTitleText}"
+                                            <TextBlock Text="{DynamicResource AcademicTitleText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5"/>
-                                            <TextBox Name="titule" Margin="0,0,0,10"/>
+                                            <TextBox x:Name="titule" Margin="0,0,0,10"/>
                                         </StackPanel>
                                     </Border>
 
@@ -261,28 +245,58 @@
                                             <DropShadowEffect Color="#888888" BlurRadius="10" ShadowDepth="2" />
                                         </Border.Effect>
                                         <StackPanel Margin="20">
-                                            <TextBlock Text="{x:Static resources:SharedResource.UsernameText}"
-                   Style="{DynamicResource DynamicTextBlockStyle}"
-                   Margin="0,5"/>
-                                            <TextBox Name="username" Margin="0,0,0,10"/>
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.PasswordText}"
-                   Style="{DynamicResource DynamicTextBlockStyle}"
-                   Margin="0,5"/>
-                                            <TextBox Name="password" Margin="0,0,0,10"/>
+                                            <TextBlock Text="{DynamicResource UsernameText}"
+               Style="{DynamicResource DynamicTextBlockStyle}"
+               Margin="0,5"/>
+                                            <TextBox x:Name="username" Margin="0,0,0,10"/>
+                                            <TextBlock Text="{DynamicResource PasswordText}"
+               Style="{DynamicResource DynamicTextBlockStyle}"
+               Margin="0,5"/>
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.IdText}"
-                   Style="{DynamicResource DynamicTextBlockStyle}"
-                   Margin="0,5"/>
-                                            <TextBox Name="id" Margin="0,0,0,10"/>
+                                            <Grid>
+
+                                                <PasswordBox x:Name="passwordBox"
+                     Margin="0,0,40,10"
+                     PasswordChar="●"
+                     PasswordChanged="PasswordBox_PasswordChanged"/>
+
+
+                                                <TextBox x:Name="textBox"
+                 Margin="0,0,40,10"
+                 Visibility="Collapsed"
+                 TextChanged="TextBox_TextChanged"/>
+                                                <Button x:Name="toggleButton"
+        Width="30"
+        Height="30"
+        Padding="0"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Center"
+        Margin="0,0,-5,7"
+        Foreground="White"
+        Background="Gray"
+        BorderBrush="White"
+        Click="ToggleButton_Click">
+                                                    <materialDesign:PackIcon x:Name="toggleIcon" Kind="Eye" Width="15" Height="15"/>
+                                                </Button>
+
+                                            </Grid>
+
+
+                                            <TextBlock Text="{DynamicResource IdText}"
+               Style="{DynamicResource DynamicTextBlockStyle}"
+               Margin="0,5"/>
+                                            <TextBox x:Name="id" TextChanged="id_TextChanged" Margin="0,0,0,10"/>
+                                            <TextBlock x:Name="idProfError" Text="{DynamicResource IdIntegerValue}" Foreground="Red" Visibility="Collapsed"/>
                                         </StackPanel>
+
                                     </Border>
 
 
                                 </Grid>
-                                <Button Content="{x:Static resources:SharedResource.AddButton}" Style="{DynamicResource CustomButtonStyle}"  Click="AddProfessor_Click" Margin="-115,10,0,0" Width="120" Height="50"   HorizontalAlignment="Center"/>
+                                <Button Content="{DynamicResource AddButton}" Style="{DynamicResource CustomButtonStyle}"  Click="AddProfessor_Click" Margin="-115,10,0,0" Width="120" Height="50"   HorizontalAlignment="Center"/>
                             </StackPanel>
-                            <StackPanel Name="addStudentForm" Visibility="Collapsed" Margin="0">
+                            <StackPanel x:Name="addStudentForm" Visibility="Collapsed" Margin="0">
                                 <Grid Margin="0">
 
                                     <Grid.ColumnDefinitions>
@@ -305,20 +319,22 @@
                                             <DropShadowEffect Color="#888888" BlurRadius="10" ShadowDepth="2" />
                                         </Border.Effect>
                                         <StackPanel Margin="10">
-                                            <TextBlock Text="{x:Static resources:SharedResource.NameText}"
+                                            <TextBlock Text="{DynamicResource NameText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5" />
-                                            <TextBox Name="txtStudentName" Margin="0,0,0,10" />
+                                            <TextBox x:Name="txtStudentName" Margin="0,0,0,10" />
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.SurnameText}"
+                                            <TextBlock Text="{DynamicResource SurnameText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5" />
-                                            <TextBox Name="txtStudentSurname" Margin="0,0,0,10" />
+                                            <TextBox x:Name="txtStudentSurname" Margin="0,0,0,10" />
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.EmailText}"
+                                            <TextBlock Text="{DynamicResource EmailText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5" />
-                                            <TextBox Name="emailS" Margin="0,0,0,10" />
+                                            <TextBox x:Name="emailS" TextChanged="email_TextChanged"  Margin="0,0,0,10" />
+                                            <TextBlock x:Name="emailStudentError" Text="{DynamicResource InvalidEmailFormat}" Foreground="Red" Visibility="Collapsed" />
+
                                         </StackPanel>
                                     </Border>
 
@@ -328,45 +344,73 @@
         BorderThickness="10"
         CornerRadius="15"
         Width="400"
-        Height="385"
+        Height="394"
         Margin="120,20,10,10"
         Padding="10">
                                         <Border.Effect>
                                             <DropShadowEffect Color="#888888" BlurRadius="10" ShadowDepth="2" />
                                         </Border.Effect>
                                         <StackPanel Margin="10">
-                                            <TextBlock Text="{x:Static resources:SharedResource.UsernameText}"
+                                            <TextBlock Text="{DynamicResource UsernameText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5" />
-                                            <TextBox Name="usernameS" Margin="0,0,0,10" />
+                                            <TextBox x:Name="usernameS" Margin="0,0,0,10" />
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.PasswordText}"
+                                            <TextBlock Text="{DynamicResource PasswordText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5" />
-                                            <TextBox Name="passwordS" Margin="0,0,0,10" />
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.IdText}"
+                                            <Grid>
+                                                <PasswordBox x:Name="passwordSBox"
+                 Margin="0,0,40,10"
+                 PasswordChar="●"
+                 PasswordChanged="PasswordSBox_PasswordChanged" />
+                                                <TextBox x:Name="textSBox"
+             Margin="0,0,40,10"
+             Visibility="Collapsed"
+             TextChanged="TextSBox_TextChanged" />
+                                                <Button x:Name="toggleSButton"
+            Width="30"
+            Height="30"
+            Padding="0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Margin="0,0,-5,7"
+            Foreground="White"
+            Background="Gray"
+            BorderBrush="White"
+            Click="ToggleSButton_Click">
+                                                    <materialDesign:PackIcon x:Name="toggleSIcon"
+                                 Kind="Eye"
+                                 Width="15"
+                                 Height="15"/>
+                                                </Button>
+                                            </Grid>
+
+
+                                            <TextBlock Text="{DynamicResource IdText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    Margin="0,5" />
-                                            <TextBox Name="idS" Margin="0,0,0,10" />
+                                            <TextBox x:Name="idS" TextChanged="id_TextChanged " Margin="0,0,0,10" />
+                                            <TextBlock x:Name="idStudentError" Text="{DynamicResource IdIntegerValue}" Foreground="Red" Visibility="Collapsed" />
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.IndexNumberText}"
+                                            <TextBlock Text="{DynamicResource IndexNumberText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    VerticalAlignment="Center"
                    Margin="0,5" />
-                                            <TextBox Name="index" Margin="0,0,0,10" />
+                                            <TextBox x:Name="index" Margin="0,0,0,10" />
 
-                                            <TextBlock Text="{x:Static resources:SharedResource.YearOfStudy}"
+                                            <TextBlock Text="{DynamicResource YearOfStudy}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    VerticalAlignment="Center"
                    Margin="0,5" />
-                                            <TextBox Name="grade" Margin="0,0,0,10" />
+                                            <TextBox x:Name="grade" Margin="0,0,0,10" />
                                         </StackPanel>
                                     </Border>
                                 </Grid>
 
                                 <Grid Margin="5">
-                                    <ListBox Name="lstStudentSubjects" SelectionMode="Multiple" Margin="0,5">
+                                    <ListBox x:Name="lstStudentSubjects" SelectionMode="Multiple" Margin="0,5">
                                         <ListBox.ItemTemplate>
                                             <DataTemplate>
                                                 <TextBlock Text="{Binding Naziv}"  Style="{DynamicResource DynamicTextBlockStyle}"/>
@@ -374,10 +418,10 @@
                                         </ListBox.ItemTemplate>
                                     </ListBox>
                                 </Grid>
-                                <Button Content="{x:Static resources:SharedResource.AddButton}" Style="{DynamicResource CustomButtonStyle}" Click="AddStudent_Click" Margin="-70,0,50,10" Width="120"/>
+                                <Button Content="{DynamicResource AddButton}" Style="{DynamicResource CustomButtonStyle}" Click="AddStudent_Click" Margin="-70,0,50,10" Width="120"/>
                             </StackPanel>
 
-                            <StackPanel Name="addSubjectForm" Visibility="Collapsed" Margin="0,10">
+                            <StackPanel x:Name="addSubjectForm" Visibility="Collapsed" Margin="0,10">
                                 <Border Grid.Column="1"
         Background="WhiteSmoke"
         BorderBrush="Gray"
@@ -391,34 +435,34 @@
                                         <DropShadowEffect Color="#888888" BlurRadius="10" ShadowDepth="2" />
                                     </Border.Effect>
                                     <StackPanel Margin="10">
-                                        <TextBlock Text="{x:Static resources:SharedResource.EnterCourseName}"
+                                        <TextBlock Text="{DynamicResource CourseNameText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    VerticalAlignment="Center"
                    Margin="0,10"/>
-                                        <TextBox Name="txtSubjectName" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBox x:Name="txtSubjectName" Margin="5" VerticalAlignment="Center"/>
 
-                                        <TextBlock Text="{x:Static resources:SharedResource.DescriptionText}"
+                                        <TextBlock Text="{DynamicResource DescriptionText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    VerticalAlignment="Center"
                    Margin="0,5"/>
-                                        <TextBox Name="characteristic" Margin="0,0,0,10"/>
+                                        <TextBox x:Name="characteristic" Margin="0,0,0,10"/>
 
-                                        <TextBlock Text="{x:Static resources:SharedResource.ECTSText}"
+                                        <TextBlock Text="{DynamicResource ECTSText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    VerticalAlignment="Center"
                    Margin="0,5"/>
-                                        <TextBox Name="ects" Margin="0,0,0,10"/>
+                                        <TextBox x:Name="ects" Margin="0,0,0,10"/>
 
-                                        <TextBlock Text="{x:Static resources:SharedResource.IdText}"
+                                        <TextBlock Text="{DynamicResource IdText}"
                    Style="{DynamicResource DynamicTextBlockStyle}"
                    VerticalAlignment="Center"
                    Margin="0,5"/>
-                                        <TextBox Name="identifikator" Margin="0,0,0,10"/>
+                                        <TextBox x:Name="identifikator" Margin="0,0,0,10"/>
 
                                     </StackPanel>
                                 </Border>
 
-                                <Button Content="{x:Static resources:SharedResource.AddButton}"
+                                <Button Content="{DynamicResource AddButton}"
                 Style="{DynamicResource CustomButtonStyle}"
                 Click="AddSubject_Click"
                 Width="100"
@@ -430,25 +474,28 @@
                 </TabItem>
 
 
-                <TabItem Header="{x:Static resources:SharedResource.DeleteText}" Height="85" Margin="0,0,20,0" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" >
+                <TabItem Header="{DynamicResource DeleteText}" Height="85" Margin="0,0,20,0" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" >
                     <Grid>
 
                         <Border Background="AntiqueWhite" BorderThickness="10" BorderBrush="Gray" CornerRadius="50" Padding="30" Margin="100,50,100,50">
                             <StackPanel Margin="10">
 
-                                <Border Background="White" Margin="0,10,10,10">
-                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
-                                        <Image Source="pack://application:,,,/Images/Combox.png" Width="20" Height="20" Margin="0,0,10,0" />
 
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10">
+                                    <TextBlock Text="{DynamicResource SelectDeleteEntity}"   Style="{DynamicResource DynamicTextBlockStyle}"
+              
+               Foreground="Black" Margin="0,0,0,0"/>
+                                    <ComboBox Name="cmbDeleteChoice" 
+              Style="{StaticResource ModernComboBoxStyle}" 
+              Padding="30,5,5,0"
+              SelectionChanged="cmbDeleteChoice_SelectionChanged"
+              Width="200" Margin="-200,-25,0,0">
 
-                                        <ComboBox Name="cmbDeleteChoice" SelectionChanged="cmbDeleteChoice_SelectionChanged">
-
-                                            <ComboBoxItem Content="{x:Static resources:SharedResource.ProfessorText}" Tag="Professor" />
-                                            <ComboBoxItem Content="{x:Static resources:SharedResource.StudentText}" Tag="Student" />
-                                            <ComboBoxItem Content="{x:Static resources:SharedResource.SubjectText}" Tag="Subject" />
-                                        </ComboBox>
-                                    </StackPanel>
-                                </Border>
+                                        <ComboBoxItem Content="{DynamicResource ProfessorText}" Tag="Professor"/>
+                                        <ComboBoxItem Content="{DynamicResource StudentText}" Tag="Student"/>
+                                        <ComboBoxItem Content="{DynamicResource SubjectText}" Tag="Subject"/>
+                                    </ComboBox>
+                                </StackPanel>
 
                                 <ListBox Name="lstDeleteItems" Margin="50,10,0,10" />
                             </StackPanel>
@@ -457,31 +504,48 @@
 
                     </Grid>
                 </TabItem>
-                <TabItem  Header="{x:Static resources:SharedResource.UpdateButton}" Margin="0,0,20,0" Foreground="Black" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" >
+                <TabItem  Header="{DynamicResource UpdateButton}" Margin="0,0,20,0" Foreground="Black" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" >
 
 
-                    <StackPanel Margin="20 30 20 10">
+                    <StackPanel Margin="20 20 20 10">
 
-                        <TextBlock Text="{x:Static resources:SharedResource.UpdateEntity}"   Style="{DynamicResource DynamicTextHeaderStyle}" Margin="10" Foreground="White" >
+                        <TextBlock Text="{DynamicResource SelectTypeEntity}"   Style="{DynamicResource DynamicTextHeaderStyle}"   FontWeight="Bold"  Margin="130,30,0,0"  >
 
                         </TextBlock>
-                        <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="10"  CornerRadius="10" Width="400" Margin="60,10,700,10">
-                            <ComboBox Name="cmbUpdateChoice" SelectionChanged="CmbUpdateChoice_SelectionChanged" Margin="10,10,10,10">
-                                <ComboBoxItem Content="{x:Static resources:SharedResource.ProfessorText}" Tag="Professor" />
-                                <ComboBoxItem Content="{x:Static resources:SharedResource.StudentText}" Tag="Student" />
-                                <ComboBoxItem Content="{x:Static resources:SharedResource.SubjectText}" Tag="Subject" />
-                            </ComboBox>
 
-                        </Border>
-                        <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="10" Width="400" CornerRadius="10" Margin="270,-75,10,10">
-                            <ComboBox x:Name="cmbUpdate" SelectionChanged="cmbUpdateE_SelectionChanged" Margin="10,10,10,10" Visibility="Visible">
+                        <ComboBox Name="cmbUpdateChoice" Text="{DynamicResource  UpdateEntity}"
+                                  Style="{DynamicResource ModernComboBoxStyle}" 
+                                  Loaded="cmbUpdateChoice_Loaded"
+                                  SelectionChanged="CmbUpdateChoice_SelectionChanged" 
+                                  Margin="0,5,650,10">
+                            <ComboBoxItem Content="{DynamicResource  ProfessorText}" Tag="Professor" />
+                            <ComboBoxItem Content="{DynamicResource  StudentText}" Tag="Student" />
+                            <ComboBoxItem Content="{DynamicResource  SubjectText}" Tag="Subject" />
+                        </ComboBox>
+
+
+                        <TextBlock 
+            FontSize="16" 
+            Style="{DynamicResource DynamicTextHeaderStyle}" 
+            Margin="535,-75,0,0" 
+            FontWeight="Bold"
+            Text="{DynamicResource SelectTypeEntity}" />
+
+                        <ContentControl x:Name="cmbUpdatePresenter"  PreviewMouseDown="CmbUpdate_PreviewMouseDown">
+                            <ComboBox x:Name="cmbUpdate" IsEnabled="False" Text="{DynamicResource SelectConcreteEntity}" 
+                                      SelectionChanged="cmbUpdateE_SelectionChanged" Margin="140,-45,0,10" Visibility="Visible"
+                                   BorderThickness="2" Width="300" Height="32" Padding="7"
+          Background="#E0E0E0" 
+          BorderBrush="Gray">
+
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding DisplayText}" />
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
-                        </Border>
+                        </ContentControl>
+
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="609*"/>
@@ -494,7 +558,7 @@
                 </TabItem>
 
 
-                <TabItem Header="{x:Static resources:SharedResource.ManageAssignmentText}" Height="85" Margin="0,0,20,0" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
+                <TabItem Header="{DynamicResource ManageAssignmentText}" Height="85" Margin="0,0,20,0" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
                     <Grid Margin="5">
 
                         <Grid.ColumnDefinitions>
@@ -503,82 +567,87 @@
                         </Grid.ColumnDefinitions>
                         <TabControl>
 
+                            <TabItem Header="{DynamicResource AssignText}"   Height="83.5" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Width="350" >
+                                <StackPanel Width="1080" Margin="20,40,0,20">
+                                    <TextBlock Text="{DynamicResource SelectProfessor}"  FontSize="14" FontWeight="Bold" Margin="280,100,0,5"/>
+                                    <Border BorderBrush="Gray" BorderThickness="5" Width="600" Height="300" Margin="0,-100,0,0" CornerRadius="30" Background="WhiteSmoke">
+                                        <StackPanel Width="760">
 
-                            <TabItem Header="{x:Static resources:SharedResource.AssignText}" Height="83.5" Margin="0,0,20,0" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}">
-                                <StackPanel Width="762">
-                                    <Border BorderThickness="10" BorderBrush="Gray" CornerRadius="20" Margin="50,80,0,20"  Width="498" Height="100" Background="WhiteSmoke">
-                                        <Grid>
-                                            <Image Source="pack://application:,,,/Images/teacher.png"   Height="40" Margin="10,10,430,20"></Image>
+                                            <TextBlock Text="{DynamicResource SelectProfessor}"  FontSize="14"  Margin="120,50,0,10"/>
+                                            <Grid>
+                                                <Image Source="pack://application:,,,/Images/teacher.png"   Height="50" Margin="0,-10,650,9"></Image>
 
-                                            <ComboBox Name="cmbProfesori" SelectionChanged="SubjectChanged" Grid.Column="0" Margin="75,0,15,5">
-                                                <ComboBox.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <TextBlock Text="{Binding DisplayText}"  Style="{DynamicResource DynamicTextBlockStyle}" />
-                                                    </DataTemplate>
-                                                </ComboBox.ItemTemplate>
-                                            </ComboBox>
-                                        </Grid>
+                                                <ComboBox Name="cmbProfesori" SelectionChanged="SubjectChanged" SelectedValuePath="DisplayText" Style="{StaticResource ModernComboBoxStyle}" Grid.Column="0" Margin="0,-20,200,0">
+                                                    <ComboBox.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding DisplayText}"  />
+                                                        </DataTemplate>
+                                                    </ComboBox.ItemTemplate>
+                                                </ComboBox>
+                                            </Grid>
+
+
+                                            <TextBlock Text="{DynamicResource SelectSubject}"  FontSize="14" Margin="120,50,0,0"/>
+                                            <Grid>
+                                                <Image Source="pack://application:,,,/Images/education.png"  Width="50" Height="50" Margin="10,0,650,20"></Image>
+                                                <ComboBox Name="cmbPredmeti" Grid.Column="1"  Style="{StaticResource ModernComboBoxStyle}" Margin="0,0,200,25">
+                                                    <ComboBox.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding DisplayText}" />
+                                                        </DataTemplate>
+                                                    </ComboBox.ItemTemplate>
+                                                </ComboBox>
+                                            </Grid>
+
+
+                                        </StackPanel>
                                     </Border>
-
-                                    <Border BorderBrush="Gray" BorderThickness="10" Width="500" Background="WhiteSmoke" Height="100"  CornerRadius="20" Margin="50,20,0,0">
-                                        <Grid>
-                                            <Image Source="pack://application:,,,/Images/education.png"   Height="50" Margin="10,10,420,20"></Image>
-                                            <ComboBox Name="cmbPredmeti" Grid.Column="1" Margin="80,5,5,5">
-                                                <ComboBox.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <TextBlock Text="{Binding DisplayText}" />
-                                                    </DataTemplate>
-                                                </ComboBox.ItemTemplate>
-                                            </ComboBox>
-                                        </Grid>
-                                    </Border>
-                                    <Button Content="{x:Static resources:SharedResource.AssignText}"  Style="{DynamicResource CustomButtonStyle}" Click="InsertProfSub" Width="150" Margin="0,30,0,15"></Button>
+                                    <Button Content="{DynamicResource AssignButton}" Style="{DynamicResource CustomButtonStyle}"  Click="InsertProfSub" Margin="-10,50,0,15" Width="136"/>
 
                                 </StackPanel>
                             </TabItem>
-                            <TabItem Header="{x:Static resources:SharedResource.UnassignCourse}"   Height="83.5" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Width="350" >
-                                <StackPanel Height="486" Margin="70,10,0,0">
-                                    <Border BorderThickness="10" BorderBrush="Gray" CornerRadius="20" Margin="50,80,0,20"  Width="498" Height="100" Background="WhiteSmoke">
-                                        <Grid>
-                                            <Image Source="pack://application:,,,/Images/teacher.png"   Height="40" Margin="10,10,430,20"></Image>
+                            <TabItem Header="{DynamicResource UnassignCourse}"   Height="83.5" HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Width="350" >
+                                <StackPanel Width="1080" Margin="20,40,0,20">
+                                    <TextBlock Text="{DynamicResource SelectProfessor}"  FontSize="14" FontWeight="Bold" Margin="280,100,0,5"/>
+                                    <Border BorderBrush="Gray" BorderThickness="5" Width="600" Height="300" Margin="0,-100,0,0" CornerRadius="30" Background="WhiteSmoke">
+                                        <StackPanel Width="760">
 
-                                            <ComboBox Name="cmbProfessors" SelectionChanged="SubjectChanged" Grid.Column="0" Margin="75,0,15,5">
-                                                <ComboBox.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <TextBlock Text="{Binding DisplayText}"  Style="{DynamicResource DynamicTextBlockStyle}" />
-                                                    </DataTemplate>
-                                                </ComboBox.ItemTemplate>
-                                            </ComboBox>
-                                        </Grid>
+                                            <TextBlock Text="{DynamicResource SelectProfessor}"  FontSize="14"  Margin="120,50,0,10"/>
+                                            <Grid>
+                                                <Image Source="pack://application:,,,/Images/teacher.png"   Height="50" Margin="0,-10,650,9"></Image>
+
+                                                <ComboBox Name="cmbProfessors" SelectionChanged="SubjectChanged" SelectedValuePath="DisplayText" Style="{StaticResource ModernComboBoxStyle}" Grid.Column="0" Margin="0,-20,200,0">
+                                                    <ComboBox.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding DisplayText}"  />
+                                                        </DataTemplate>
+                                                    </ComboBox.ItemTemplate>
+                                                </ComboBox>
+                                            </Grid>
+
+
+                                            <TextBlock Text="{DynamicResource SelectSubject}"  FontSize="14"  Margin="120,50,0,0"/>
+                                            <Grid>
+                                                <Image Source="pack://application:,,,/Images/education.png"  Width="50" Height="50" Margin="10,0,650,20"></Image>
+                                                <ComboBox Name="cmbSubjects" Grid.Column="1"  Style="{StaticResource ModernComboBoxStyle}" Margin="0,0,200,25">
+                                                    <ComboBox.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding DisplayText}" />
+                                                        </DataTemplate>
+                                                    </ComboBox.ItemTemplate>
+                                                </ComboBox>
+                                            </Grid>
+
+
+                                        </StackPanel>
                                     </Border>
-
-                                    <Border BorderBrush="Gray" BorderThickness="10" Width="500" Background="WhiteSmoke" Height="100"  CornerRadius="20" Margin="40,25,0,20">
-                                        <Grid>
-                                            <Image Source="pack://application:,,,/Images/education.png"   Height="40" Margin="10,10,420,20"></Image>
-                                            <ComboBox Name="cmbSubjects"  Grid.Column="1" Margin="80,5,5,5">
-                                                <ComboBox.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <TextBlock Text="{Binding DisplayText}" Style="{DynamicResource DynamicTextBlockStyle}" />
-                                                    </DataTemplate>
-                                                </ComboBox.ItemTemplate>
-                                            </ComboBox>
-                                        </Grid>
-                                    </Border>
-                                    <Button Content="{x:Static resources:SharedResource.UnassignCourse}" Style="{DynamicResource CustomButtonStyle}" Margin="20" Click="DeleteProfSub" Width="136"/>
-
+                                    <Button Content="{DynamicResource UnassignButton}" Style="{DynamicResource CustomButtonStyle}"  Click="DeleteProfSub" Margin="0,50,0,15" Width="136"/>
                                 </StackPanel>
                             </TabItem>
                         </TabControl>
                     </Grid>
-
                 </TabItem>
             </TabControl>
-
-            <!-- <Button Width="100"  Background="Transparent" BorderBrush="Transparent"  Click="LogoutButton_Click"  BorderThickness="0" Height="80" HorizontalAlignment="Right" VerticalAlignment="Bottom " 
-  Margin="5 50 0 5">
-            <Image Source="Images/logout.jpg"  Stretch="UniformToFill"/>
-        </Button> -->
         </Grid>
-
     </ScrollViewer>
 </Window>

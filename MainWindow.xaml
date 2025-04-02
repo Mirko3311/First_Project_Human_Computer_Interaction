@@ -24,22 +24,22 @@
 
             <Border Background="#3aafd0" CornerRadius="60" Padding="20" Width="395" Height="500" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <StackPanel Margin="0" Width="368" Height="386">
-                    <TextBlock Text="{x:Static resources:SharedResource.LogInTitle}" 
+                    <TextBlock Text="{DynamicResource LogInTitle}" 
                                Margin="0 40" Foreground="#ffffff" TextAlignment="Center" 
                                FontSize="38" FontFamily="Arial" FontWeight="Bold" />
 
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <materialDesign:PackIcon Kind="User" Width="30" Height="30" Foreground="#FFFFFF" />
-                        <TextBox x:Name="txtUsername" Margin="20 0" 
-                                  materialDesign:HintAssist.Hint="{x:Static resources:SharedResource.EnterCourseName}" 
+                        <TextBox x:Name="txtUsername" Margin="20 0"  Padding="10"
+                                  materialDesign:HintAssist.Hint="{DynamicResource EnterCourseName}" 
                                   Foreground="#000000" Width="250" BorderBrush="#3498DB" 
                                   Background="#F7F9FC" CaretBrush="#3498DB" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <materialDesign:PackIcon Kind="Lock" Width="30" Height="30" Foreground="#FFFFFF" />
-                        <PasswordBox x:Name="txtPassword" Margin="20 0" 
-                                     materialDesign:HintAssist.Hint="{x:Static resources:SharedResource.EnterPassword}" 
+                        <PasswordBox x:Name="txtPassword" Margin="20 0" Padding="10"
+                                     materialDesign:HintAssist.Hint="{DynamicResource EnterPassword}" 
                                      Foreground="#000000" Width="250" BorderBrush="#3498DB" 
                                      Background="#F7F9FC" CaretBrush="#3498DB" />
                     </StackPanel>
@@ -47,7 +47,7 @@
                         <Button Width="120" Height="50" BorderBrush="#3498DB" BorderThickness="2" 
                                 Background="#3498DB" Foreground="White" Margin="20" ToolTip="Login" 
                                 x:Name="btnLogin" Click="btnLogin_Click" 
-                                Content="{x:Static resources:SharedResource.LogInButton}" 
+                                Content="{DynamicResource LogInButton}" 
                                 FontWeight="Bold" materialDesign:ButtonAssist.CornerRadius="8" />
                     </StackPanel>
                 </StackPanel>

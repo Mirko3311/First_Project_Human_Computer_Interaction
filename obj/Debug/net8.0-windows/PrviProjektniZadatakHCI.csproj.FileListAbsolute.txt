@@ -127,13 +127,11 @@ E:\PrviProjektniZadatakHCI\PrviProjektniZadatakHCI\obj\Debug\net8.0-windows\refi
 E:\PrviProjektniZadatakHCI\PrviProjektniZadatakHCI\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.pdb
 E:\PrviProjektniZadatakHCI\PrviProjektniZadatakHCI\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.genruntimeconfig.cache
 E:\PrviProjektniZadatakHCI\PrviProjektniZadatakHCI\obj\Debug\net8.0-windows\ref\PrviProjektniZadatakHCI.dll
+C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\PrviProjektniZadatakHCI.dll
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\PrviProjektniZadatakHCI.exe
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\PrviProjektniZadatakHCI.dll.config
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\PrviProjektniZadatakHCI.deps.json
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\PrviProjektniZadatakHCI.runtimeconfig.json
-C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\PrviProjektniZadatakHCI.dll
-C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\PrviProjektniZadatakHCI.pdb
-C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\en\PrviProjektniZadatakHCI.resources.dll
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\CommonServiceLocator.dll
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\Google.Protobuf.dll
@@ -210,6 +208,7 @@ C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\runt
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.csproj.AssemblyReference.cache
+C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\Themes\CustomCombox.baml
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\Themes\Style.baml
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\View\SuperUser.baml
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\MainWindow.g.cs
@@ -256,4 +255,8 @@ C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\Prvi
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\refint\PrviProjektniZadatakHCI.dll
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.pdb
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\PrviProjektniZadatakHCI.genruntimeconfig.cache
+C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\PrviProjektniZadatakHCI.pdb
+C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\bin\Debug\net8.0-windows\en\PrviProjektniZadatakHCI.resources.dll
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\ref\PrviProjektniZadatakHCI.dll
+C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\Resources\EnglishLanguage.baml
+C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\obj\Debug\net8.0-windows\Resources\SerbianLanguage.baml

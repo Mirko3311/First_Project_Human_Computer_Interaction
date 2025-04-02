@@ -204,6 +204,9 @@
   <data name="EmailText" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
   <data name="EnterCourseName" xml:space="preserve">
     <value>Enter the course name</value>
   </data>
@@ -395,6 +398,18 @@
   </data>
   <data name="SelectItemDelete" xml:space="preserve">
     <value> Select an item to delete</value>
+  </data>
+  <data name="SelectProfessorText" xml:space="preserve">
+    <value>Select the professor</value>
+  </data>
+  <data name="SelectStudentText" xml:space="preserve">
+    <value>Select the student</value>
+  </data>
+  <data name="SelectSubjectText" xml:space="preserve">
+    <value>Select the subject</value>
+  </data>
+  <data name="Serbian" xml:space="preserve">
+    <value>Serbian</value>
   </data>
   <data name="StudentAchievement" xml:space="preserve">
     <value>Student Achievement</value>

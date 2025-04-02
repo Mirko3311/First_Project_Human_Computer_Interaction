@@ -5,7 +5,7 @@
         xmlns:local="clr-namespace:ASystem"
         xmlns:resources="clr-namespace:PrviProjektniZadatakHCI.Resources;assembly=PrviProjektniZadatakHCI"
         WindowState="Maximized"
-         Title="{x:Static resources:SharedResource.StudentText}"
+         Title="{DynamicResource  StudentText}"
         SnapsToDevicePixels="True">
 
     <Window.InputBindings>
@@ -57,9 +57,25 @@
                     </DockPanel>
                 </Border>
 
-                <Button Grid.Row="1" x:Name="btnPassword"  Click="Password_Click" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,260,0,0" Width="41" Height="41" >
+                <Button Grid.Row="1" x:Name="btnPassword"  Click="Password_Click" Style="{DynamicResource topButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,200,0,0" Width="41" Height="41" >
                     <Icon:PackIconMaterial Kind="Key" Width="30" Height="41" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
+                </Button>
+
+                <Button Grid.Row="1"  Margin="5,300,0,0" Width="41" Height="41"  Background="Black" BorderBrush="Black">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+                                <Icon:PackIconMaterial Kind="Translate" ToolTip="Promjena jezika" Foreground="Black" Width="35" Height="35"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Button.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="{DynamicResource  English}" Click="ChangeLanguageToEnglish"/>
+                            <MenuItem Header="{DynamicResource  Serbian}" Click="ChangeLanguageToSerbian"/>
+                        </ContextMenu>
+                    </Button.ContextMenu>
                 </Button>
 
 
@@ -67,9 +83,9 @@
                     <Icon:PackIconMaterial Kind="ThemeLightDark" Width="23" Height="31" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     <Button.ContextMenu>
                         <ContextMenu>
-                            <MenuItem Header="{x:Static resources:SharedResource.BlueText}" Click="LightThemeClick"/>
-                            <MenuItem Header="{x:Static resources:SharedResource.RedText}" Click="DarkThemeClick"/>
-                            <MenuItem Header="{x:Static resources:SharedResource.GreenText}" Click="GreenThemeClick"/>
+                            <MenuItem Header="{DynamicResource  BlueText}" Click="LightThemeClick"/>
+                            <MenuItem Header="{DynamicResource  RedText}" Click="DarkThemeClick"/>
+                            <MenuItem Header="{DynamicResource  GreenText}" Click="GreenThemeClick"/>
                         </ContextMenu>
                     </Button.ContextMenu>
                 </Button>
@@ -80,19 +96,19 @@
             </Grid>
         </Border>
    <TabControl Grid.Column="1">
-            <TabItem Header="{x:Static resources:SharedResource.AttendanceO}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}"  Foreground="White">
+            <TabItem Header="{DynamicResource  AttendanceO}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}"  Foreground="White">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="181*"/>
                         <RowDefinition Height="368*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="{x:Static resources:SharedResource.OAbyCourses}" Foreground="White" FontSize="18" FontWeight="Bold" Margin="25,25,25,25" Grid.RowSpan="2" />
+                    <TextBlock Text="{DynamicResource  OAbyCourses}" Foreground="White" FontSize="18" FontWeight="Bold" Margin="25,25,25,25" Grid.RowSpan="2" />
 
 
                     <Border BorderBrush="Gray" BorderThickness="8" Background="White" CornerRadius="4" Padding="5" Margin="25,63,800,26">
                         <StackPanel Margin="0,0,18,0">
-                            <TextBlock Text="{x:Static resources:SharedResource.CourseList}" FontSize="15" FontWeight="Bold" Margin="0,0,100,15" Width="244" Foreground="{DynamicResource MyForegroundBrush}" FontStretch="Medium"/>
-                            <ComboBox Name="cmbPredmeti" ItemsSource="{Binding}" Margin="0,0,0,20" SelectionChanged="dgPrisustvo_SelectionChanged">
+                            <TextBlock Text="{DynamicResource  CourseList}" FontSize="15" FontWeight="Bold" Margin="0,0,100,15" Width="244" Foreground="{DynamicResource MyForegroundBrush}" FontStretch="Medium"/>
+                            <ComboBox Name="cmbPredmeti" ItemsSource="{Binding}"  Style="{StaticResource ModernComboBoxStyle}" Margin="0,0,0,20" SelectionChanged="dgPrisustvo_SelectionChanged">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Naziv}" FontSize="14" />
@@ -107,7 +123,7 @@
                         <DataGrid Name="dgPrisustvo" AutoGenerateColumns="False" HeadersVisibility="Column" IsReadOnly="True" Margin="10,14,10,10" SelectionChanged="dgPrisustvo_SelectionChanged_1" >
                             <DataGrid.Columns>
 
-                                <DataGridTextColumn Header="{x:Static resources:SharedResource.LectureD}"  Binding="{Binding Datum}" Width="*">
+                                <DataGridTextColumn Header="{DynamicResource  LectureD}"  Binding="{Binding Datum}" Width="*">
                                     <DataGridTextColumn.HeaderStyle>
                                         <Style TargetType="DataGridColumnHeader">
                                             <Setter Property="Background" Value="White" />
@@ -124,7 +140,7 @@
                                 </DataGridTextColumn>
 
 
-                                <DataGridTextColumn Header="{x:Static resources:SharedResource.Absent_Present}" Binding="{Binding Status}" Width="*">
+                                <DataGridTextColumn Header="{DynamicResource  Absent_Present}" Binding="{Binding Status}" Width="*">
                                     <DataGridTextColumn.HeaderStyle>
                                         <Style TargetType="DataGridColumnHeader">
                                             <Setter Property="Background" Value="White" />
@@ -147,21 +163,20 @@
             </TabItem>
 
 
-            <TabItem Foreground="White" Header="{x:Static resources:SharedResource.Homeworks}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" >
+            <TabItem Foreground="White" Header="{DynamicResource  Homeworks}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" >
                 <Grid>
 
                     <Border BorderBrush="Gray" BorderThickness="10" Background="White" Width="920" CornerRadius="15" Padding="0" Margin="10,20,0,30">
                         <StackPanel Margin="-10">
 
 
-                            <TextBlock Text="{x:Static resources:SharedResource.CourseList}" Foreground="Black" FontSize="35" Margin="0,10,1200,15" Width="185" Height="30" />
+                            <TextBlock Text="{DynamicResource  CourseList}"  Foreground="Black" FontSize="35" Margin="0,10,1200,5" Width="185" Height="30" />
                             <Grid>
-                                <Border Margin="52,45,838,23" Height="20" >
-                                    <Image Source="pack://application:,,,/Images/education.png" Margin="-26,-28,0,0"/>
-                                </Border>
+                                <TextBlock Text="Izaberite predmet" Foreground="{DynamicResource MyForegroundBrush}"  Margin="80,0,0,0"/>
+                               
 
-                                <Border Background="LightSlateGray" Width="300"  CornerRadius="10"  Margin="10,5,400,20" Height="32">
-                                    <ComboBox x:Name="cmbPredmetD" SelectionChanged="cmbPredmet_SelectionChangedD" ItemsSource="{Binding}" Width ="260" Margin="0,0,3,0">
+                             
+                                    <ComboBox x:Name="cmbPredmetD"  Style="{StaticResource ModernComboBoxStyle}" SelectionChanged="cmbPredmet_SelectionChangedD" ItemsSource="{Binding}" Width ="250" Margin="-500,30,100,20">
 
                                         <ComboBox.ItemTemplate>
                                             <DataTemplate>
@@ -170,12 +185,12 @@
                                             </DataTemplate>
                                         </ComboBox.ItemTemplate>
                                     </ComboBox>
-                                </Border>
+                               
                             </Grid>
                             <DataGrid Name="dgAktivnosti" FontSize="15" AutoGenerateColumns="False" Margin="20,10,10,10" 
                          ItemsSource="{Binding}" IsReadOnly="True" HorizontalAlignment="Stretch"  SelectionChanged="dgAktivnosti_SelectionChanged">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="{x:Static resources:SharedResource.NameText}" FontSize="15"   Binding="{Binding naziv}" Width="200">
+                                    <DataGridTextColumn Header="{DynamicResource  NameText}" FontSize="15"   Binding="{Binding naziv}" Width="200">
                                         <DataGridTextColumn.HeaderStyle>
                                             <Style TargetType="DataGridColumnHeader">
                                                 <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -184,7 +199,7 @@
                                         </DataGridTextColumn.HeaderStyle>
                                     </DataGridTextColumn>
 
-                                    <DataGridTextColumn Header="{x:Static resources:SharedResource.DeadLineText}" Binding="{Binding rok, StringFormat=\{0:dd.MM.yyyy\}}" Width="150">
+                                    <DataGridTextColumn Header="{DynamicResource  DeadLineText}" Binding="{Binding rok, StringFormat=\{0:dd.MM.yyyy\}}" Width="150">
                                         <DataGridTextColumn.HeaderStyle>
                                             <Style TargetType="DataGridColumnHeader">
                                                 <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -193,7 +208,7 @@
                                         </DataGridTextColumn.HeaderStyle>
                                     </DataGridTextColumn>
 
-                                    <DataGridTextColumn Header="{x:Static resources:SharedResource.DescriptionText}" Binding="{Binding opis}" Width="300">
+                                    <DataGridTextColumn Header="{DynamicResource  DescriptionText}" Binding="{Binding opis}" Width="300">
                                         <DataGridTextColumn.HeaderStyle>
                                             <Style TargetType="DataGridColumnHeader">
                                                 <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -210,18 +225,18 @@
             </TabItem>
 
 
-            <TabItem Header="{x:Static resources:SharedResource.ExamManagement}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Foreground="White">
+            <TabItem Header="{DynamicResource  ExamManagement}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Foreground="White">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="960*"/>
                         <ColumnDefinition Width="127*"/>
                         <ColumnDefinition Width="0*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="{x:Static resources:SharedResource.ExamsByCourses}" Foreground="{DynamicResource MyForegroundBrush}" FontSize="20" FontWeight="Bold" Margin="20,25,25,25" Grid.ColumnSpan="2" />
+                    <TextBlock Text="{DynamicResource  ExamsByCourses}" Foreground="{DynamicResource MyForegroundBrush}" FontSize="20" FontWeight="Bold" Margin="20,25,25,25" Grid.ColumnSpan="2" />
                     <Border BorderBrush="Gray" BorderThickness="8" Background="White" CornerRadius="4" Padding="5" Margin="0,60,670,450" Width="350"  Height="100">
                         <StackPanel Margin="0,5,18,0">
-                            <TextBlock Text="{x:Static resources:SharedResource.CourseList}" FontSize="16" FontWeight="Bold" Margin="0,0,100,15" Width="244" Foreground="{DynamicResource  MyForegroundBrush}" FontStretch="Medium"/>
-                            <ComboBox Name="cmbPredmetiIspit" ItemsSource="{Binding}" Foreground="Black" Margin="0,0,0,20" SelectionChanged="ChangeSubject_SelectionChanged">
+                            <TextBlock Text="{DynamicResource  CourseList}" FontSize="16" FontWeight="Bold" Margin="0,0,100,15" Width="244" Foreground="{DynamicResource  MyForegroundBrush}" FontStretch="Medium"/>
+                            <ComboBox Name="cmbPredmetiIspit" ItemsSource="{Binding}" Style="{StaticResource ModernComboBoxStyle}" Foreground="Black" Margin="0,0,0,20" SelectionChanged="ChangeSubject_SelectionChanged">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Naziv}"  FontSize="14"/>
@@ -237,9 +252,9 @@
                         <DataGrid Name="dgIspiti" AutoGenerateColumns="False" HeadersVisibility="Column" IsReadOnly="True" Margin="40,15,15,9"   ColumnHeaderStyle="{StaticResource DynamicHeaderStyle}">
                             <!-- SelectionChanged="dgIspiti_SelectionChanged" --> 
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="{x:Static resources:SharedResource.ExamDate}"   Binding="{Binding datumIspita}" Width="*" />
-                                <DataGridTextColumn Header="{x:Static resources:SharedResource.GradeText}" Binding="{Binding ocjena}" Width="*"/>
-                                <DataGridTextColumn Header="{x:Static resources:SharedResource.PointsText}" Binding="{Binding bodovi}" Width="*"/>
+                                <DataGridTextColumn Header="{DynamicResource  ExamDate}"   Binding="{Binding datumIspita}" Width="*" />
+                                <DataGridTextColumn Header="{DynamicResource  GradeText}" Binding="{Binding ocjena}" Width="*"/>
+                                <DataGridTextColumn Header="{DynamicResource  PointsText}" Binding="{Binding bodovi}" Width="*"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Border>
@@ -247,12 +262,12 @@
             </TabItem>
 
 
-            <!--   <TabItem Header="{x:Static resources:SharedResource.StudentAchievement}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Foreground="White">
+            <!--   <TabItem Header="{DynamicResource  StudentAchievement}" Height="85"  HeaderTemplate="{DynamicResource CustomTabHeaderTemplate}" Foreground="White">
                 <Grid>
-                    <TextBlock Text="{x:Static resources:SharedResource.PerformanceByCourses}" Foreground="White" FontSize="16" FontWeight="Bold" Margin="10" />
+                    <TextBlock Text="{DynamicResource  PerformanceByCourses}" Foreground="White" FontSize="16" FontWeight="Bold" Margin="10" />
                     <Border BorderBrush="#c16500" BorderThickness="8" Background="#008479" CornerRadius="4" Padding="5" Margin="41,51,800,464" Height="100">
                         <StackPanel Margin="0,0,18,0">
-                            <TextBlock Text="{x:Static resources:SharedResource.CourseList}" FontWeight="Bold" Margin="-1,10,100,15" Width="244" Foreground="White" FontStretch="Medium"/>
+                            <TextBlock Text="{DynamicResource  CourseList}" FontWeight="Bold" Margin="-1,10,100,15" Width="244" Foreground="White" FontStretch="Medium"/>
                             <ComboBox Name="cmbPredmetiUspjeh" ItemsSource="{Binding}" Margin="0,0,0,20">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>

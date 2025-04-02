@@ -19,6 +19,7 @@ using PrviProjektniZadatakHCI.View;
 using PrviProjektniZadatakHCI.DataAccess;
 using PrviProjektniZadatakHCI.Resources;
 using PrviProjektniZadatakHCI;
+using System.Globalization;
 
 namespace ASystem
 {
@@ -47,6 +48,60 @@ namespace ASystem
 
             CommandBinding logoutBinding = new CommandBinding(LogoutCommand, LogoutButton_Click);
             this.CommandBindings.Add(logoutBinding);
+        }
+
+        private void ChangeLanguage(string languageCode)
+        {
+            var cultureInfo = new CultureInfo(languageCode);
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            ResourceDictionary resourceDictionary = new ResourceDictionary();
+            if (languageCode == "sr")
+            {
+                resourceDictionary.Source = new Uri("pack://application:,,,/PrviProjektniZadatakHCI;component/Resources/SerbianLanguage.xaml");
+            }
+            else
+            {
+                resourceDictionary.Source = new Uri("pack://application:,,,/PrviProjektniZadatakHCI;component/Resources/EnglishLanguage.xaml");
+            }
+            this.Resources.MergedDictionaries.Clear();
+            this.Resources.MergedDictionaries.Add(resourceDictionary);
+        }
+
+        private List<DataGrid> FindAllDataGrids(DependencyObject parent)
+        {
+            var dataGrids = new List<DataGrid>();
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                if (child is DataGrid dataGrid)
+                {
+                    dataGrids.Add(dataGrid);
+                }
+                else
+                {
+                    dataGrids.AddRange(FindAllDataGrids(child));
+                }
+            }
+            return dataGrids;
+        }
+        public void RefreshAllDataGrids()
+        {
+            var allDataGrids = FindAllDataGrids(this); 
+            foreach (var dataGrid in allDataGrids)
+            {
+                dataGrid.InvalidateVisual();
+                dataGrid.Items.Refresh();
+            }
+        }
+        private void ChangeLanguageToEnglish(object sender, RoutedEventArgs e)
+        {
+            ChangeLanguage("en");
+        }
+
+        private void ChangeLanguageToSerbian(object sender, RoutedEventArgs e)
+        {
+            ChangeLanguage("sr");
         }
         private void Undo_Executed(object sender, ExecutedRoutedEventArgs e)
         {

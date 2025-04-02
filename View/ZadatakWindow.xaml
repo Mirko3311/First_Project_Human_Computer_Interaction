@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:PrviProjektniZadatakHCI.View"
         xmlns:resources="clr-namespace:PrviProjektniZadatakHCI.Resources;assembly=PrviProjektniZadatakHCI"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
-
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="{x:Static resources:SharedResource.TaskOverviewText}" Height="600" Width="700" WindowStartupLocation="CenterScreen"
+        Title="{DynamicResource TaskOverviewText}" Height="600" Width="700" WindowStartupLocation="CenterScreen"
         Background="#F0F2F5">
 
     <Grid>
@@ -24,12 +24,23 @@
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="600">
                 <Border Padding="15" CornerRadius="10" BorderBrush="DarkGray" BorderThickness="1">
                     <StackPanel Background="White">
-                        <TextBlock Text="{x:Static resources:SharedResource.TaskNameText}" FontWeight="Bold" FontSize="16" Foreground="Black"/>
+                        <TextBlock Text="{DynamicResource TaskNameText}" FontWeight="Bold" FontSize="16" Foreground="Black"/>
                         <TextBox x:Name="txtNaziv" Margin="0,5,0,10" Background="#EAEAEA" Padding="5"/>
-                        <TextBlock Text="{x:Static resources:SharedResource.DescriptionText}" FontWeight="Bold" FontSize="16" Foreground="Black"/>
+                        <TextBlock Text="{DynamicResource DescriptionText}" FontWeight="Bold" FontSize="16" Foreground="Black"/>
                         <TextBox x:Name="txtOpis" Margin="0,5,0,10" Height="80" TextWrapping="Wrap" Background="#EAEAEA" Padding="5"/>
-                        <TextBlock Text="{x:Static resources:SharedResource.DeadLineText}" FontWeight="Bold" FontSize="16" Foreground="Black"/>
-                        <DatePicker x:Name="dpRok" Margin="0,5,0,10"/>
+                        <TextBlock Text="{DynamicResource DeadLineText}" FontWeight="Bold" FontSize="16" Foreground="Black"/>
+                      <!--  <DatePicker x:Name="dpRok" Margin="0,5,0,10"/> -->
+                        <DatePicker x:Name="dpRok" 
+             Margin="0,5,0,10"
+            DisplayDateStart="{x:Static sys:DateTime.Today}"
+            SelectedDate="{x:Static sys:DateTime.Today}">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="IsReadOnly" Value="True"/>
+                                    <!-- Optional: Prevent manual typing -->
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
 
                     </StackPanel>
                 </Border>

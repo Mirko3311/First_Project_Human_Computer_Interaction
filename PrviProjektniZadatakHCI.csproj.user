@@ -36,6 +36,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Resources\EnglishLanguage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\SerbianLanguage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\CustomCombox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Style.xaml">
       <SubType>Designer</SubType>
     </Page>

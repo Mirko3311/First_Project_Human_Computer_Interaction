@@ -322,6 +322,15 @@ namespace PrviProjektniZadatakHCI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Engleski.
+        /// </summary>
+        public static string English {
+            get {
+                return ResourceManager.GetString("English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unesite ime predmeta.
         /// </summary>
         public static string EnterCourseName {
@@ -439,7 +448,7 @@ namespace PrviProjektniZadatakHCI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Šifra zadatka.
+        ///   Looks up a localized string similar to Unesite šifru zadatka:.
         /// </summary>
         public static string ExamIdText {
             get {
@@ -894,6 +903,42 @@ namespace PrviProjektniZadatakHCI.Resources {
         public static string SelectItemDelete {
             get {
                 return ResourceManager.GetString("SelectItemDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Izaberite profesora .
+        /// </summary>
+        public static string SelectProfessorText {
+            get {
+                return ResourceManager.GetString("SelectProfessorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Izaberite studenta.
+        /// </summary>
+        public static string SelectStudentText {
+            get {
+                return ResourceManager.GetString("SelectStudentText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Izaberite predmet.
+        /// </summary>
+        public static string SelectSubjectText {
+            get {
+                return ResourceManager.GetString("SelectSubjectText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Srpski.
+        /// </summary>
+        public static string Serbian {
+            get {
+                return ResourceManager.GetString("Serbian", resourceCulture);
             }
         }
         

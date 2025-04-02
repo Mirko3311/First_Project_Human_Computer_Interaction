@@ -15,6 +15,7 @@ namespace PrviProjektniZadatakHCI.ViewModel
 {
     namespace ASystem
     {
+
         public class ProfesorViewModel : INotifyPropertyChanged
         {
             private Profesor _selektovaniProfesor;

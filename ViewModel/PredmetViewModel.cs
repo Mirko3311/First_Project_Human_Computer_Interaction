@@ -98,6 +98,25 @@ namespace PrviProjektniZadatakHCI.ViewModel
             ECTS = predmet.ECTS.ToString();
         }
 
+        private ObservableCollection<StudentViewModel> _students;
+        public ObservableCollection<StudentViewModel> Students
+        {
+            get => _students;
+            set
+            {
+                _students = value;
+                OnPropertyChanged(nameof(Students));
+            }
+        }
+
+        public void LoadStudentsForSubject(Predmet predmet)
+        {
+            var studentModels = PredmetDataAccess.studentiSlusaju(predmet);
+            Students = new ObservableCollection<StudentViewModel>(
+                studentModels.Select(s => new StudentViewModel(s))
+            );
+        }
+
     }
 
 }

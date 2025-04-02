@@ -27,7 +27,7 @@
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
-    <FontFamily x:Key="DynamicFont">Verdana</FontFamily>
+    <FontFamily x:Key="DynamicFont">Arial</FontFamily>
 
 
     <Style x:Key="DynamicHeaderStyle" TargetType="DataGridColumnHeader">
@@ -37,8 +37,8 @@
 
     <Style x:Key="DynamicTextBlockStyle" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="{DynamicResource DynamicFont}" />
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="Foreground" Value="{DynamicResource MyForegroundBrush}" />
     </Style>
 
     <Style x:Key="DynamicTextHeaderStyle" TargetType="TextBlock">

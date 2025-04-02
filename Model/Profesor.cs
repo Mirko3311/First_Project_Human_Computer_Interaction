@@ -48,8 +48,11 @@ namespace ASystem
 
         }
 
-
-       public Profesor DeepCopy()
+        public string ToString()
+        {
+            return DisplayText;
+        }
+        public Profesor DeepCopy()
     {
         return (Profesor)this.MemberwiseClone();
     }

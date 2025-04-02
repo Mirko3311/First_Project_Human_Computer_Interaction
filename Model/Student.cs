@@ -26,10 +26,7 @@ namespace ASystem
             get { return $"{ime} {prezime}"; }
         }
 
-        public String NazivStudenta
-        {
-            get { return $"{ime} {prezime}"; }
-        }
+    
         public Student(int idKorisnika, string ime, string prezime) : base(idKorisnika, ime, prezime) 
         {}
         public bool IsPrisutanChecked { get; set; }

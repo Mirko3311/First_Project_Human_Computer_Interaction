@@ -9,17 +9,18 @@ using System.Threading.Tasks;
 
 namespace PrviProjektniZadatakHCI.ViewModel
 {
-    public class StudentViewModel : INotifyPropertyChanged
+    public class StudentViewModel : BaseViewModel
     {
         private Student _student;
         public StudentViewModel(Student student)
         {
             _student = student;
         }
+        public Student StudentModel => _student;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string NazivStudenta => _student.NazivStudenta;
+        public string NazivStudenta => _student.DisplayText;
 
         public string ImeStudenta => _student.ime;
 

@@ -18,10 +18,9 @@
 
     <Style x:Key="DynamicTextBlockStyle" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="{DynamicResource DynamicFont}" />
-        <Setter Property="FontSize" Value="15" />
-        <Setter Property="Foreground" Value="#db5f17" />
-    </Style>
-
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="{DynamicResource MyForegroundBrush}" />
+    </Style> 
     <Style x:Key="CustomButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="#4CAF50" /> 
         <Setter Property="Foreground" Value="White" />   

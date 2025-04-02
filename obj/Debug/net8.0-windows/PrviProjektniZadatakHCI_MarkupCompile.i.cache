@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\PC\OneDrive\Desktop\First_Project_HCI\HC1\App.xaml
-14-2841913
+17-811663089
 
-47-1829496940
+521704958174
 2571146144039
-MainWindow.xaml;Themes\Generic.xaml;Themes\Style.xaml;View\AdminWindow.xaml;View\DetailWindow.xaml;View\ProfessorWindow.xaml;View\PromjenaLozinkeView.xaml;View\StudentView.xaml;View\StudentWindow.xaml;View\SuccessWindow.xaml;View\SuperUser.xaml;View\WarningWindow.xaml;View\WrongWindow.xaml;View\ZadatakWindow.xaml;
+MainWindow.xaml;Resources\EnglishLanguage.xaml;Resources\SerbianLanguage.xaml;Themes\CustomCombox.xaml;Themes\Generic.xaml;Themes\Style.xaml;View\AdminWindow.xaml;View\DetailWindow.xaml;View\ProfessorWindow.xaml;View\PromjenaLozinkeView.xaml;View\StudentView.xaml;View\StudentWindow.xaml;View\SuccessWindow.xaml;View\SuperUser.xaml;View\WarningWindow.xaml;View\WrongWindow.xaml;View\ZadatakWindow.xaml;
 
-False
+True
 

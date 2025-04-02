@@ -39,23 +39,52 @@ namespace ASystem
                 }
             }
 
+        /*    private void ChangeLanguageToEnglish(object sender, RoutedEventArgs e)
+            {
+                (Application.Current as App).SetLanguage("en");
+                MainWindow newWindow = new MainWindow();
+                newWindow.Show();
+                this.Close();
+            }
+
+            private void ChangeLanguageToSerbian(object sender, RoutedEventArgs e)
+            {
+                (Application.Current as App).SetLanguage("sr");
+                MainWindow newWindow = new MainWindow();
+                newWindow.Show();
+                this.Close();
+            }
+
+            */
+
+        private void ChangeLanguage(string languageCode)
+        {
+            var cultureInfo = new CultureInfo(languageCode);
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            ResourceDictionary resourceDictionary = new ResourceDictionary();
+            if (languageCode == "sr")
+            {
+                resourceDictionary.Source = new Uri("pack://application:,,,/PrviProjektniZadatakHCI;component/Resources/SerbianLanguage.xaml");
+            }
+            else
+            {
+                resourceDictionary.Source = new Uri("pack://application:,,,/PrviProjektniZadatakHCI;component/Resources/EnglishLanguage.xaml");
+            }
+            this.Resources.MergedDictionaries.Clear();
+            this.Resources.MergedDictionaries.Add(resourceDictionary);
+        }
+
+
         private void ChangeLanguageToEnglish(object sender, RoutedEventArgs e)
         {
-            (Application.Current as App).SetLanguage("en");
-            MainWindow newWindow = new MainWindow();
-            newWindow.Show();
-            this.Close();
+            ChangeLanguage("en");
         }
 
         private void ChangeLanguageToSerbian(object sender, RoutedEventArgs e)
         {
-            (Application.Current as App).SetLanguage("sr");
-            MainWindow newWindow = new MainWindow();
-            newWindow.Show();
-            this.Close();
+            ChangeLanguage("sr");
         }
-
-
         private void btnLogin_Click(object sender, RoutedEventArgs e)
             {
                 try

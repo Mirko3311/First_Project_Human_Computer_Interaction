@@ -3,128 +3,168 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\professorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\professorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\professorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\professorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\dataaccess\\ispitdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:dataaccess\\ispitdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\dataaccess\\professordataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:dataaccess\\professordataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\themes\\style.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:themes\\style.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\themes\\redtheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:themes\\redtheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\themes\\generic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:themes\\generic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\themes\\bluetheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:themes\\bluetheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\dataaccess\\predmetdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:dataaccess\\predmetdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\dataaccess\\prisustvodataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:dataaccess\\prisustvodataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\dataaccess\\korisnikdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:dataaccess\\korisnikdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\ispit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\ispit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\trenutnikorisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\trenutnikorisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\uspjeh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\uspjeh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\domacizadatak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\domacizadatak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\predmet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\predmet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\profesor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\profesor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\promjenalozinkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\promjenalozinkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\predmetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\predmetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\korisniviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\korisniviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\zadatakwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\zadatakwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\wrongwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\wrongwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\superuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\superuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\successwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\successwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\studentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\studentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\studentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\studentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\professorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\professorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\professorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\professorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\predmetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\predmetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\studentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\studentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\dataaccess\\domacizadatakdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:dataaccess\\domacizadatakdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\zadatakwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\zadatakwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\themes\\bluetheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:themes\\bluetheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\resources\\englishlanguage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:resources\\englishlanguage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\resources\\serbianlanguage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:resources\\serbianlanguage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\zadatakwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\zadatakwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\studentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\studentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\studentview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\studentview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\detailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\detailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\promjenalozinkeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\promjenalozinkeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\superuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\superuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\successwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\successwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\view\\successwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:view\\successwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\util\\emailvalidationrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:util\\emailvalidationrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\util\\academicyearvalidationrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:util\\academicyearvalidationrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\themes\\customcombox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:themes\\customcombox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\themes\\greentheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:themes\\greentheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\util\\idvalidationrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:util\\idvalidationrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\util\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:util\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\korisniviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\korisniviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\profesor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\profesor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\themes\\redtheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:themes\\redtheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\themes\\style.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:themes\\style.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\resources\\sharedresource.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:resources\\sharedresource.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\changerthemes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:changerthemes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\predmet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\predmet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\model\\prisustvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:model\\prisustvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|c:\\users\\pc\\onedrive\\desktop\\first_project_hci\\hc1\\viewmodel\\promjenalozinkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA1518E-477E-9BA7-1D97-512732A21D53}|PrviProjektniZadatakHCI.csproj|solutionrelative:viewmodel\\promjenalozinkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -143,7 +183,7 @@
           ]
         },
         {
-          "DockedHeight": 537,
+          "DockedHeight": 546,
           "SelectedChildIndex": 4,
           "Children": [
             {
@@ -151,8 +191,17 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfessorWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ProfessorWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\ProfessorWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ProfessorWindow.xaml.cs",
+              "RelativeToolTip": "View\\ProfessorWindow.xaml.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAQwF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T12:01:37.277Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -161,336 +210,489 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "StudentWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentWindow.xaml",
+              "RelativeDocumentMoniker": "View\\StudentWindow.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentWindow.xaml*",
+              "RelativeToolTip": "View\\StudentWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-27T21:32:08.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\StudentWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentWindow.xaml.cs",
+              "RelativeToolTip": "View\\StudentWindow.xaml.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwF0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T21:32:10.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfesorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\ProfesorViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\ProfesorViewModel.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\ProfesorViewModel.cs",
+              "RelativeToolTip": "ViewModel\\ProfesorViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T20:07:33.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ProfessorWindow.xaml",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ProfessorWindow.xaml",
               "RelativeDocumentMoniker": "View\\ProfessorWindow.xaml",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ProfessorWindow.xaml",
               "RelativeToolTip": "View\\ProfessorWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-25T12:15:20.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProfessorWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ProfessorWindow.xaml.cs",
-              "RelativeDocumentMoniker": "View\\ProfessorWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ProfessorWindow.xaml.cs",
-              "RelativeToolTip": "View\\ProfessorWindow.xaml.cs",
-              "ViewState": "AgIAAEQBAAAAAAAAAAAAAFUBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T12:01:37.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Style.xaml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\Style.xaml",
-              "RelativeDocumentMoniker": "Themes\\Style.xaml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\Style.xaml",
-              "RelativeToolTip": "Themes\\Style.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-25T11:36:58.237Z",
+              "WhenOpened": "2025-03-26T14:59:50.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "RedTheme.xaml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\RedTheme.xaml",
-              "RelativeDocumentMoniker": "Themes\\RedTheme.xaml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\RedTheme.xaml",
-              "RelativeToolTip": "Themes\\RedTheme.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-25T11:36:53.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BlueTheme.xaml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\BlueTheme.xaml",
-              "RelativeDocumentMoniker": "Themes\\BlueTheme.xaml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\BlueTheme.xaml",
-              "RelativeToolTip": "Themes\\BlueTheme.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-25T11:36:46.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProfessorDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\ProfessorDataAccess.cs",
-              "RelativeDocumentMoniker": "DataAccess\\ProfessorDataAccess.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\ProfessorDataAccess.cs",
-              "RelativeToolTip": "DataAccess\\ProfessorDataAccess.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:35:18.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PrisustvoDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\PrisustvoDataAccess.cs",
-              "RelativeDocumentMoniker": "DataAccess\\PrisustvoDataAccess.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\PrisustvoDataAccess.cs",
-              "RelativeToolTip": "DataAccess\\PrisustvoDataAccess.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:35:10.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PredmetDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\PredmetDataAccess.cs",
-              "RelativeDocumentMoniker": "DataAccess\\PredmetDataAccess.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\PredmetDataAccess.cs",
-              "RelativeToolTip": "DataAccess\\PredmetDataAccess.cs",
-              "ViewState": "AgIAAC8CAAAAAAAAAAAAAKwBAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:34:54.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "KorisnikDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\KorisnikDataAccess.cs",
-              "RelativeDocumentMoniker": "DataAccess\\KorisnikDataAccess.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\KorisnikDataAccess.cs",
-              "RelativeToolTip": "DataAccess\\KorisnikDataAccess.cs",
-              "ViewState": "AgIAAPkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:34:49.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IspitDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\IspitDataAccess.cs",
-              "RelativeDocumentMoniker": "DataAccess\\IspitDataAccess.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\IspitDataAccess.cs",
-              "RelativeToolTip": "DataAccess\\IspitDataAccess.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAkwFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:34:37.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Student.cs",
-              "RelativeDocumentMoniker": "Model\\Student.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Student.cs",
-              "RelativeToolTip": "Model\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:33:19.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Admin.cs",
-              "RelativeDocumentMoniker": "Model\\Admin.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Admin.cs",
-              "RelativeToolTip": "Model\\Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:34:03.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Ispit.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Ispit.cs",
-              "RelativeDocumentMoniker": "Model\\Ispit.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Ispit.cs",
-              "RelativeToolTip": "Model\\Ispit.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:33:59.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Korisnik.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Korisnik.cs",
-              "RelativeDocumentMoniker": "Model\\Korisnik.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Korisnik.cs",
-              "RelativeToolTip": "Model\\Korisnik.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAkwCEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:33:46.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Predmet.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Predmet.cs",
-              "RelativeDocumentMoniker": "Model\\Predmet.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Predmet.cs",
-              "RelativeToolTip": "Model\\Predmet.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:33:29.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Uspjeh.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Uspjeh.cs",
-              "RelativeDocumentMoniker": "Model\\Uspjeh.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Uspjeh.cs",
-              "RelativeToolTip": "Model\\Uspjeh.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:33:25.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TrenutniKorisnik.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\TrenutniKorisnik.cs",
-              "RelativeDocumentMoniker": "Model\\TrenutniKorisnik.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\TrenutniKorisnik.cs",
-              "RelativeToolTip": "Model\\TrenutniKorisnik.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:33:22.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Profesor.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Profesor.cs",
-              "RelativeDocumentMoniker": "Model\\Profesor.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Profesor.cs",
-              "RelativeToolTip": "Model\\Profesor.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:33:10.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DomaciZadatak.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\DomaciZadatak.cs",
-              "RelativeDocumentMoniker": "Model\\DomaciZadatak.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\DomaciZadatak.cs",
-              "RelativeToolTip": "Model\\DomaciZadatak.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:33:08.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "PredmetViewModel.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\PredmetViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\PredmetViewModel.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\PredmetViewModel.cs",
               "RelativeToolTip": "ViewModel\\PredmetViewModel.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:32:06.153Z",
+              "WhenOpened": "2025-04-02T10:25:41.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "KorisniViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\KorisniViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\KorisniViewModel.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\KorisniViewModel.cs",
-              "RelativeToolTip": "ViewModel\\KorisniViewModel.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "StudentViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\StudentViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\StudentViewModel.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\StudentViewModel.cs",
+              "RelativeToolTip": "ViewModel\\StudentViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwAsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:32:02.809Z",
+              "WhenOpened": "2025-03-26T20:46:27.139Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ZadatakWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ZadatakWindow.xaml",
-              "RelativeDocumentMoniker": "View\\ZadatakWindow.xaml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ZadatakWindow.xaml",
-              "RelativeToolTip": "View\\ZadatakWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-25T11:31:55.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "SuperUser.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuperUser.xaml.cs",
-              "RelativeDocumentMoniker": "View\\SuperUser.xaml.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuperUser.xaml.cs",
-              "RelativeToolTip": "View\\SuperUser.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\BaseViewModel.cs",
+              "RelativeToolTip": "ViewModel\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:30:55.131Z",
+              "WhenOpened": "2025-04-02T10:27:43.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "SuccessWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuccessWindow.xaml",
-              "RelativeDocumentMoniker": "View\\SuccessWindow.xaml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuccessWindow.xaml",
-              "RelativeToolTip": "View\\SuccessWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-25T11:29:53.213Z",
+              "DocumentIndex": 8,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\AdminWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "View\\AdminWindow.xaml.cs",
+              "ViewState": "AgIAAJcBAAAAAAAAAADwv+cAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T20:56:06.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "StudentWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentWindow.xaml",
-              "RelativeDocumentMoniker": "View\\StudentWindow.xaml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentWindow.xaml",
-              "RelativeToolTip": "View\\StudentWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-25T11:29:33.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 9,
               "Title": "AdminWindow.xaml",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\AdminWindow.xaml",
               "RelativeDocumentMoniker": "View\\AdminWindow.xaml",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\AdminWindow.xaml",
               "RelativeToolTip": "View\\AdminWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-25T11:27:52.519Z",
+              "WhenOpened": "2025-03-26T07:48:29.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ZadatakWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ZadatakWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\ZadatakWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ZadatakWindow.xaml.cs",
+              "RelativeToolTip": "View\\ZadatakWindow.xaml.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAgwIcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T20:31:50.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwEsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T14:41:03.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BlueTheme.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\BlueTheme.xaml",
+              "RelativeDocumentMoniker": "Themes\\BlueTheme.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\BlueTheme.xaml",
+              "RelativeToolTip": "Themes\\BlueTheme.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-01T21:42:36.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-01T20:56:08.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnglishLanguage.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Resources\\EnglishLanguage.xaml",
+              "RelativeDocumentMoniker": "Resources\\EnglishLanguage.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Resources\\EnglishLanguage.xaml",
+              "RelativeToolTip": "Resources\\EnglishLanguage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-31T15:38:32.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SerbianLanguage.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Resources\\SerbianLanguage.xaml",
+              "RelativeDocumentMoniker": "Resources\\SerbianLanguage.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Resources\\SerbianLanguage.xaml",
+              "RelativeToolTip": "Resources\\SerbianLanguage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-01T10:40:17.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ZadatakWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ZadatakWindow.xaml",
+              "RelativeDocumentMoniker": "View\\ZadatakWindow.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\ZadatakWindow.xaml",
+              "RelativeToolTip": "View\\ZadatakWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-01T18:41:42.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StudentView.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentView.xaml",
+              "RelativeDocumentMoniker": "View\\StudentView.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentView.xaml",
+              "RelativeToolTip": "View\\StudentView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-01T09:35:25.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "StudentView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentView.xaml.cs",
+              "RelativeDocumentMoniker": "View\\StudentView.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\StudentView.xaml.cs",
+              "RelativeToolTip": "View\\StudentView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T18:29:39.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\DetailWindow.xaml",
+              "RelativeDocumentMoniker": "View\\DetailWindow.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\DetailWindow.xaml",
+              "RelativeToolTip": "View\\DetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-01T18:41:26.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "PromjenaLozinkeView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\PromjenaLozinkeView.xaml.cs",
+              "RelativeDocumentMoniker": "View\\PromjenaLozinkeView.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\PromjenaLozinkeView.xaml.cs",
+              "RelativeToolTip": "View\\PromjenaLozinkeView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T18:30:06.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SuperUser.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuperUser.xaml.cs",
+              "RelativeDocumentMoniker": "View\\SuperUser.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuperUser.xaml.cs",
+              "RelativeToolTip": "View\\SuperUser.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T18:30:00.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SuccessWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuccessWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\SuccessWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuccessWindow.xaml.cs",
+              "RelativeToolTip": "View\\SuccessWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T18:29:55.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SuccessWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuccessWindow.xaml",
+              "RelativeDocumentMoniker": "View\\SuccessWindow.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\SuccessWindow.xaml",
+              "RelativeToolTip": "View\\SuccessWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-01T18:29:51.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GreenTheme.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\GreenTheme.xaml",
+              "RelativeDocumentMoniker": "Themes\\GreenTheme.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\GreenTheme.xaml",
+              "RelativeToolTip": "Themes\\GreenTheme.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-26T09:05:00.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ValidationHelper.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Util\\ValidationHelper.cs",
+              "RelativeDocumentMoniker": "Util\\ValidationHelper.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Util\\ValidationHelper.cs",
+              "RelativeToolTip": "Util\\ValidationHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:17:36.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EmailValidationRule.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Util\\EmailValidationRule.cs",
+              "RelativeDocumentMoniker": "Util\\EmailValidationRule.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Util\\EmailValidationRule.cs",
+              "RelativeToolTip": "Util\\EmailValidationRule.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:34:45.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AcademicYearValidationRule.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Util\\AcademicYearValidationRule.cs",
+              "RelativeDocumentMoniker": "Util\\AcademicYearValidationRule.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Util\\AcademicYearValidationRule.cs",
+              "RelativeToolTip": "Util\\AcademicYearValidationRule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:54:47.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RedTheme.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\RedTheme.xaml",
+              "RelativeDocumentMoniker": "Themes\\RedTheme.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\RedTheme.xaml",
+              "RelativeToolTip": "Themes\\RedTheme.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-28T15:13:49.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Style.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\Style.xaml",
+              "RelativeDocumentMoniker": "Themes\\Style.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\Style.xaml",
+              "RelativeToolTip": "Themes\\Style.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-28T15:17:41.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "KorisniViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\KorisniViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\KorisniViewModel.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\KorisniViewModel.cs",
+              "RelativeToolTip": "ViewModel\\KorisniViewModel.cs",
+              "ViewState": "AgIAAL0AAAAAAAAAAADwv8cAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T20:11:28.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IdValidationRule.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Util\\IdValidationRule.cs",
+              "RelativeDocumentMoniker": "Util\\IdValidationRule.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Util\\IdValidationRule.cs",
+              "RelativeToolTip": "Util\\IdValidationRule.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T11:58:46.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAlwFYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:25:51.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-26T11:25:21.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SharedResource.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Resources\\SharedResource.Designer.cs",
+              "RelativeDocumentMoniker": "Resources\\SharedResource.Designer.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Resources\\SharedResource.Designer.cs",
+              "RelativeToolTip": "Resources\\SharedResource.Designer.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T13:14:51.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ChangerThemes.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ChangerThemes.cs",
+              "RelativeDocumentMoniker": "ChangerThemes.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ChangerThemes.cs",
+              "RelativeToolTip": "ChangerThemes.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T14:26:56.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Predmet.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Predmet.cs",
+              "RelativeDocumentMoniker": "Model\\Predmet.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Predmet.cs",
+              "RelativeToolTip": "Model\\Predmet.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T10:47:55.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Prisustvo.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Prisustvo.cs",
+              "RelativeDocumentMoniker": "Model\\Prisustvo.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Prisustvo.cs",
+              "RelativeToolTip": "Model\\Prisustvo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T20:44:17.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Profesor.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Profesor.cs",
+              "RelativeDocumentMoniker": "Model\\Profesor.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Model\\Profesor.cs",
+              "RelativeToolTip": "Model\\Profesor.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T20:44:20.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CustomCombox.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\CustomCombox.xaml",
+              "RelativeDocumentMoniker": "Themes\\CustomCombox.xaml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\CustomCombox.xaml",
+              "RelativeToolTip": "Themes\\CustomCombox.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-26T15:40:38.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
               "Title": "PromjenaLozinkeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\PromjenaLozinkeViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\PromjenaLozinkeViewModel.cs",
@@ -498,68 +700,17 @@
               "RelativeToolTip": "ViewModel\\PromjenaLozinkeViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:27:09.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ProfesorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\ProfesorViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\ProfesorViewModel.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\ViewModel\\ProfesorViewModel.cs",
-              "RelativeToolTip": "ViewModel\\ProfesorViewModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwCYAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:27:01.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DomaciZadatakDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\DomaciZadatakDataAccess.cs",
-              "RelativeDocumentMoniker": "DataAccess\\DomaciZadatakDataAccess.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\DataAccess\\DomaciZadatakDataAccess.cs",
-              "RelativeToolTip": "DataAccess\\DomaciZadatakDataAccess.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T11:25:25.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Generic.xaml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\Generic.xaml",
-              "RelativeDocumentMoniker": "Themes\\Generic.xaml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\Themes\\Generic.xaml",
-              "RelativeToolTip": "Themes\\Generic.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-24T22:21:17.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "WrongWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\WrongWindow.xaml",
-              "RelativeDocumentMoniker": "View\\WrongWindow.xaml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\First_Project_HCI\\HC1\\View\\WrongWindow.xaml",
-              "RelativeToolTip": "View\\WrongWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-24T21:10:52.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T11:27:09.469Z"
             }
           ]
         },
         {
-          "DockedHeight": 120,
+          "DockedHeight": 192,
           "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3822e751-eb69-4b0e-b301-595a9e4c74d5}"
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

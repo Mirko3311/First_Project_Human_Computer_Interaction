@@ -28,8 +28,10 @@ namespace PrviProjektniZadatakHCI.View
         private Stack<Action> _undoStack;
         public ZadatakWindow(DomaciZadatak zadatak, Profesor profesor, Stack<Action> undoStack)
         {
-            
+         
+
             InitializeComponent();
+            dpRok.BlackoutDates.Add(new CalendarDateRange(DateTime.MinValue, DateTime.Today.AddDays(-1)));
             _zadatak = zadatak;
             _profesor = profesor;
             _undoStack = undoStack;
@@ -46,7 +48,7 @@ namespace PrviProjektniZadatakHCI.View
             };
             txtNaziv.Text = _zadatak.naziv;
             txtOpis.Text = _zadatak.opis;
-            dpRok.SelectedDate = _zadatak.rok;
+           //dpRok.SelectedDate = _zadatak.rok;
 
         }
 
@@ -54,8 +56,8 @@ namespace PrviProjektniZadatakHCI.View
         {
             if (DomaciZadatakDataAccess.obrisiZadatak(_zadatak))
             {
-                string message = SharedResource.SuccessfullyDelete;
-                new SuccessWindow(message);
+                string message = (String)Application.Current.Resources["SuccessfullyDelete"];
+                new SuccessWindow(message).ShowDialog();
                 this.DialogResult = true;
                 this.Close();
             }
@@ -67,8 +69,9 @@ namespace PrviProjektniZadatakHCI.View
 
             _undoStack.Push(() =>
             {
-            DomaciZadatakDataAccess.ponovoDodajZadatak(_zadatak, _profesor);
-          
+                DomaciZadatakDataAccess.ponovoDodajZadatak(_zadatak, _profesor);
+                string message = (String)Application.Current.Resources["SuccessfullyUndo"];
+                new SuccessWindow(message).ShowDialog();
             });
         }
 
@@ -82,8 +85,8 @@ namespace PrviProjektniZadatakHCI.View
                 _zadatak.opis = _originalniZadatak.opis;
                 _zadatak.rok = _originalniZadatak.rok;  
                 DomaciZadatakDataAccess.azurirajDZadatak(_zadatak, _profesor);
-                string message = SharedResource.ChangesRetreved;
-                new SuccessWindow(message);
+                string message = (string)Application.Current.Resources["SuccessfullyUndo"];
+                new SuccessWindow(message).ShowDialog();
             });
             _zadatak.naziv = txtNaziv.Text;
             _zadatak.opis = txtOpis.Text;
@@ -92,17 +95,44 @@ namespace PrviProjektniZadatakHCI.View
 
             if (DomaciZadatakDataAccess.azurirajDZadatak(_zadatak, _profesor))
             {
-                string message = SharedResource.TaskSuccessfullyUpdate;
+                string message = (string)Application.Current.Resources["TaskSuccessfullyUpdate"];
                 new SuccessWindow(message).ShowDialog();
                 this.DialogResult = true;
                 this.Close();
             }
             else
             {
-                string message = SharedResource.ErrorUpdate;
+                string message = (string)Application.Current.Resources["ErrorUpdate"];
                 new WrongWindow(message).ShowDialog();
             }
         }
 
+
+        private List<DataGrid> FindAllDataGrids(DependencyObject parent)
+        {
+            var dataGrids = new List<DataGrid>();
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                if (child is DataGrid dataGrid)
+                {
+                    dataGrids.Add(dataGrid);
+                }
+                else
+                {
+                    dataGrids.AddRange(FindAllDataGrids(child));
+                }
+            }
+            return dataGrids;
+        }
+        public void RefreshAllDataGrids()
+        {
+            var allDataGrids = FindAllDataGrids(this); // this = ProfessorWindow
+            foreach (var dataGrid in allDataGrids)
+            {
+                dataGrid.InvalidateVisual();
+                dataGrid.Items.Refresh(); // Опционо: Освјежи податке
+            }
+        }
     }
 }

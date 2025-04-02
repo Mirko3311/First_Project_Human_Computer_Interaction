@@ -19,8 +19,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using PrviProjektniZadatakHCI.Resources;
 using PrviProjektniZadatakHCI;
+using System.Globalization;
+using PrviProjektniZadatakHCI.Util;
+using static MaterialDesignThemes.Wpf.Theme;
 
 namespace ASystem
 {
@@ -28,21 +30,18 @@ namespace ASystem
     public partial class AdminWindow : Window
     {
        
-        public static RoutedCommand CancelCommand = new RoutedCommand();
-        public static RoutedCommand LogoutCommand = new RoutedCommand();
+        public static readonly RoutedCommand CancelCommand = new RoutedCommand();
+        public static readonly RoutedCommand LogoutCommand = new RoutedCommand();
         private static readonly string connectionString = ConfigurationManager.ConnectionStrings["MySql_hci"].ConnectionString;
 
         private Stack<Action> undoStack = new Stack<Action>();
-        private Stack<Action> redoStack = new Stack<Action>();
-
-
         ObservableCollection<Predmet> predmeti = PredmetDataAccess.pregledPredmeta();
         ObservableCollection<Student> studenti = StudentDataAccess.GetStudents();
         ObservableCollection<Profesor> profesori = ProfessorDataAccess.GetProfessors();
         List<Korisnik> korisnici = KorisnikDataAccess.GetKorisnici();
-        private Profesor trenutniProfesor = null;
-        private Student trenutniStudent = null;
-        private Predmet trenutniPredmet = null;
+        private Profesor? trenutniProfesor = null;
+        private Student? trenutniStudent = null;
+        private Predmet? trenutniPredmet = null;
         public AdminWindow()
         {
             InitializeComponent();
@@ -59,6 +58,186 @@ namespace ASystem
 
             CommandBinding logoutBinding = new CommandBinding(LogoutCommand, LogoutButton_Click);
             this.CommandBindings.Add(logoutBinding);
+
+            cmbUpdate.IsEnabled = false; 
+            cmbUpdateChoice.SelectionChanged += CmbUpdateChoice_SelectionChanged;
+            cmbUpdate.PreviewMouseDown += CmbUpdate_PreviewMouseDown;
+
+        }
+       private void email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is System.Windows.Controls.TextBox emailTextBox)
+            {
+               
+                if (string.IsNullOrWhiteSpace(emailTextBox.Text))
+                {
+                    if (emailTextBox.Name == "email") 
+                    {
+                        emailError.Visibility = Visibility.Collapsed;
+                    }
+                    else if (emailTextBox.Name == "emailS") 
+                    {
+                        emailStudentError.Visibility = Visibility.Collapsed;
+                    }
+                }
+                else
+                {
+                    bool isValidEmail = IsValidEmail(emailTextBox.Text);
+
+                    if (emailTextBox.Name == "email") 
+                    {
+                        emailError.Visibility = isValidEmail ? Visibility.Collapsed : Visibility.Visible;
+                    }
+                    else if (emailTextBox.Name == "emailS") 
+                    {
+                        emailStudentError.Visibility = isValidEmail ? Visibility.Collapsed : Visibility.Visible;
+                    }
+                }
+            }
+        }
+
+
+        private void id_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is System.Windows.Controls.TextBox idTextBox)
+            {
+          
+                if (string.IsNullOrWhiteSpace(idTextBox.Text))
+                {
+                    if (idTextBox.Name == "id")
+                    {
+                        idProfError.Visibility = Visibility.Collapsed;
+                    }
+                    else if (idTextBox.Name == "idS") 
+                    {
+                        idStudentError.Visibility = Visibility.Collapsed;
+                    }
+                }
+                else
+                {
+                    bool isValidId = int.TryParse(idTextBox.Text, out _);
+
+                    if (idTextBox.Name == "id") 
+                    {
+                        idProfError.Visibility = isValidId ? Visibility.Collapsed : Visibility.Visible;
+                    }
+                    else if (idTextBox.Name == "idS") 
+                    {
+                        idStudentError.Visibility = isValidId ? Visibility.Collapsed : Visibility.Visible;
+                    }
+                }
+            }
+        }
+
+
+        private bool isStudentPasswordVisible = false;
+
+        private void ToggleSButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!isStudentPasswordVisible)
+            {
+                textSBox.Text = passwordSBox.Password;
+                textSBox.Visibility = Visibility.Visible;
+                passwordSBox.Visibility = Visibility.Collapsed;
+                toggleSIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.EyeOff;
+                isStudentPasswordVisible = true;
+            }
+            else
+            {
+                passwordSBox.Password = textSBox.Text;
+                passwordSBox.Visibility = Visibility.Visible;
+                textSBox.Visibility = Visibility.Collapsed;
+                toggleSIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Eye;
+                isStudentPasswordVisible = false;
+            }
+        }
+
+        private void PasswordSBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            // Opcionalno: ažurirajte textSBox da ostane sinhronizovan, ako je potrebno
+            if (!isStudentPasswordVisible)
+            {
+                textSBox.Text = passwordSBox.Password;
+            }
+        }
+
+        private void TextSBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // Opcionalno: ažurirajte passwordSBox da ostane sinhronizovan, ako je potrebno
+            if (isStudentPasswordVisible)
+            {
+                passwordSBox.Password = textSBox.Text;
+            }
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var emailRegex = new System.Text.RegularExpressions.Regex(@"^[^@]+@[^@]+\.[^@]+$");
+                return emailRegex.IsMatch(email);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+        private bool isPasswordVisible = false;
+
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            isPasswordVisible = !isPasswordVisible;
+
+            if (isPasswordVisible)
+            {
+                // Prikazujemo lozinku u TextBox-u
+                textBox.Text = passwordBox.Password;
+                textBox.Visibility = Visibility.Visible;
+                passwordBox.Visibility = Visibility.Collapsed;
+                toggleButton.Content = "🔒"; 
+            }
+            else
+            {
+  
+                passwordBox.Password = textBox.Text;
+                passwordBox.Visibility = Visibility.Visible;
+                textBox.Visibility = Visibility.Collapsed;
+                toggleButton.Content = "👁"; 
+            }
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (!isPasswordVisible)
+            {
+                textBox.Text = passwordBox.Password;
+            }
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (isPasswordVisible)
+            {
+                passwordBox.Password = textBox.Text;
+            }
+        }
+
+
+      
+
+
+        private void ChangeLanguageToEnglish(object sender, RoutedEventArgs e)
+        {
+            ((App)Application.Current).ChangeLanguage("en");
+      
+        }
+
+        private void ChangeLanguageToSerbian(object sender, RoutedEventArgs e)
+        {
+            ((App)Application.Current).ChangeLanguage("sr");
+           
         }
         private void Cancel_Executed(object sender, ExecutedRoutedEventArgs e)
         {
@@ -73,8 +252,15 @@ namespace ASystem
         {
             if (cmbProfessors.SelectedItem is Profesor selectedProfessor)
             {
-                cmbSubjects.ItemsSource = ProfessorDataAccess.profesorPredaje(selectedProfessor);
+                var subjects = ProfessorDataAccess.profesorPredaje(selectedProfessor);
+               cmbSubjects.ItemsSource = subjects;
+                cmbSubjects.IsEnabled = (subjects?.Count > 0);
+                if (!cmbSubjects.IsEnabled)
+                {
+                    string message = (string)Application.Current.Resources["NoDataProfSubject"];
+                    new WarningWindow(message).ShowDialog();
 
+                }
             }
         }
 
@@ -84,48 +270,65 @@ namespace ASystem
                 string.IsNullOrWhiteSpace(txtProfessorSurname.Text) ||
                 string.IsNullOrWhiteSpace(email.Text) ||
                 string.IsNullOrWhiteSpace(username.Text) ||
-                string.IsNullOrWhiteSpace(password.Text) ||
+                string.IsNullOrWhiteSpace(textBox.Text) ||
                 string.IsNullOrWhiteSpace(titule.Text))
             {
-
-                string message = SharedResource.FillField;
-                new WarningWindow(message).ShowDialog();
+                string message = (string)Application.Current.Resources["FillField"];
+                new WarningWindow(message).ShowDialog();      
                 return;
             }
 
+
+            if (!IsValidEmail(email.Text))
+            {
+                
+                string message = (string)Application.Current.Resources["InvalidEmailFormat"];
+                new WarningWindow(message).ShowDialog();
+                return;
+            }
+            else
+            {
+                emailError.Visibility = Visibility.Collapsed; 
+            }
             if (!int.TryParse(id.Text.Trim(), out int parsedId))
             {
-                string message = SharedResource.IdIntegerValue;
+                string message = (string)Application.Current.Resources["IdIntegerValue"];
                 new WarningWindow(message).ShowDialog();
                 return;
             }
             if (korisnici.Any(p => p.idKorisnika == parsedId))
             {
-                string message = SharedResource.IdExist;
+               
+                string message = (string)Application.Current.Resources["IdExist"];
+                new WarningWindow(message).ShowDialog(); 
+                return;
+            }
+            if (korisnici.Any(p => p.username.Equals(username.Text, StringComparison.OrdinalIgnoreCase)))
+            {
+                string message = (string)Application.Current.Resources["UsernameExist"];
                 new WarningWindow(message).ShowDialog();
                 return;
             }
-
             Profesor profesor = new Profesor(
        idKorisnik: parsedId,
        ime: txtProfessorName.Text,
        prezime: txtProfessorSurname.Text,
        email: email.Text,
        username: username.Text,
-       password: password.Text,
+       password: textBox.Text,
        tipKorisnika: "profesor",
        zvanje: titule.Text
    );
 
             if (ProfessorDataAccess.dodajProfesora(profesor))
             {
-                string message = SharedResource.MessageProfAdd;
                 cmbProfesori.ItemsSource = ProfessorDataAccess.GetProfessors();
                 cmbProfessors.ItemsSource = ProfessorDataAccess.GetProfessors();
                 lstDeleteItems.ItemsSource = ProfessorDataAccess.GetProfessors();
                 cmbUpdate.ItemsSource = ProfessorDataAccess.GetProfessors();
+                string message = (string)Application.Current.Resources["MessageProfAdd"];
                 new SuccessWindow(message).ShowDialog();
- 
+
             }
             else
             {
@@ -138,27 +341,34 @@ namespace ASystem
                 cmbProfessors.ItemsSource = ProfessorDataAccess.GetProfessors();
                 lstDeleteItems.ItemsSource = ProfessorDataAccess.GetProfessors();
                 cmbUpdate.ItemsSource = ProfessorDataAccess.GetProfessors();
-                string message = SharedResource.SuccessfullyDelete;
+                string message = (string)Application.Current.Resources["SuccessfullyDelete"];
                 new SuccessWindow(message).ShowDialog();
             });
 
-            redoStack.Push(() =>
-            {
-                ProfessorDataAccess.dodajProfesora(profesor);
-
-                new SuccessWindow(string.Format(SharedResource.ProfessorReadded, profesor.ime, profesor.prezime)).ShowDialog();
-            });
-            redoStack.Clear();
+          
             RefreshProfessors();
             txtProfessorName.Text = "";
             txtProfessorSurname.Text = "";
             email.Text = "";
             username.Text = "";
-            password.Text = "";
+            textBox.Text = "";
             titule.Text = "";
             id.Text = "";
- 
+            passwordBox.Clear(); 
+            textBox.Clear(); 
 
+
+
+        }
+
+        private void cmbChoice_Loaded(object sender, RoutedEventArgs e)
+        {
+            cmbAddChoice.SelectedIndex = 0;
+        }
+        private void cmbUpdateChoice_Loaded(object sender, RoutedEventArgs e)
+        {
+            cmbUpdateChoice.SelectedIndex = 0;
+            cmbUpdate.ItemsSource = ProfessorDataAccess.GetProfessors();
         }
 
         private void cmbAddChoice_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -284,32 +494,46 @@ namespace ASystem
 
             if (cmbUpdateChoice.SelectedItem is ComboBoxItem selectedItem)
             {
-                contentPanel.Content = null;
-                cmbUpdate.SelectedItem = null;
-                cmbUpdate.ItemsSource = null;
-
+                    contentPanel.Content = null;
+                    cmbUpdate.ItemsSource = null;
+                    cmbUpdate.IsEnabled = false;
                 string choice = selectedItem.Tag?.ToString();
+                if (choice == null)
+                    return;
                 switch (choice)
                 {
                     case "Professor":
+
+                        
                         contentPanel.ContentTemplate = (DataTemplate)Resources["ProfesorTemplate"];
                         cmbUpdate.ItemsSource = ProfessorDataAccess.GetProfessors();
 
                         break;
 
                     case "Student":
+                    
                         contentPanel.ContentTemplate = (DataTemplate)Resources["StudentTemplate"];
                         cmbUpdate.ItemsSource = StudentDataAccess.GetStudents();
                         break;
 
                     case "Subject":
+                   
                         contentPanel.ContentTemplate = (DataTemplate)Resources["SubjectTemplate"];
-
                         cmbUpdate.ItemsSource = PredmetDataAccess.pregledPredmeta();
                         break;
                 }
+                cmbUpdate.IsEnabled = true;
             }
         }
+        private void CmbUpdate_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (!cmbUpdateChoice.IsEnabled)
+            {
+                MessageBox.Show("Molimo vas da prvo selektujete stavku u prvom ComboBox-u.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                e.Handled = true; // Sprečava otvaranje dropdown-a drugog ComboBox-a
+            }
+        }
+
         private void DeleteItem_Click(object sender, RoutedEventArgs e)
         {
             if (lstDeleteItems.SelectedItem != null)
@@ -319,7 +543,8 @@ namespace ASystem
 
                 switch (choice)
                 {
-                    case var _ when choice == SharedResource.ProfessorText:
+                       
+                    case var _ when choice == (string)Application.Current.Resources["ProfessorText"]:
                         var selectedProfesor = (Profesor)lstDeleteItems.SelectedItem;
                         undoStack.Push(() =>
                         {
@@ -327,33 +552,26 @@ namespace ASystem
                             lstDeleteItems.ItemsSource = ProfessorDataAccess.GetProfessors();
                             cmbProfesori.ItemsSource = ProfessorDataAccess.GetProfessors();
                             cmbUpdate.ItemsSource = ProfessorDataAccess.GetProfessors();
-                         
                             cmbProfessors.ItemsSource = ProfessorDataAccess.GetProfessors();
                             RefreshProfessors();
-                            new SuccessWindow(string.Format(SharedResource.UndoProfessorRestored, selectedProfesor.ime, selectedProfesor.prezime)).ShowDialog();
+                            string message = (string)Application.Current.Resources["SuccessfullyUndo"];                        
+                            new SuccessWindow(message).ShowDialog();
+                         
                         });
-                        redoStack.Push(() =>
-                        {
-                            ProfessorDataAccess.obrisiProfesora(selectedProfesor);
-                           lstDeleteItems.ItemsSource = ProfessorDataAccess.GetProfessors();
-                           cmbProfessors.ItemsSource = ProfessorDataAccess.GetProfessors();
-                           cmbProfesori.ItemsSource = ProfessorDataAccess.GetProfessors();
-                            RefreshProfessors();
-                            new SuccessWindow(string.Format(SharedResource.ProfessorDeleted, selectedProfesor.ime, selectedProfesor.prezime)).ShowDialog();
-                        });
+                      
                         if (ProfessorDataAccess.obrisiProfesora(selectedProfesor))
                         {
                             lstDeleteItems.ItemsSource = ProfessorDataAccess.GetProfessors();
                             cmbUpdate.ItemsSource = ProfessorDataAccess.GetProfessors();
                             cmbProfesori.ItemsSource = ProfessorDataAccess.GetProfessors();
-                      
                             cmbProfessors.ItemsSource = ProfessorDataAccess.GetProfessors();
-                            new SuccessWindow(SharedResource.SuccessfullyDelete).ShowDialog();
+                            string message = (string)Application.Current.Resources["SuccessfullyDelete"];
+                            new SuccessWindow(message).ShowDialog();
                             RefreshProfessors();
                         }
                         break;
 
-                    case var _ when choice == SharedResource.StudentText:
+                    case var _ when choice == (string)Application.Current.Resources["StudentText"]:
                         var selectedStudent = (Student)lstDeleteItems.SelectedItem;
                         undoStack.Push(() =>
                         {
@@ -361,38 +579,30 @@ namespace ASystem
                             lstDeleteItems.ItemsSource = StudentDataAccess.GetStudents();
                             cmbUpdate.ItemsSource = StudentDataAccess.GetStudents();
                             RefreshStudents();
-                            new SuccessWindow(string.Format(SharedResource.StudentRestored, selectedStudent.ime, selectedStudent.prezime)).ShowDialog();
+                            string message = (string)Application.Current.Resources["SuccessfullyUndo"];
+                            new SuccessWindow(message).ShowDialog();
                         });
-                        redoStack.Push(() =>
-                        {
-                            StudentDataAccess.obrisiStudenta(selectedStudent.idKorisnika);
-                            RefreshStudents();
-                            lstDeleteItems.ItemsSource = StudentDataAccess.GetStudents();
-                            new SuccessWindow(string.Format(SharedResource.StudentDeleted, selectedStudent.ime, selectedStudent.prezime)).ShowDialog();
-                        });
+                     
                         if (StudentDataAccess.obrisiStudenta(selectedStudent.idKorisnika))
                         {
                             RefreshStudents();
                             cmbUpdate.ItemsSource = StudentDataAccess.GetStudents();
-                            new SuccessWindow(string.Format(SharedResource.StudentDeleted, selectedStudent.ime, selectedStudent.prezime)).ShowDialog();
+                            string message = (string)Application.Current.Resources["SuccessfullyDelete"];
+                            new SuccessWindow(message).ShowDialog();
+
+
                         }
                         break;
 
-                    case var _ when choice == SharedResource.SubjectText:
+                    case var _ when choice == (string)Application.Current.Resources["SubjectText"]:
                         var selectedPredmet = (Predmet)lstDeleteItems.SelectedItem;
                         undoStack.Push(() =>
                         {
                             PredmetDataAccess.dodajPredmet(selectedPredmet);
                             lstDeleteItems.ItemsSource = PredmetDataAccess.pregledPredmeta();
                             cmbUpdate.ItemsSource = PredmetDataAccess.pregledPredmeta();
-                            new SuccessWindow($"{selectedPredmet.Naziv} {SharedResource.SaveButton}.").ShowDialog();
-                        });
-                        redoStack.Push(() =>
-                        {
-                            PredmetDataAccess.ObrisiPredmet(selectedPredmet.IdPredmeta);
-                            lstDeleteItems.ItemsSource = PredmetDataAccess.pregledPredmeta();
-                            cmbUpdate.ItemsSource = PredmetDataAccess.pregledPredmeta();
-                            new SuccessWindow($"{selectedPredmet.Naziv} {SharedResource.DeleteText}.").ShowDialog();
+                            string message = (string)Application.Current.Resources["SuccessfullyUndo"];
+                            new SuccessWindow(message).ShowDialog();
                         });
                         if (PredmetDataAccess.ObrisiPredmet(selectedPredmet.IdPredmeta))
                         {
@@ -400,6 +610,8 @@ namespace ASystem
                             lstDeleteItems.ItemsSource = PredmetDataAccess.pregledPredmeta();
                             cmbUpdate.ItemsSource = PredmetDataAccess.pregledPredmeta();
                             lstDeleteItems.Items.Refresh();
+                            string message = (string)Application.Current.Resources["SuccessfullyDelete"];
+                            new SuccessWindow(message).ShowDialog();
                         }
                         break;
                 }
@@ -454,93 +666,101 @@ namespace ASystem
                 string.IsNullOrWhiteSpace(txtStudentSurname.Text) ||
                 string.IsNullOrWhiteSpace(emailS.Text) ||
                 string.IsNullOrWhiteSpace(usernameS.Text) ||
-                string.IsNullOrWhiteSpace(passwordS.Text) ||
+                string.IsNullOrWhiteSpace(passwordSBox.Visibility == Visibility.Visible ? passwordSBox.Password : textSBox.Text) ||
                 string.IsNullOrWhiteSpace(grade.Text) ||
                 string.IsNullOrWhiteSpace(idS.Text) ||
                 string.IsNullOrWhiteSpace(index.Text))
             {
-
-                string message = SharedResource.FillField;
-                new WarningWindow(message!).ShowDialog();
-                //new WarningWindow("Popunite sva polja").ShowDialog();
+                string message = (string)Application.Current.Resources["FillField"];
+                new SuccessWindow(message).ShowDialog();
                 return;
             }
-    
-             if (!int.TryParse(grade.Text.Trim(), out int parseGrade))
+            if (!IsValidEmail(emailS.Text))
             {
-                string message = SharedResource.AcademicIntegerValue;
+
+                string message = (string)Application.Current.Resources["InvalidEmailFormat"];
                 new WarningWindow(message).ShowDialog();
-                // new WarningWindow("Akademska godine mora da bude cjelobrojna vrijednost!").ShowDialog();  
+                return;
+            }
+            else
+            {
+                emailError.Visibility = Visibility.Collapsed; 
+            }
+
+            if (!int.TryParse(grade.Text.Trim(), out int parseGrade))
+            {         
+                string message = (string)Application.Current.Resources["AcademicIntegerValue"];
+                new WarningWindow(message).ShowDialog();
                 return;
             }
             if (!int.TryParse(idS.Text.Trim(), out int parseIds))
             {
-                string message = SharedResource.IdIntegerValue;
+                string message = (string)Application.Current.Resources["IdIntegerValue"];
                 new WarningWindow(message).ShowDialog();
-              //  new WarningWindow("ID studenta mora da bude cjelobrojna vrijednost!").ShowDialog();
                 return;
             }
           
             if (korisnici.Any(p => p.idKorisnika == parseIds))
             {
-                //new WarningWindow("Identifikator zauzet!").ShowDialog();
-                string message = SharedResource.TakenId;
+                string message = (string)Application.Current.Resources["TakenId"];
                 new WarningWindow(message).ShowDialog();
-
                 return;
             }
             int.TryParse(grade.Text, out parseGrade);
+            if (parseGrade <= 0 || parseGrade >= 7)
+            {
+                string message = (string)Application.Current.Resources["AcademicYear"];
+                new WarningWindow(message).ShowDialog();
+                return;
+            }
+
             int.TryParse(idS.Text, out parseIds);
 
             if (parseIds <= 0 || parseGrade <= 0)
             {
-                string message = SharedResource.Invalid_ID_AY;
+                string message = (string)Application.Current.Resources["Invalid_ID_AY"];
                 new WrongWindow(message).ShowDialog();
-              //  new WrongWindow("Nevalidan unos za ID ili godinu studija").ShowDialog();
                 return;
             }
+            string passwordValue = passwordSBox.Visibility == Visibility.Visible ? passwordSBox.Password : textSBox.Text;
             Student student = new Student(
                 parseIds,
                 txtStudentName.Text,
                 txtStudentSurname.Text,
                 emailS.Text,
                 usernameS.Text,
-                passwordS.Text,
+                passwordValue,
                 "student",
                 index.Text,
                 parseGrade
             );
             if (StudentDataAccess.dodajStudenta(student))
             {
-                string message = SharedResource.SuccessAddStudent;
+      
+                string message = (string)Application.Current.Resources["SuccessAddStudent"];
                 new SuccessWindow(message).ShowDialog();
-                //new SuccessWindow("Student je uspješno dodat!").ShowDialog();
                 studenti = StudentDataAccess.GetStudents();
-               // cmbPredmeti.ItemsSource = StudentDataAccess.GetStudents();
                 lstDeleteItems.ItemsSource = StudentDataAccess.GetStudents();
             }
             else
             {
-                string message = SharedResource.UnsuccessfulStudent;
+                string message = (string)Application.Current.Resources["UnsuccessfulStudent"];
                 new WrongWindow(message).ShowDialog();
-                //  new WrongWindow("Neuspješno dodavanje studenta!").ShowDialog();
             }
                 undoStack.Push(() =>
                 {
-                  StudentDataAccess.obrisiStudenta(student.idKorisnika);
-                    new SuccessWindow(string.Format(SharedResource.StudentRemoved_, student.ime, student.prezime)).ShowDialog();
-
-                    /*  new SuccessWindow($"{student.ime} {student.prezime} je uklonjen.").ShowDialog();*/
+                    StudentDataAccess.obrisiStudenta(student.idKorisnika);
+                    lstDeleteItems.ItemsSource = StudentDataAccess.GetStudents(); 
+                    string message = (string)Application.Current.Resources["StudentDeleted"];
+                    new SuccessWindow(message).ShowDialog();
                 });
-                redoStack.Clear();
-
-
-            
+                       
             txtStudentName.Clear();
             txtStudentSurname.Clear();
             emailS.Clear();
             usernameS.Clear();
-            passwordS.Clear();
+            passwordSBox.Clear();
+            textSBox.Clear();
             idS.Clear();
             grade.Clear();
             lstStudentSubjects.UnselectAll();
@@ -567,36 +787,14 @@ namespace ASystem
             {
                 var undoAction = undoStack.Pop();
                 undoAction.Invoke();
-                redoStack.Push(undoAction);
+             
             }
             else
             {
-                string message = SharedResource.UndoMessage;
-                new WarningWindow(message).ShowDialog();
-                //     new WarningWindow("Nema dostupnih operacija za poništavanje").ShowDialog();
-                // Content="{x:Static resources:SharedResource.UpdateButton}"
-                //  new SuccessWindow(x: Static resources: SharedResource.UpdateButton).ShowDialog();
-                //new SuccessWindow(Resources.UpdateSuccessMessage).ShowDialog();
-
-
-            }
-        }
-
-        private void Redo_Click(object sender, RoutedEventArgs e)
-        {
-            if (redoStack.Count > 0)
-            {
-                var redoAction = redoStack.Pop();
-                redoAction.Invoke();
-                undoStack.Push(redoAction);
-            }
-            else
-            {
-                string message = SharedResource.UndoMessage;
+                string message = (string)Application.Current.Resources["UndoMessage"];
                 new WarningWindow(message).ShowDialog();
             }
         }
-
         private void AddSubject_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtSubjectName.Text) ||
@@ -604,14 +802,15 @@ namespace ASystem
                 string.IsNullOrWhiteSpace(ects.Text) ||
                 string.IsNullOrWhiteSpace(identifikator.Text))
             {
-                string message = SharedResource.FillField;
+
+                string message = (string)Application.Current.Resources["FillField"];
                 new WarningWindow(message).ShowDialog();
                 return;
             }
 
             if (!int.TryParse(identifikator.Text.Trim(), out int id))
-            {
-                string message = SharedResource.IdIntegerValue;
+            {          
+                string message = (string)Application.Current.Resources["IdIntegerValue"];
                 new WarningWindow(message).ShowDialog();
                 return;
             }
@@ -619,14 +818,19 @@ namespace ASystem
 
             if (!int.TryParse(ects.Text.Trim(), out int ECTS))
             {
-                string message = SharedResource.ECTSIntegerValue;
+                string message = (string)Application.Current.Resources["ECTSIntegerValue"];
                 new WarningWindow(message).ShowDialog();
                 return;
             }
-    
+            else if (ECTS <= 0 || ECTS >= 9)
+            {
+                string message = (string)Application.Current.Resources["ECTSRange"];
+                new WarningWindow(message).ShowDialog();
+                return;
+            }
             if (predmeti.Any(p => p.IdPredmeta == id))
             {
-                string message = SharedResource.IdIntegerValue;
+                string message = (string)Application.Current.Resources["IdIntegerValue"];
                 new WarningWindow(message).ShowDialog();
                 return; 
             }
@@ -645,7 +849,7 @@ namespace ASystem
                 predmeti = PredmetDataAccess.pregledPredmeta();
                 cmbPredmeti.ItemsSource = PredmetDataAccess.pregledPredmeta();
                 lstDeleteItems.ItemsSource = PredmetDataAccess.pregledPredmeta();
-                string message = SharedResource.SuccessfulAddSubject;
+                string message = (string)Application.Current.Resources["SuccessfulAddSubject"];
                 new SuccessWindow(message).ShowDialog();
                 txtSubjectName.Clear();
                 characteristic.Clear();
@@ -654,19 +858,14 @@ namespace ASystem
             }
             else
             {
-                string message = SharedResource.ErrorAdding;
-                new WarningWindow(message).ShowDialog();
+                string message = (string)Application.Current.Resources["ErrorAdding"];
+                new SuccessWindow(message).ShowDialog();
             }
             undoStack.Push(() =>
             {
                 PredmetDataAccess.ObrisiPredmet(predmet.IdPredmeta);
-                string message = SharedResource.SuccessfullyDelete;
+                string message = (string)Application.Current.Resources["SuccessfullyDelete"];
                 new SuccessWindow(message).ShowDialog();
-            });
-
-            redoStack.Push(() =>
-            {
-                PredmetDataAccess.dodajPredmet(predmet);
             });
        
             txtSubjectName.Clear();
@@ -678,72 +877,86 @@ namespace ASystem
         private void UpdateProfessor_Click(object sender, RoutedEventArgs e)
         {
             Profesor selektovaniProfesor = contentPanel.DataContext as Profesor;
-            if (selektovaniProfesor != null && trenutniProfesor != null)
+
+           
+            if (!IsValidEmail(selektovaniProfesor.email))
             {
-             
+                string message = (string)Application.Current.Resources["InvalidEmailFormat"];
+                new WarningWindow(message).ShowDialog();
+                return;
+            }
+
+            if (selektovaniProfesor != null && trenutniProfesor != null )
+            {
                 undoStack.Push(() =>
                 {
                   
                     ProfessorDataAccess.AzurirajProfesora(trenutniProfesor);
                     cmbProfesori.ItemsSource = ProfessorDataAccess.GetProfessors();
                     cmbProfessors.ItemsSource = ProfessorDataAccess.GetProfessors();
-                    string message = string.Format(SharedResource.ProfessorReadded, trenutniProfesor.ime,trenutniProfesor.prezime);
-
+                    string message = string.Format((string)Application.Current.Resources["InvalidEmailFormat"],trenutniProfesor.ime, trenutniProfesor.prezime);
                     new SuccessWindow(message).ShowDialog();
 
-
                 });
-
                 bool success = ProfessorDataAccess.AzurirajProfesora(selektovaniProfesor);
                 if (success)
                 {
-                    string message = SharedResource.ProfUpdateMessage;
-                    new SuccessWindow(message).ShowDialog();
-                    cmbProfesori.ItemsSource = ProfessorDataAccess.GetProfessors();
-                    cmbProfessors.ItemsSource = ProfessorDataAccess.GetProfessors();
-                    cmbUpdate.ItemsSource = ProfessorDataAccess.GetProfessors();
-                    txtProfessorName.Clear();
-                    txtProfessorSurname.Clear();
-                    email.Clear();
-                    titule.Clear();
+                    string message = (string)Application.Current.Resources["ProfUpdateMessage"];
+                        new SuccessWindow(message).ShowDialog();
+                        cmbProfesori.ItemsSource = ProfessorDataAccess.GetProfessors();
+                        cmbProfessors.ItemsSource = ProfessorDataAccess.GetProfessors();
+                        cmbUpdate.ItemsSource = ProfessorDataAccess.GetProfessors();
+                        txtProfessorName.Clear();
+                        txtProfessorSurname.Clear();
+                        email.Clear();
+                        titule.Clear();
+                  
                 }
                 else
-                {
-                    string message = SharedResource.ErrorUpdate;
+                { 
+                    string message = (string)Application.Current.Resources["ErrorUpdate"];
                     new WrongWindow(message).ShowDialog();
                 }
             }
         }
+      
         private void UpdateStudent_Click(object sender, RoutedEventArgs e)
-        {
-           
+        {     
             Student selektovaniStudent = contentPanel.DataContext as Student;
         
             if (selektovaniStudent != null)
             {
-
+                var yearValidation = new AcademicYearValidationRule { MinValue = 1, MaxValue = 5 };
+                var yearResult = yearValidation.Validate(selektovaniStudent.GodinaStudija, CultureInfo.CurrentCulture);
+                if (!yearResult.IsValid)
+                {
+                    string message = (string)Application.Current.Resources["AcademicYearRange"];
+                    new WarningWindow(message).ShowDialog();
+                    return;
+                }
+                if (!IsValidEmail(selektovaniStudent.email))
+                {
+                    string message = (string)Application.Current.Resources["InvalidEmailFormat"];
+                    new WarningWindow(message).ShowDialog();
+                    return;
+                }
                 undoStack.Push(() =>
                 {
-
                     StudentDataAccess.AzurirajStudenta(trenutniStudent);
-                    string message = SharedResource.SuccessAddStudent;
+                    string message = (string)Application.Current.Resources["SuccessAddStudent"];
                     new SuccessWindow(message).ShowDialog();
 
                 });
-
-
-
                 if (string.IsNullOrWhiteSpace(selektovaniStudent.ime) ||
                     string.IsNullOrWhiteSpace(selektovaniStudent.prezime) ||
                     string.IsNullOrWhiteSpace(selektovaniStudent.email) ||
                     string.IsNullOrWhiteSpace(selektovaniStudent.BrojIndeksa) ||
                     selektovaniStudent.GodinaStudija <= 0) 
                 {
-                    string message = SharedResource.FillField;
-                    new WarningWindow(message).ShowDialog();             
+                    string message = (string)Application.Current.Resources["FillField"];
+                    new WarningWindow(message).ShowDialog();
                     return;
                 }
-
                 bool success = StudentDataAccess.AzurirajStudenta(selektovaniStudent);
                 if (success)
                 {
@@ -752,7 +965,7 @@ namespace ASystem
                     emailS.Clear();            
                     grade.Clear();                  
                     index.Clear();
-                    string message = SharedResource.SuccessAddStudent;
+                    string message = (string)Application.Current.Resources["UpdateStudent"];
                     new SuccessWindow(message).ShowDialog();
                     txtStudentName.Clear();
                     txtStudentSurname.Clear();
@@ -762,7 +975,7 @@ namespace ASystem
                 }
                 else
                 {
-                    string message = SharedResource.ErrorUpdate;
+                    string message = (string)Application.Current.Resources["ErrorUpdate"];
                     new WrongWindow(message).ShowDialog();
                 }
             }
@@ -791,23 +1004,30 @@ namespace ASystem
             if (selektovaniPredmet != null)
             {
 
+                if (selektovaniPredmet.ECTS < 1 || selektovaniPredmet.ECTS > 8)
+                {
+                    string message = (string)Application.Current.Resources["ECTSRange"];
+                    new WarningWindow(message).Show();
+                    return;
+                }
                 undoStack.Push(() =>
                 {
 
                     PredmetDataAccess.AzurirajPredmet(trenutniPredmet);
-                    string message = SharedResource.SubjectUndo;
+
+                    string message = (string)Application.Current.Resources["SubjectUndo"];
                     new SuccessWindow(message).ShowDialog();
 
                 });
                 bool success = PredmetDataAccess.AzurirajPredmet(selektovaniPredmet);
                 if (success)
                 {
-                    string message = SharedResource.SubjectSuccessfullyUpdated;
+                    string message = (string)Application.Current.Resources["SubjectSuccessfullyUpdated"];
                     new SuccessWindow(message).ShowDialog();
                 }
                 else
                 {
-                    string message = SharedResource.ErrorUpdate;
+                    string message = (string)Application.Current.Resources["ErrorUpdate"];
                     new WrongWindow(message).ShowDialog();
                 }
             }
@@ -823,25 +1043,25 @@ namespace ASystem
 
             if (selektovaniProfesor != null && selektovaniPredmet != null)
             {
-                PredmetDataAccess.profesorPredmet(selektovaniProfesor, selektovaniPredmet);
-                string message = SharedResource.SuccessProfSubject;
-                new SuccessWindow(message).ShowDialog();
-                cmbPredmeti.SelectedIndex = -1;
-                cmbProfesori.SelectedIndex = -1;
-
+                if (PredmetDataAccess.profesorPredmet(selektovaniProfesor, selektovaniPredmet))
+                {
+                    string message = (string)Application.Current.Resources["SuccessProfSubject"];
+                    new SuccessWindow(message).ShowDialog();
+                    cmbPredmeti.SelectedIndex = -1;
+                    cmbProfesori.SelectedIndex = -1;
+                }      
             }
             else
             {
-                string message = SharedResource.ErrorProfSubject;
-                new WrongWindow(message).ShowDialog();
-
+                string message = (string)Application.Current.Resources["ErrorProfSubject"];
+                new SuccessWindow(message).ShowDialog();
             }
 
 
             undoStack.Push(() =>
             {
                 PredmetDataAccess.razduzi(selektovaniProfesor, selektovaniPredmet);
-                string message = SharedResource.UnassignCourse;
+                string message = (string)Application.Current.Resources["UnassignCourse"];
                 new SuccessWindow(message).ShowDialog();
             });
         }
@@ -854,12 +1074,13 @@ namespace ASystem
 
             if (selektovaniProfesor == null)
             {
-                string message = SharedResource.NoSelectedProfesoor;
+
+                string message = (string)Application.Current.Resources["NoSelectedProfesor"];
                 new WarningWindow(message).ShowDialog();
             }
             if (selektovaniPredmet == null)
             {
-                string message = SharedResource.NoSubjectSelected;
+                string message = (string)Application.Current.Resources["NoSubjectSelected"];
                 new WarningWindow(message).ShowDialog();
             }
 
@@ -870,17 +1091,14 @@ namespace ASystem
                     cmbSubjects.SelectedIndex = -1;
                     cmbProfessors.SelectedIndex = -1;
                     predmeti.Remove(selektovaniPredmet);
-                    string message = SharedResource.UnassignMessage;
+                    string message = (string)Application.Current.Resources["UnassignMessage"];
                     new SuccessWindow(message).ShowDialog();
-
                 }
                 else
                 {
                     string message = SharedResource.ErrorUnassign;
                     new WrongWindow(message).ShowDialog();
-
-                }
-              
+                } 
             }
             undoStack.Push(() =>
             {
@@ -889,8 +1107,6 @@ namespace ASystem
                 new SuccessWindow(message).ShowDialog();
             });
         }
-
-
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -902,7 +1118,7 @@ namespace ASystem
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             username.Clear();
-            password.Clear();
+            textBox.Clear();
             id.Clear();
             txtProfessorName.Clear();
             txtProfessorSurname.Clear();
@@ -912,7 +1128,8 @@ namespace ASystem
             txtSubjectName.Clear();
             emailS.Clear();
             usernameS.Clear();
-            passwordS.Clear();
+            passwordSBox.Clear();
+            textSBox.Clear();
             idS.Clear();
             index.Clear();
             grade.Clear();
